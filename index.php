@@ -31,7 +31,7 @@ include 'header.php';
 
     <div class="hero-inner">
       <div class="hero-content">
-        <p class="hero-eyebrow">Very Complete Game Guides</p>
+        <p class="hero-eyebrow">Complete Game Guides</p>
 
         <h1 class="hero-title">
           Complete<br>
