@@ -3,7 +3,7 @@
 // Cuando salga un juego nuevo, solo cambia los datos de este bloque. 
 // La tarjeta de la web se actualizará sola automáticamente.
 $featured_game = [
-    'floating_tag_1' => '⚔ Updated for Patch 1.03',
+    'floating_tag_1' => '⚔ Updated for Patch 1.10',
     'link'           => 'https://guidevault.online/crimson-desert',
     //thumb_art se deja vacío ya que usaremos imagen de fondo
     'thumb_art'      => '', 
