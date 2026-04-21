@@ -1198,3 +1198,26 @@ ul, ol { list-style: none; }
     text-decoration: line-through;
     opacity: 0.5;
 }
+/* =========================================
+   🛠️ ACCORDION GLOBAL FIX (Cierre Hermético)
+   ========================================= */
+.guide-accordion-body {
+    max-height: 0 !important;
+    overflow: hidden !important; /* ESTO ES LA MAGIA: Corta cualquier texto que intente escapar */
+    transition: max-height 0.4s ease-in-out !important;
+}
+
+/* Cuando el acordeón tiene la clase 'open' (se abre) */
+.guide-accordion.open .guide-accordion-body {
+    max-height: 2500px !important; /* Espacio de sobra para cualquier texto largo */
+}
+
+/* Animación para que la flechita (▾) gire al abrirse */
+.guide-accordion-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.guide-accordion.open .guide-accordion-icon {
+    transform: rotate(180deg);
+}
