@@ -71,9 +71,10 @@ RewriteCond %{HTTP_USER_AGENT} ^$
 RewriteRule ^.* - [F,L]
 
 # Bloqueo de Hotlinking (EVITA QUE ROBEN TUS IMÁGENES)
-# Configurado específicamente para: guidevault.online
+# Permitimos tanto el dominio .online como el .localhost
 RewriteCond %{HTTP_REFERER} !^$
 RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?guidevault\.online [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?guidevault\.localhost [NC]
 RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F,NC,L]
 
 # Bloqueo de inyecciones comunes en la URL (Scripts maliciosos)
