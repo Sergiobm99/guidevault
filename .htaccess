@@ -1,0 +1,103 @@
+# ============================================================
+# .htaccess — GameGuides Network (GUIDEVAULT.ONLINE)
+# Configured for Security, Performance, Anti-Cloning & Clean URLs
+# ============================================================
+
+Options -Indexes
+ServerSignature Off
+DirectoryIndex index.php
+
+RewriteEngine On
+RewriteBase /
+
+# 1. SEGURIDAD DE PROTOCOLO: FORZAR HTTPS Y NO-WWW
+# ------------------------------------------------------------
+# Forzar HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Forzar versión sin WWW (guidevault.online)
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# 1.5 URLS AMIGABLES: ELIMINAR EXTENSIÓN .PHP
+# ------------------------------------------------------------
+# A) Redirigir enlaces viejos con .php hacia la versión limpia (SEO 301)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# B) Reescritura interna: si no es carpeta y el .php existe, sírvelo invisiblemente
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*?)/?$ $1.php [L]
+
+# 2. OPTIMIZACIÓN: CACHÉ Y COMPRESIÓN GZIP
+# ------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html              "access plus 1 hour"
+  ExpiresByType text/css               "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/png              "access plus 1 month"
+  ExpiresByType image/jpeg             "access plus 1 month"
+  ExpiresByType image/svg+xml          "access plus 1 month"
+  ExpiresByType image/webp             "access plus 1 month"
+  ExpiresByType font/woff2             "access plus 1 year"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/plain application/json image/svg+xml application/xml
+</IfModule>
+
+# 3. CABECERAS DE SEGURIDAD (HSTS, XSS, Frame Options)
+# ------------------------------------------------------------
+<IfModule mod_headers.c>
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# 4. BLOQUEO DE CLONADORES, BOTS Y SCRAPERS
+# ------------------------------------------------------------
+# Bloqueo por User-Agent (HTTrack, curl, wget, etc.)
+RewriteCond %{HTTP_USER_AGENT} ^.*(HTTrack|clsHTTP|Archiver|Loader|email|nikto|miner|libwww-perl|curl|wget|python|php|Go-http-client).* [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^.*(Baiduspider|Sogou|Yandex|DotBot|AhrefsBot|SemrushBot).* [NC]
+RewriteRule ^.* - [F,L]
+
+# Bloqueo de peticiones sin User-Agent
+RewriteCond %{HTTP_USER_AGENT} ^$
+RewriteRule ^.* - [F,L]
+
+# Bloqueo de Hotlinking (EVITA QUE ROBEN TUS IMÁGENES)
+# Configurado específicamente para: guidevault.online
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?guidevault\.online [NC]
+RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F,NC,L]
+
+# Bloqueo de inyecciones comunes en la URL (Scripts maliciosos)
+RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+RewriteRule ^(.*)$ - [F,L]
+
+# 5. REGLAS DE ACCESO A ARCHIVOS Y DIRECTORIOS
+# ------------------------------------------------------------
+# Denegar acceso a archivos de configuración y sistema
+<FilesMatch "(\.htaccess|\.htpasswd|php\.ini|config\.php)$">
+ Order deny,allow
+ Deny from all
+</FilesMatch>
+
+# Servir archivos estáticos y directorios directamente
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Página de error personalizada
+ErrorDocument 404 /404.php
+# Bloquear acceso directo al archivo de claves
+<Files "secrets.php">
+    Require all denied
+</Files>
