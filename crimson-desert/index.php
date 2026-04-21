@@ -102,15 +102,15 @@ include 'header.php';
               <li style="margin-top: 10px;"><a href="#support" style="color: #c9a84c;">Support the Guide</a></li>
           </ul>
       </div>
-<a href="extras/beginners-guide" class="reveal" style="display: flex; align-items: center; justify-content: space-between; background: linear-gradient(90deg, rgba(212, 168, 67, 0.15) 0%, rgba(0,0,0,0.8) 100%); border-left: 4px solid var(--gold); padding: 2rem; border-radius: 8px; text-decoration: none; margin-bottom: 4rem; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(212, 168, 67, 0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-        <div>
-          <h3 style="color: var(--gold); font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 0.5rem; text-transform: uppercase;">New to Pywel? Start Here</h3>
-          <p style="color: var(--text); margin: 0; font-size: 0.95rem; max-width: 500px;">10 essential tips for your first hours, common mistakes to avoid, and the best early-game weapons.</p>
-        </div>
-        <div style="background: var(--gold); color: #000; padding: 15px 20px; font-family: var(--font-display); font-size: 1.2rem; border-radius: 4px;">
-          READ GUIDE →
-        </div>
-      </a>
+<div class="guide-card-item reveal" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; background: linear-gradient(90deg, rgba(212, 168, 67, 0.1) 0%, transparent 100%); border-left: 4px solid var(--gold); padding: 2rem; margin: 3rem 0; border-radius: 4px;">
+    <div style="flex: 1 1 300px;">
+        <h3 style="color: var(--gold); font-family: var(--font-display); font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: 1px; text-transform: uppercase;">New to Pywel? Start Here</h3>
+        <p style="color: #ccc; margin: 0; font-size: 1rem; line-height: 1.6;">10 essential tips for your first hours, common mistakes to avoid, and the best early-game weapons.</p>
+    </div>
+    <a href="chapter-1.php" style="background: var(--gold); color: var(--black); padding: 1rem 2rem; font-family: var(--font-ui); font-weight: bold; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; border-radius: 4px; text-align: center; flex: 0 1 auto; white-space: nowrap; transition: transform 0.2s;">
+        Read Guide →
+    </a>
+</div>
       <section class="guide-section reveal" id="story">
         <span class="label">Chapter 1</span>
         <h2 class="guide-section-title">Story & Lore</h2>
