@@ -123,7 +123,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             <span class="guide-accordion-icon">▾</span>
           </button>
           <div class="guide-accordion-body" style="max-height:800px; padding: 1.5rem;">
-            <div class="guide-accordion-inner">
+            <div class="guide-accordion-inner" style="padding: 1.5rem;">
               <p style="margin-bottom: 1rem;">In the main hall, you must redirect sunlight to hit the central pedestal. However, some mirrors are "Mirages" (illusions).</p>
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li style="margin-bottom: 0.5rem;"><strong>The Trick:</strong> Use your <em>Abyss Vision</em> to identify which mirrors are real. Real mirrors will have a faint purple glow around the edges.</li>
@@ -139,7 +139,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             <span class="guide-accordion-icon">▾</span>
           </button>
           <div class="guide-accordion-body" style="max-height:800px; padding: 1.5rem;">
-            <div class="guide-accordion-inner">
+            <div class="guide-accordion-inner" style="padding: 1.5rem;">
               <p style="margin-bottom: 1rem;">Before proceeding down the temple stairs, exit through the broken eastern wall. You will find a small pool of water.</p>
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li style="margin-bottom: 0.5rem;"><strong>Unlocking the Rift:</strong> Wait until precisely midnight (in-game time). The moon's reflection on the water will turn purple, opening the portal to the <em>Drowning Void</em>.</li>
