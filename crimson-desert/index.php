@@ -102,15 +102,17 @@ include 'header.php';
               <li style="margin-top: 10px;"><a href="#support" style="color: #c9a84c;">Support the Guide</a></li>
           </ul>
       </div>
-<div class="guide-card-item reveal" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; background: linear-gradient(90deg, rgba(212, 168, 67, 0.1) 0%, transparent 100%); border-left: 4px solid var(--gold); padding: 2rem; margin: 3rem 0; border-radius: 4px;">
+
+        <div class="guide-card-item reveal" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; background: linear-gradient(90deg, rgba(212, 168, 67, 0.1) 0%, transparent 100%); border-left: 4px solid var(--gold); padding: 2rem; margin: 3rem 0; border-radius: 4px;">
     <div style="flex: 1 1 300px;">
         <h3 style="color: var(--gold); font-family: var(--font-display); font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: 1px; text-transform: uppercase;">New to Pywel? Start Here</h3>
         <p style="color: #ccc; margin: 0; font-size: 1rem; line-height: 1.6;">10 essential tips for your first hours, common mistakes to avoid, and the best early-game weapons.</p>
     </div>
-    <a href="chapter-1.php" style="background: var(--gold); color: var(--black); padding: 1rem 2rem; font-family: var(--font-ui); font-weight: bold; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; border-radius: 4px; text-align: center; flex: 0 1 auto; white-space: nowrap; transition: transform 0.2s;">
+    <a href="extras/beginners-guide.php" style="background: var(--gold); color: var(--black); padding: 1rem 2rem; font-family: var(--font-ui); font-weight: bold; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; border-radius: 4px; text-align: center; flex: 0 1 auto; white-space: nowrap; transition: transform 0.2s;">
         Read Guide →
     </a>
 </div>
+      </a>
       <section class="guide-section reveal" id="story">
         <span class="label">Chapter 1</span>
         <h2 class="guide-section-title">Story & Lore</h2>

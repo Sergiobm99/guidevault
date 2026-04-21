@@ -4,7 +4,7 @@
 // La tarjeta de la web se actualizará sola automáticamente.
 $featured_game = [
     'floating_tag_1' => '⚔ Updated for Patch 1.03',
-    'link'           => 'https://guidevault.online/crimson-desert',
+    'link'           => '/crimson-desert',
     //thumb_art se deja vacío ya que usaremos imagen de fondo
     'thumb_art'      => '', 
     'status_text'    => 'Live',
@@ -157,7 +157,7 @@ include 'header.php';
 
       <div class="guides-grid" id="guides-grid">
 
-        <a href="https://guidevault.online/crimson-desert"
+        <a href="/crimson-desert"
            class="guide-card"
            data-genres="action openworld">
           <div class="guide-card-thumb" style="background-image: url('img/crimson-desert-art.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
