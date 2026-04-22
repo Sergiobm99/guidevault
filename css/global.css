@@ -1221,3 +1221,32 @@ ul, ol { list-style: none; }
 .guide-accordion.open .guide-accordion-icon {
     transform: rotate(180deg);
 }
+/* =========================================
+   📱 MOBILE FIXES: TABLAS RESPONSIVAS
+   ========================================= */
+/* 1. Contenedor con scroll táctil suave */
+.guide-table-wrap, 
+.synergy-table-container {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch; /* Hace que el scroll en iPhone sea fluido */
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+/* 2. Evitamos que la tabla se aplaste */
+.guide-table, 
+.synergy-table {
+    width: 100%;
+    min-width: 600px !important; /* MAGIA: Obliga a la tabla a mantener un ancho decente */
+    border-collapse: collapse;
+}
+
+/* 3. Damos un poco de aire a las celdas en móvil */
+.guide-table th, 
+.guide-table td, 
+.synergy-table th, 
+.synergy-table td {
+    padding: 1rem;
+    line-height: 1.5;
+    vertical-align: top; /* Alinea el texto arriba para que sea más fácil de leer */
+}
