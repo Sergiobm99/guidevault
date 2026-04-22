@@ -92,7 +92,7 @@
         <ul>
           <li><a href="https://www.patreon.com" target="_blank">Patreon</a></li>
           <li><a href="https://www.paypal.com/donate" target="_blank">PayPal Donation</a></li>
-			<li><a href="/hall-of-fame.php" style="color: var(--gold); font-weight: bold;">✨ Hall of Fame</a></li>
+			<li><a href="/../hall-of-fame.php" style="color: var(--gold); font-weight: bold;">✨ Hall of Fame</a></li>
         </ul>
       </div>
 
