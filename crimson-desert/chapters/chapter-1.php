@@ -37,15 +37,15 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
     <main class="guide-content">
 
       <div class="mobile-toc-container">
-          <button class="mobile-toc-btn" id="tocToggle" onclick="document.getElementById('tocList').classList.toggle('show'); document.getElementById('tocIcon').textContent = document.getElementById('tocList').classList.contains('show') ? '▲' : '▼';">
+          <button class="mobile-toc-btn" id="tocToggle">
               <span>CONTENTS</span>
               <span id="tocIcon">▼</span>
           </button>
          <ul class="mobile-toc-list" id="tocList">
-              <li><a href="#trials" onclick="document.getElementById('tocList').classList.remove('show'); document.getElementById('tocIcon').textContent = '▼';">1. Trials of Kindness</a></li>
-              <li><a href="#abyss-rift" onclick="document.getElementById('tocList').classList.remove('show'); document.getElementById('tocIcon').textContent = '▼';">2. First Abyss Rift</a></li>
-              <li><a href="#aftermath" onclick="document.getElementById('tocList').classList.remove('show'); document.getElementById('tocIcon').textContent = '▼';">3. Aftermath & Upgrades</a></li>
-              <li><a href="#completion" onclick="document.getElementById('tocList').classList.remove('show'); document.getElementById('tocIcon').textContent = '▼';">4. Chapter Completion</a></li>
+              <li><a href="#trials">1. Trials of Kindness</a></li>
+              <li><a href="#abyss-rift">2. First Abyss Rift</a></li>
+              <li><a href="#aftermath">3. Aftermath & Upgrades</a></li>
+              <li><a href="#completion">4. Chapter Completion</a></li>
           </ul>
       </div>
 
@@ -159,14 +159,38 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             </ul>
         </div>
         
-        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 4rem;">
+        <div class="chapter-nav">
             <a href="/crimson-desert/chapters/prologue.php" style="color: var(--text-dim); text-decoration: none; font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">← Previous: Prologue</a>
-            <a href="/crimson-desert/chapters/chapter-2.php" class="btn btn-gold" style="font-size: 1rem; padding: 0.8rem 1.5rem;">Next: Chapter 2 →</a>
+            <a href="/crimson-desert/chapters/chapter-2.php" class="btn btn-theme" style="font-size: 1rem; padding: 0.8rem 1.5rem;">Next: Chapter 2 →</a>
         </div>
       </section>
 
     </main>
   </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const tocToggle = document.getElementById('tocToggle');
+    const tocList = document.getElementById('tocList');
+    const tocIcon = document.getElementById('tocIcon');
+
+    if (tocToggle && tocList) {
+        tocToggle.addEventListener('click', (e) => {
+            e.preventDefault(); // Detiene cualquier comportamiento raro en móvil
+            tocList.classList.toggle('show');
+            tocIcon.textContent = tocList.classList.contains('show') ? '▲' : '▼';
+        });
+
+        // Cuando haces clic en un enlace del menú, lo cierra automáticamente
+        tocList.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                tocList.classList.remove('show');
+                tocIcon.textContent = '▼';
+            });
+        });
+    }
+});
+</script>
 
 <?php
 $fxTheme = 'sand'; include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/theme-fx.php';

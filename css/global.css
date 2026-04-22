@@ -61,21 +61,9 @@
 }
 
 /* ── RESET & BASE SIZE STABILIZER ── */
-*, *::before, *::after {
-  box-sizing: border-box; margin: 0; padding: 0;
-}
-
-html {
-  scroll-behavior: smooth; font-size: 16px !important; 
-  -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%;
-}
-
-body {
-  background: var(--black); color: var(--text);
-  font-family: var(--font-body); font-size: 1rem;
-  line-height: 1.75; overflow-x: hidden; -webkit-font-smoothing: antialiased;
-}
-
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px !important; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { background: var(--black); color: var(--text); font-family: var(--font-body); font-size: 1rem; line-height: 1.75; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
 img, video { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 button { cursor: pointer; border: none; background: none; font: inherit; }
@@ -108,23 +96,15 @@ ul, ol { list-style: none; }
 .nav-brand-icon {
   width: 28px; height: 28px; background: var(--gold);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.7rem; color: var(--black); font-weight: 900;
+  display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--black); font-weight: 900;
 }
 .nav-brand-name { font-family: var(--font-display); font-size: 1.25rem; letter-spacing: 0.08em; color: var(--text); line-height: 1; }
 .nav-brand-name span { color: var(--gold); }
 .nav-links { display: flex; align-items: center; gap: 0.125rem; flex: 1; }
-.nav-link {
-  font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600;
-  letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim);
-  padding: 0.4rem 0.875rem; border-radius: 2px; transition: all 0.2s var(--ease); position: relative;
-}
+.nav-link { font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); padding: 0.4rem 0.875rem; border-radius: 2px; transition: all 0.2s var(--ease); position: relative; }
 .nav-link:hover { color: var(--gold); background: var(--gold-glow); }
 .nav-link.active { color: var(--gold); }
-.nav-link.active::after {
-  content: ''; position: absolute; bottom: -1px; left: 50%;
-  transform: translateX(-50%); width: 16px; height: 1px; background: var(--gold);
-}
+.nav-link.active::after { content: ''; position: absolute; bottom: -1px; left: 50%; transform: translateX(-50%); width: 16px; height: 1px; background: var(--gold); }
 
 /* ── FOOTER ── */
 .site-footer { background: var(--dark-1); border-top: 1px solid rgba(212, 168, 67, 0.1); padding: 4rem 2rem 2rem; }
@@ -164,7 +144,7 @@ ul, ol { list-style: none; }
 .mobile-menu-toggle { display: none; flex-direction: column; justify-content: space-between; width: 25px; height: 18px; background: transparent; border: none; cursor: pointer; padding: 0; margin-left: 15px; }
 .mobile-menu-toggle span { width: 100%; height: 2px; background-color: var(--gold); border-radius: 2px; }
 
-/* ÍNDICE MÓVIL BLINDADO EN DORADO */
+/* ÍNDICE MÓVIL BLINDADO EN DORADO (SOLUCIONADO EL DESPLIEGUE) */
 .mobile-toc-container {
     display: none; margin: 0 0 30px 0; background: #09090b; 
     border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 6px; overflow: hidden;
@@ -179,8 +159,11 @@ ul, ol { list-style: none; }
     cursor: pointer; text-align: left;
 }
 .mobile-toc-btn span { color: var(--gold) !important; }
-.mobile-toc-list { list-style: none; padding: 0; margin: 0; display: none !important; }
+
+/* Sin el !important en el display: none para que el toggle funcione perfecto en iOS/Android */
+.mobile-toc-list { list-style: none; padding: 0; margin: 0; display: none; }
 .mobile-toc-list.show { display: block !important; }
+
 .mobile-toc-list li a {
     display: block; padding: 14px 20px; color: var(--text); text-decoration: none;
     font-family: var(--font-ui); font-size: 1.15rem; font-weight: 500;
@@ -188,6 +171,32 @@ ul, ol { list-style: none; }
     text-transform: uppercase; letter-spacing: 1px;
 }
 .mobile-toc-list li a:hover { color: var(--gold) !important; background: rgba(212, 175, 55, 0.05); padding-left: 25px; }
+
+/* =========================================
+   NAVEGACIÓN DE CAPÍTULOS (NUEVO: SOLUCIONA EL BOTÓN APLASTADO)
+   ========================================= */
+.chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: 4rem;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    /* En móvil, pone el botón NEXT a tamaño completo arriba y el PREVIOUS debajo */
+    .chapter-nav {
+        flex-direction: column-reverse; 
+        gap: 2rem;
+        text-align: center;
+    }
+    .chapter-nav .btn {
+        width: 100%;
+        justify-content: center; /* Centra el texto del botón en móvil */
+    }
+}
 
 /* =========================================
    MAGIA RESPONSIVA
@@ -216,69 +225,33 @@ ul, ol { list-style: none; }
 .guide-toc-title, .guide-toc-list a { font-family: var(--font-ui) !important; }
 .guide-section p, .guide-section li { font-family: var(--font-body); }
 
-
 /* =========================================
-   SMART SEARCH BAR & HEADER OVERFLOW FIX (RESTAURADO)
+   SMART SEARCH BAR & HEADER OVERFLOW FIX
    ========================================= */
 .guide-hero, .guide-hero-inner, .guide-hero-content { overflow: visible !important; }
 .guide-hero { z-index: 999; }
 .hero-search-container { position: relative; margin-top: 2.5rem; max-width: 650px; }
-
-/* ESTILO DE LA BARRA DE BÚSQUEDA RESTAURADA */
 .hero-search-container input {
-    width: 100%; 
-    padding: 16px 20px 16px 45px; 
-    border-radius: 8px; 
-    border: 1px solid rgba(212, 168, 67, 0.4);
-    /* Fondo con la lupa dorada incorporada */
+    width: 100%; padding: 16px 20px 16px 45px; border-radius: 8px; border: 1px solid rgba(212, 168, 67, 0.4);
     background: rgba(0, 0, 0, 0.6) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="%23c9a84c" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>') no-repeat 15px center;
-    color: #fff; 
-    font-size: 1.1rem; 
-    font-family: var(--font-ui); 
-    outline: none; 
-    transition: all 0.3s ease; 
-    backdrop-filter: blur(5px);
+    color: #fff; font-size: 1.1rem; font-family: var(--font-ui); outline: none; transition: all 0.3s ease; backdrop-filter: blur(5px);
 }
-
-.hero-search-container input:focus { 
-    border-color: var(--gold); 
-    background-color: rgba(0, 0, 0, 0.8); 
-    box-shadow: 0 0 15px var(--gold-glow);
-}
-
-/* CAJA DE RESULTADOS DEL BUSCADOR */
-.search-results-dropdown {
-    position: absolute; top: 100%; left: 0; right: 0; background: #111; 
-    border: 1px solid rgba(212, 168, 67, 0.3); border-top: none; border-radius: 0 0 8px 8px; 
-    z-index: 1000; display: none; max-height: 300px; overflow-y: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-}
-.search-result-item { 
-    padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; color: #ccc; 
-    text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.05); transition: all 0.2s; 
-}
+.hero-search-container input:focus { border-color: var(--gold); background-color: rgba(0, 0, 0, 0.8); box-shadow: 0 0 15px var(--gold-glow); }
+.search-results-dropdown { position: absolute; top: 100%; left: 0; right: 0; background: #111; border: 1px solid rgba(212, 168, 67, 0.3); border-top: none; border-radius: 0 0 8px 8px; z-index: 1000; display: none; max-height: 300px; overflow-y: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.8); }
+.search-result-item { padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; color: #ccc; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.05); transition: all 0.2s; }
 .search-result-item:hover { background: rgba(212, 168, 67, 0.1); color: var(--gold); padding-left: 25px; }
 
-
 /* =========================================
-   ANIMACIONES DE FONDO Y PARTÍCULAS (RESTAURADO)
+   ANIMACIONES DE FONDO Y PARTÍCULAS
    ========================================= */
-@keyframes ambientPulse {
-    0% { opacity: 0.7; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.05); }
-    100% { opacity: 0.7; transform: scale(1); }
-}
-
-.hero-bg {
-    animation: ambientPulse 10s ease-in-out infinite;
-    transform-origin: center center;
-}
+@keyframes ambientPulse { 0% { opacity: 0.7; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } 100% { opacity: 0.7; transform: scale(1); } }
+.hero-bg { animation: ambientPulse 10s ease-in-out infinite; transform-origin: center center; }
 
 /* =========================================
    EFECTO PREMIUM: REVEAL ON SCROLL
    ========================================= */
 .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 .reveal.active { opacity: 1; transform: translateY(0); }
-
 
 /* =========================================
    COMPONENTES Y CHECKLIST (TODO EN DORADO)
@@ -294,11 +267,7 @@ ul, ol { list-style: none; }
 .guide-checklist { list-style: none; padding: 0; margin: 0; }
 .guide-checklist li { border-bottom: 1px dashed rgba(255,255,255,0.05); padding-bottom: 1rem; margin-bottom: 1rem; }
 .guide-checklist label { display: flex; align-items: flex-start; gap: 12px; cursor: pointer; color: var(--text-dim); }
-.guide-checklist input[type="checkbox"] {
-    appearance: none; -webkit-appearance: none; width: 22px; height: 22px; 
-    border: 2px solid var(--gold) !important; /* FORZADO A DORADO */
-    border-radius: 4px; background: rgba(0,0,0,0.5); cursor: pointer; position: relative; flex-shrink: 0; margin-top: 2px;
-}
+.guide-checklist input[type="checkbox"] { appearance: none; -webkit-appearance: none; width: 22px; height: 22px; border: 2px solid var(--gold) !important; border-radius: 4px; background: rgba(0,0,0,0.5); cursor: pointer; position: relative; flex-shrink: 0; margin-top: 2px; }
 .guide-checklist input[type="checkbox"]:checked { background: var(--gold) !important; border-color: var(--gold) !important; }
 .guide-checklist input[type="checkbox"]:checked::after { content: '✔'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #000; font-size: 14px; font-weight: bold; }
 .guide-checklist input[type="checkbox"]:checked + span { text-decoration: line-through; opacity: 0.5; }
