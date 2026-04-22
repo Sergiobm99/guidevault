@@ -77,9 +77,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             <span class="guide-accordion-label" style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 1px;">Puzzle: The Shattered Bridge</span>
             <span class="guide-accordion-icon">▾</span>
           </button>
-          <div class="guide-accordion-body" style="max-height:800px; padding: 1.5rem;">
-            <div class="guide-accordion-inner">
-              <p style="margin-bottom: 1rem;">Halfway up the mountain, the main bridge is destroyed. You must navigate the Ice Caves underneath to cross the chasm.</p>
+          <div class="guide-accordion-body">
+            <div class="guide-accordion-inner" style="padding: 1.5rem;">
+              <p>Halfway up the mountain, the main bridge is destroyed. You must navigate the Ice Caves underneath to cross the chasm.</p>
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li style="margin-bottom: 0.5rem;"><strong>The Slippery Floor:</strong> Running on ice causes Kliff to slide uncontrollably. Use the crouch/stealth button to walk carefully over slick surfaces.</li>
                 <li><strong>The Crystal Reflection:</strong> You will find a locked door powered by a frozen Abyss Node. Equip a torch and stand near the node to thaw it out. Once thawed, use your Axiom Force to rotate the crystal mirror <strong>twice to the right</strong> to bounce the light into the door switch.</li>

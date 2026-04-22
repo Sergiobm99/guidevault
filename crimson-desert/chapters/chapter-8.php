@@ -80,9 +80,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             <span class="guide-accordion-label" style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 1px;">Optional Mini-Boss: The King's Executioner</span>
             <span class="guide-accordion-icon">▾</span>
           </button>
-          <div class="guide-accordion-body" style="max-height:800px; padding: 1.5rem;">
-            <div class="guide-accordion-inner">
-              <p style="margin-bottom: 1rem;">Instead of taking the grand staircase, head down the spiral steps on the left to the Dungeons. You will find the Executioner guarding the cells.</p>
+          <div class="guide-accordion-body">
+            <div class="guide-accordion-inner" style="padding: 1.5rem;">
+              <p>Instead of taking the grand staircase, head down the spiral steps on the left to the Dungeons. You will find the Executioner guarding the cells.</p>
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li style="margin-bottom: 0.5rem;"><strong>The Fight:</strong> He uses a giant guillotining axe. His attacks cannot be blocked with a standard shield, you must use <strong>Perfect Dodge</strong>. Hit him with Fire-infused attacks (from Chapter 6) to melt his heavy armor.</li>
                 <li><strong>The Rescue:</strong> Defeating him yields the <em>Dungeon Master Key</em>. Open Cell #4 to rescue the exiled High Priest. He will fully heal you and grant Kliff the "Divine Blessing" buff (+30% Max HP) for the final boss.</li>
@@ -119,9 +119,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             <span class="guide-accordion-label" style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 1px;">Puzzle: The Four Pillars of Pywel</span>
             <span class="guide-accordion-icon">▾</span>
           </button>
-          <div class="guide-accordion-body" style="max-height:1000px; padding: 1.5rem;">
-            <div class="guide-accordion-inner">
-              <p style="margin-bottom: 1rem;">Four statues represent the regions of Pywel. You must activate them in the order of the sun's journey (East to West).</p>
+          <div class="guide-accordion-body">
+            <div class="guide-accordion-inner" style="padding: 1.5rem;">
+              <p>Four statues represent the regions of Pywel. You must activate them in the order of the sun's journey (East to West).</p>
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li style="margin-bottom: 0.5rem;"><strong>Step 1:</strong> Use the <span style="color: #3498db; font-weight: bold;">Fragment of the Tide</span> on the East Pillar (Delesyia).</li>
                 <li style="margin-bottom: 0.5rem;"><strong>Step 2:</strong> Use the <span style="color: #f39c12; font-weight: bold;">Fragment of the Sands</span> on the South Pillar (Akapen).</li>
@@ -138,9 +138,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             <span class="guide-accordion-label" style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 1px;">Secret: The Royal Abyss Rift</span>
             <span class="guide-accordion-icon">▾</span>
           </button>
-          <div class="guide-accordion-body" style="max-height:800px; padding: 1.5rem;">
-            <div class="guide-accordion-inner">
-              <p style="margin-bottom: 1rem;">While riding the elevator down, look at the wall moving past you. Midway down, there is a cracked seal glowing purple. Use your <strong>Axiom Force Grapple</strong> to rip the seal off and jump into the hole.</p>
+          <div class="guide-accordion-body">
+            <div class="guide-accordion-inner" style="padding: 1.5rem;">
+              <p>While riding the elevator down, look at the wall moving past you. Midway down, there is a cracked seal glowing purple. Use your <strong>Axiom Force Grapple</strong> to rip the seal off and jump into the hole.</p>
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li style="margin-bottom: 0.5rem;"><strong>The Challenge:</strong> You must defeat a clone of Kliff from the Prologue. He has all your stats. Unequip your health potions before entering, or his clone will use them to heal!</li>
                 <li><strong>Reward:</strong> The <em>Demeniss Abyss Fragment</em> (Doubles your maximum health permanently).</li>

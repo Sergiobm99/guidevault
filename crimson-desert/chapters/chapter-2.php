@@ -100,9 +100,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             <span class="guide-accordion-label" style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 1px;">Part 1: Infiltration & Stealth Mechanics</span>
             <span class="guide-accordion-icon">▾</span>
           </button>
-          <div class="guide-accordion-body" style="max-height:800px; padding: 1.5rem;">
-            <div class="guide-accordion-inner">
-              <p style="margin-bottom: 1rem;">The Slums are heavily patrolled by the City Watch. This is the first time the <strong>Stealth Meter</strong> becomes vital. Use the rooftops to stay out of sight.</p>
+          <div class="guide-accordion-body">
+            <div class="guide-accordion-inner" style="padding: 1.5rem;">
+              <p>The Slums are heavily patrolled by the City Watch. This is the first time the <strong>Stealth Meter</strong> becomes vital. Use the rooftops to stay out of sight.</p>
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li style="margin-bottom: 0.5rem;"><strong>Observation:</strong> Watch the patrol paths of the guards. They carry lanterns at night, making their vision cones easy to spot.</li>
                 <li style="margin-bottom: 0.5rem;"><strong>The Lure:</strong> Use the "Whistle" ability while hiding in hay bales or dark corners to draw a single guard away from the group for a non-lethal takedown.</li>

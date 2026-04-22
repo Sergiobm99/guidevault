@@ -100,9 +100,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             <span class="guide-accordion-label" style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 1px;">Puzzle: The Magma Diverter</span>
             <span class="guide-accordion-icon">▾</span>
           </button>
-          <div class="guide-accordion-body" style="max-height:1000px; padding: 1.5rem;">
-            <div class="guide-accordion-inner">
-              <p style="margin-bottom: 1rem;">There are three giant valves connected by pipes. The goal is to redirect the lava flow into the cooling pits to solidify a path.</p>
+          <div class="guide-accordion-body">
+            <div class="guide-accordion-inner" style="padding: 1.5rem;">
+              <p>There are three giant valves connected by pipes. The goal is to redirect the lava flow into the cooling pits to solidify a path.</p>
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li style="margin-bottom: 0.5rem;"><strong>Sequence:</strong> Turn the North Valve <strong>clockwise</strong> once. This stops the main flow.</li>
                 <li style="margin-bottom: 0.5rem;"><strong>The Catch:</strong> A 30-second timer starts. You must sprint to the South Valve before the pressure builds up and the pipes explode.</li>
@@ -117,9 +117,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             <span class="guide-accordion-label" style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 1px;">Secret: The Crucible Abyss Rift</span>
             <span class="guide-accordion-icon">▾</span>
           </button>
-          <div class="guide-accordion-body" style="max-height:800px; padding: 1.5rem;">
-            <div class="guide-accordion-inner">
-              <p style="margin-bottom: 1rem;">After crossing the magma bridge, do NOT go through the main doors. Instead, jump down onto a small, isolated pillar of rock to the right. The purple Rift portal is hidden below eye level.</p>
+          <div class="guide-accordion-body">
+            <div class="guide-accordion-inner" style="padding: 1.5rem;">
+              <p>After crossing the magma bridge, do NOT go through the main doors. Instead, jump down onto a small, isolated pillar of rock to the right. The purple Rift portal is hidden below eye level.</p>
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li style="margin-bottom: 0.5rem;"><strong>The Challenge:</strong> This is a pure combat trial. You must defeat 4 waves of Ashen Berserkers. The catch? The arena slowly sinks into the lava. You must kill them quickly before you run out of safe ground.</li>
                 <li><strong>Reward:</strong> The <em>Harsand Abyss Fragment</em> (Increases Perfect Parry window by 15%).</li>

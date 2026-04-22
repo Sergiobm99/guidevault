@@ -71,9 +71,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             <span class="guide-accordion-label" style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 1px;">Puzzle: The Grand Ocular</span>
             <span class="guide-accordion-icon">▾</span>
           </button>
-          <div class="guide-accordion-body" style="max-height:1000px; padding: 1.5rem;">
-            <div class="guide-accordion-inner">
-              <p style="margin-bottom: 1rem;">This is the most complex puzzle in the game. You are in a giant spherical room with a central light source.</p>
+          <div class="guide-accordion-body">
+            <div class="guide-accordion-inner" style="padding: 1.5rem;">
+              <p>This is the most complex puzzle in the game. You are in a giant spherical room with a central light source.</p>
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li style="margin-bottom: 0.5rem;"><strong>Gravity Shift:</strong> Activate the purple node on the ceiling to rotate the room 180 degrees. This brings the mirrors on the "floor" into range of the light beam.</li>
                 <li style="margin-bottom: 0.5rem;"><strong>Alignment:</strong> Use the <em>Axiom Force Grapple</em> to pull the four hanging prisms into a square formation.</li>
@@ -88,9 +88,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             <span class="guide-accordion-label" style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 1px;">Secret Mini-Boss: The Mirror Paradox</span>
             <span class="guide-accordion-icon">▾</span>
           </button>
-          <div class="guide-accordion-body" style="max-height:800px; padding: 1.5rem;">
-            <div class="guide-accordion-inner">
-              <p style="margin-bottom: 1rem;">In the Grand Ocular room, before leaving, point the light beam directly at the shattered mirror in the corner. This summons Kliff's dark reflection.</p>
+          <div class="guide-accordion-body">
+            <div class="guide-accordion-inner" style="padding: 1.5rem;">
+              <p>In the Grand Ocular room, before leaving, point the light beam directly at the shattered mirror in the corner. This summons Kliff's dark reflection.</p>
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li style="margin-bottom: 0.5rem;"><strong>The Fight:</strong> The Paradox has all your current skills and weapons. The trick is to <strong>unequip your weapon</strong> right before he spawns. He will spawn unarmed. Re-equip your weapon immediately and defeat him easily.</li>
                 <li><strong>Reward:</strong> <em>Paradox Core</em> (Grants a permanent +5% to all damage output).</li>

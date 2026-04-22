@@ -75,9 +75,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             <span class="guide-accordion-label" style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 1px;">Stealth Route: The Sea Cave</span>
             <span class="guide-accordion-icon">▾</span>
           </button>
-          <div class="guide-accordion-body" style="max-height:800px; padding: 1.5rem;">
-            <div class="guide-accordion-inner">
-              <p style="margin-bottom: 1rem;">Equip your new Rebreather and dive off the cliff to the right of the main pirate gates.</p>
+          <div class="guide-accordion-body">
+            <div class="guide-accordion-inner" style="padding: 1.5rem;">
+              <p>Equip your new Rebreather and dive off the cliff to the right of the main pirate gates.</p>
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li style="margin-bottom: 0.5rem;"><strong>Underwater Traps:</strong> Watch out for the spiked nets. Use your Axiom Force (L2 + R2) to sever the ropes holding them before swimming through.</li>
                 <li style="margin-bottom: 0.5rem;"><strong>Silent Takedowns:</strong> When you surface inside the cave, you will find three guards. If you emerge from the water exactly behind a guard, you can press Triangle (Y) for an instant "Drowning Takedown" that makes zero noise.</li>
@@ -120,9 +120,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             <span class="guide-accordion-label" style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 1px;">Puzzle: The Weeping Statues</span>
             <span class="guide-accordion-icon">▾</span>
           </button>
-          <div class="guide-accordion-body" style="max-height:800px; padding: 1.5rem;">
-            <div class="guide-accordion-inner">
-              <p style="margin-bottom: 1rem;">In the central flooded chamber, there are four large statues pouring water from their eyes.</p>
+          <div class="guide-accordion-body">
+            <div class="guide-accordion-inner" style="padding: 1.5rem;">
+              <p>In the central flooded chamber, there are four large statues pouring water from their eyes.</p>
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li style="margin-bottom: 0.5rem;"><strong>The Clue:</strong> A tablet underwater reads: <em>"The flame born of ice, struck by the heavens, returns to ash."</em></li>
                 <li style="margin-bottom: 0.5rem;"><strong>Solution:</strong> You must shoot the statues with elemental arrows in this exact order: <strong>Ice Arrow, Lightning Arrow, Fire Arrow.</strong></li>
