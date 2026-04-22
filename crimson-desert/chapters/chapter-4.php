@@ -98,9 +98,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             <span class="guide-accordion-label" style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 1px;">Crucial Side Quest: The Lost Caravan</span>
             <span class="guide-accordion-icon">▾</span>
           </button>
-          <div class="guide-accordion-body" style="max-height:800px; padding: 1.5rem;">
-            <div class="guide-accordion-inner">
-              <p style="margin-bottom: 1rem;">Do not skip this quest! Talk to the crying merchant near the tents. He asks you to find his lost caravan to the East.</p>
+          <div class="guide-accordion-body">
+            <div class="guide-accordion-inner" style="padding: 1.5rem;">
+              <p>Do not skip this quest! Talk to the crying merchant near the tents. He asks you to find his lost caravan to the East.</p>
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li style="margin-bottom: 0.5rem;"><strong>The Location:</strong> Follow the trail of broken barrels to a canyon. You will find the caravan surrounded by Desert Bandits.</li>
                 <li><strong>The Choice:</strong> After defeating the bandits, you can return the goods (Gain +500 Nomad Reputation) or keep them (Gain 4,000 Gold). <strong>Choose the Reputation.</strong> High reputation unlocks the legendary Nomad Armor set at the vendor.</li>
@@ -122,9 +122,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             <span class="guide-accordion-label" style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 1px;">Puzzle: The Mirage Mirrors</span>
             <span class="guide-accordion-icon">▾</span>
           </button>
-          <div class="guide-accordion-body" style="max-height:800px; padding: 1.5rem;">
+          <div class="guide-accordion-body">
             <div class="guide-accordion-inner" style="padding: 1.5rem;">
-              <p style="margin-bottom: 1rem;">In the main hall, you must redirect sunlight to hit the central pedestal. However, some mirrors are "Mirages" (illusions).</p>
+              <p>In the main hall, you must redirect sunlight to hit the central pedestal. However, some mirrors are "Mirages" (illusions).</p>
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li style="margin-bottom: 0.5rem;"><strong>The Trick:</strong> Use your <em>Abyss Vision</em> to identify which mirrors are real. Real mirrors will have a faint purple glow around the edges.</li>
                 <li><strong>Solution:</strong> Rotate the first real mirror 45 degrees East. Use your Axiom Force to pull the second mirror closer to the window. The light will bounce and reveal the hidden staircase.</li>
@@ -138,9 +138,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             <span class="guide-accordion-label" style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 1px;">Secret: The Oasis Abyss Rift</span>
             <span class="guide-accordion-icon">▾</span>
           </button>
-          <div class="guide-accordion-body" style="max-height:800px; padding: 1.5rem;">
+          <div class="guide-accordion-body">
             <div class="guide-accordion-inner" style="padding: 1.5rem;">
-              <p style="margin-bottom: 1rem;">Before proceeding down the temple stairs, exit through the broken eastern wall. You will find a small pool of water.</p>
+              <p>Before proceeding down the temple stairs, exit through the broken eastern wall. You will find a small pool of water.</p>
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li style="margin-bottom: 0.5rem;"><strong>Unlocking the Rift:</strong> Wait until precisely midnight (in-game time). The moon's reflection on the water will turn purple, opening the portal to the <em>Drowning Void</em>.</li>
                 <li><strong>The Challenge:</strong> Inside, you must defeat 3 waves of Elite Sand-Stalkers without using healing potions. The reward is the <em>Akapen Abyss Fragment</em> (+10% Movement Speed in combat).</li>
