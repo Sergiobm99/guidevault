@@ -38,15 +38,15 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
     <main class="guide-content">
 
       <div class="mobile-toc-container">
-          <button class="mobile-toc-btn" id="tocToggle">
-              <span style="font-family: var(--font-display); letter-spacing: 0.15em;">CHAPTER PROGRESS</span>
-              <span class="toc-icon" id="tocIcon">▼</span>
+          <button class="mobile-toc-btn" id="tocToggle" onclick="document.getElementById('tocList').classList.toggle('show'); document.getElementById('tocIcon').textContent = document.getElementById('tocList').classList.contains('show') ? '▲' : '▼';">
+              <span>CONTENTS</span>
+              <span id="tocIcon">▼</span>
           </button>
          <ul class="mobile-toc-list" id="tocList">
-              <li><a href="#trials">1. Trials of Kindness</a></li>
-              <li><a href="#abyss-rift">2. First Abyss Rift</a></li>
-              <li><a href="#aftermath">3. Aftermath & Upgrades</a></li>
-              <li><a href="#completion">4. Chapter Completion</a></li>
+              <li><a href="#trials" onclick="document.getElementById('tocList').classList.remove('show'); document.getElementById('tocIcon').textContent = '▼';">1. Trials of Kindness</a></li>
+              <li><a href="#abyss-rift" onclick="document.getElementById('tocList').classList.remove('show'); document.getElementById('tocIcon').textContent = '▼';">2. First Abyss Rift</a></li>
+              <li><a href="#aftermath" onclick="document.getElementById('tocList').classList.remove('show'); document.getElementById('tocIcon').textContent = '▼';">3. Aftermath & Upgrades</a></li>
+              <li><a href="#completion" onclick="document.getElementById('tocList').classList.remove('show'); document.getElementById('tocIcon').textContent = '▼';">4. Chapter Completion</a></li>
           </ul>
       </div>
 
