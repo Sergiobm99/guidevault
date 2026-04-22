@@ -146,9 +146,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             </ul>
         </div>
         
-        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 4rem;">
+        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; align-items: center; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 4rem;">
             <a href="/crimson-desert/chapters/prologue.php" style="color: var(--text-dim); text-decoration: none; font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">← Previous: Prologue</a>
-            <a href="/crimson-desert/chapters/chapter-2.php" class="btn btn-theme" style="font-size: 1rem; padding: 0.8rem 1.5rem;">Next: Chapter 2 →</a>
+            <a href="/crimson-desert/chapters/chapter-2.php" class="btn btn-gold">Next: Chapter 2 →</a>
         </div>
       </section>
 
