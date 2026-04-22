@@ -45,7 +45,7 @@
    SISTEMA DE TEMAS DE GUÍAS (Todos Dorados)
    ======================================================= */
 .theme-crimson-desert {
-    --guide-accent:       #D4A843; /* ERRADICADO EL ROJO. AHORA ES DORADO */
+    --guide-accent:       #D4A843;
     --guide-accent-dim:   #8A6820;
     --guide-accent-glow:  rgba(212, 168, 67, 0.3);
     --guide-color-1:      rgba(212, 168, 67, 0.15);
@@ -53,7 +53,7 @@
 }
 
 .theme-elden-ring {
-    --guide-accent:       #D4AF37; /* DORADO */
+    --guide-accent:       #D4AF37;
     --guide-accent-dim:   #8A6820;
     --guide-accent-glow:  rgba(212, 175, 55, 0.3);
     --guide-color-1:      rgba(212, 175, 55, 0.15); 
@@ -216,9 +216,81 @@ ul, ol { list-style: none; }
 .guide-toc-title, .guide-toc-list a { font-family: var(--font-ui) !important; }
 .guide-section p, .guide-section li { font-family: var(--font-body); }
 
+
+/* =========================================
+   SMART SEARCH BAR & HEADER OVERFLOW FIX (RESTAURADO)
+   ========================================= */
+.guide-hero, .guide-hero-inner, .guide-hero-content { overflow: visible !important; }
+.guide-hero { z-index: 999; }
+.hero-search-container { position: relative; margin-top: 2.5rem; max-width: 650px; }
+
+/* ESTILO DE LA BARRA DE BÚSQUEDA RESTAURADA */
+.hero-search-container input {
+    width: 100%; 
+    padding: 16px 20px 16px 45px; 
+    border-radius: 8px; 
+    border: 1px solid rgba(212, 168, 67, 0.4);
+    /* Fondo con la lupa dorada incorporada */
+    background: rgba(0, 0, 0, 0.6) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="%23c9a84c" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>') no-repeat 15px center;
+    color: #fff; 
+    font-size: 1.1rem; 
+    font-family: var(--font-ui); 
+    outline: none; 
+    transition: all 0.3s ease; 
+    backdrop-filter: blur(5px);
+}
+
+.hero-search-container input:focus { 
+    border-color: var(--gold); 
+    background-color: rgba(0, 0, 0, 0.8); 
+    box-shadow: 0 0 15px var(--gold-glow);
+}
+
+/* CAJA DE RESULTADOS DEL BUSCADOR */
+.search-results-dropdown {
+    position: absolute; top: 100%; left: 0; right: 0; background: #111; 
+    border: 1px solid rgba(212, 168, 67, 0.3); border-top: none; border-radius: 0 0 8px 8px; 
+    z-index: 1000; display: none; max-height: 300px; overflow-y: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+.search-result-item { 
+    padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; color: #ccc; 
+    text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.05); transition: all 0.2s; 
+}
+.search-result-item:hover { background: rgba(212, 168, 67, 0.1); color: var(--gold); padding-left: 25px; }
+
+
+/* =========================================
+   ANIMACIONES DE FONDO Y PARTÍCULAS (RESTAURADO)
+   ========================================= */
+@keyframes ambientPulse {
+    0% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 0.7; transform: scale(1); }
+}
+
+.hero-bg {
+    animation: ambientPulse 10s ease-in-out infinite;
+    transform-origin: center center;
+}
+
+/* =========================================
+   EFECTO PREMIUM: REVEAL ON SCROLL
+   ========================================= */
+.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+
 /* =========================================
    COMPONENTES Y CHECKLIST (TODO EN DORADO)
    ========================================= */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
+.gallery-item { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; position: relative; }
+.gallery-item:hover { transform: translateY(-5px); border-color: var(--guide-accent, var(--gold)); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+.gallery-img { width: 100%; height: 220px; object-fit: cover; border-bottom: 2px solid var(--guide-color-1, rgba(212, 175, 55, 0.2)); }
+.gallery-content { padding: 1.5rem; }
+.gallery-content h3 { color: var(--guide-accent, var(--gold)); margin-bottom: 0.5rem; font-size: 1.2rem; }
+.gallery-content p { font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); line-height: 1.5; }
+
 .guide-checklist { list-style: none; padding: 0; margin: 0; }
 .guide-checklist li { border-bottom: 1px dashed rgba(255,255,255,0.05); padding-bottom: 1rem; margin-bottom: 1rem; }
 .guide-checklist label { display: flex; align-items: flex-start; gap: 12px; cursor: pointer; color: var(--text-dim); }
