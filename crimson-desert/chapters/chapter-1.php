@@ -17,8 +17,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
         <span class="guide-hero-breadcrumb-sep">/</span>
         <span>Chapter 1</span>
       </nav>
-      <span class="label" style="color: var(--gold); letter-spacing: 0.2em; display: block; margin-bottom: 0.5rem;">WALKTHROUGH: PART 1</span>
-      <h1 class="guide-hero-title" style="font-size: clamp(2.5rem, 5vw, 4.5rem); color: var(--gold); line-height: 1.1; margin-bottom: 1rem;">Chapter 1: The First Encounter</h1>
+      <span class="label" style="color: var(--guide-accent); letter-spacing: 0.2em; display: block; margin-bottom: 0.5rem;">WALKTHROUGH: PART 1</span>
+      <h1 class="guide-hero-title" style="font-size: clamp(2.5rem, 5vw, 4.5rem); color: var(--guide-accent); line-height: 1.1; margin-bottom: 1rem;">Chapter 1: The First Encounter</h1>
       <p class="guide-hero-subtitle" style="font-family: var(--font-ui); color: #ddd; font-size: 1.1rem;">Hernand City & The First Rift</p>
     </div>
   </header>
@@ -26,7 +26,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
   <div class="guide-layout responsive-layout">
     
     <aside class="guide-toc desktop-toc" aria-label="Table of contents">
-        <div class="guide-toc-title" style="color: var(--gold); font-size: 1.2rem; margin-bottom: 1rem;">Chapter Progress</div>
+        <div class="guide-toc-title" style="color: var(--guide-accent); font-size: 1.2rem; margin-bottom: 1rem;">Chapter Progress</div>
         <ul class="guide-toc-list" style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 1rem;">
             <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#trials" style="color: var(--text-dim); transition: color 0.2s;">1. Trials of Kindness</a></li>
             <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#abyss-rift" style="color: var(--text-dim); transition: color 0.2s;">2. First Abyss Rift</a></li>
@@ -39,8 +39,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
 
       <div class="mobile-toc-container">
           <button class="mobile-toc-btn" id="tocToggle">
-              <span style="font-family: var(--font-display); letter-spacing: 0.15em; color: var(--gold);">CHAPTER PROGRESS</span>
-              <span class="toc-icon" id="tocIcon" style="color: var(--gold);">▼</span>
+              <span style="font-family: var(--font-display); letter-spacing: 0.15em;">CHAPTER PROGRESS</span>
+              <span class="toc-icon" id="tocIcon">▼</span>
           </button>
          <ul class="mobile-toc-list" id="tocList">
               <li><a href="#trials">1. Trials of Kindness</a></li>
@@ -51,8 +51,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
       </div>
 
       <section class="guide-section" id="trials" style="margin-bottom: 4rem;">
-        <div class="callout info" style="margin-bottom: 3rem;">
-          <span class="callout-label" style="color: var(--gold);">Chapter Overview</span>
+        <div class="callout info" style="margin-bottom: 3rem; border-left: 4px solid var(--guide-accent); background: var(--guide-color-1);">
+          <span class="callout-label" style="color: var(--guide-accent);">Chapter Overview</span>
           <p style="color: #ccc; margin-top: 0.5rem;"><strong>Recommended Level:</strong> None (Focus on gear upgrades)<br><strong>Key Unlocks:</strong> Axiom Force (Tier 1), Hernand Blacksmith, Mercenary Board, Fast Travel.<br><strong>Missables:</strong> The "Rusty Greymane Dagger" hidden in the sewers.</p>
         </div>
 
@@ -63,7 +63,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
           <li class="step">
             <div class="step-num">1</div>
             <div class="step-content">
-              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--gold); margin-top: 0;">The Tavern Brawl</h4>
+              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--guide-accent); margin-top: 0;">The Tavern Brawl</h4>
               <p style="color: #ccc;">Enter the Rusty Boar Tavern. A cutscene will trigger where local thugs are harassing a merchant. Choose the dialogue option: <strong>[Step In]</strong>. You will have to fight three unarmed thugs. Rely on parries; do not draw your weapon or the guards will be called.</p>
               
               <div style="background: rgba(45, 90, 140, 0.1); border-left: 3px solid var(--blue); padding: 1rem; margin-top: 1rem; border-radius: 0 4px 4px 0;">
@@ -75,27 +75,27 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
           <li class="step">
             <div class="step-num">2</div>
             <div class="step-content">
-              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--gold); margin-top: 0;">Hidden Item: The Merchant's Ledger</h4>
+              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--guide-accent); margin-top: 0;">Hidden Item: The Merchant's Ledger</h4>
               <p style="color: #ccc;">Before leaving the tavern, check the tables near the fireplace. You will find a <em>Stolen Ledger</em>. Return this to the merchant outside for a free <strong>Standard Inventory Expansion Tool</strong>.</p>
             </div>
           </li>
           <li class="step">
             <div class="step-num">3</div>
             <div class="step-content">
-              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--gold); margin-top: 0;">The Sewers & The Rat King (Mini-Boss)</h4>
+              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--guide-accent); margin-top: 0;">The Sewers & The Rat King (Mini-Boss)</h4>
               <p style="color: #ccc;">Head to the market square and jump down the open grate. Equip a torch. At the end of the linear tunnel, you will fight the <strong>Sewer Rat King</strong>.</p>
               
               <div class="callout danger" style="margin-top:1rem; border-left: 4px solid var(--red); background: rgba(140, 45, 45, 0.08); padding: 1.5rem;">
                 <span class="callout-label" style="color: var(--red); font-weight: bold; text-transform: uppercase;">Boss Strategy: Sewer Rat King</span>
                 <p style="color: #ccc; margin-top: 0.5rem;">This oversized beast causes Bleed build-up. Use your slide dodge to stay behind it. When it stands on its hind legs, it is preparing an unblockable bite—roll backward immediately.</p>
-                <p style="margin-top: 0.5rem; margin-bottom: 0; color: var(--gold);"><strong>Drops:</strong> Rat King Tail, 250 Gold.<br><strong>Secret:</strong> After defeating it, search the pile of bones in the corner to find the <strong>Rusty Greymane Dagger</strong> (a vital lore item for Macduff).</p>
+                <p style="margin-top: 0.5rem; margin-bottom: 0; color: var(--guide-accent);"><strong>Drops:</strong> Rat King Tail, 250 Gold.<br><strong>Secret:</strong> After defeating it, search the pile of bones in the corner to find the <strong>Rusty Greymane Dagger</strong> (a vital lore item for Macduff).</p>
               </div>
             </div>
           </li>
           <li class="step">
             <div class="step-num">4</div>
             <div class="step-content">
-              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--gold); margin-top: 0;">Unlock the Mercenary Board</h4>
+              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--guide-accent); margin-top: 0;">Unlock the Mercenary Board</h4>
               <p style="color: #ccc;">Climb out of the sewers and speak to Captain Aris near the barracks. Impressed by your handling of the Rat King, she will grant you access to the <strong>Mercenary Board</strong>. You can now take side contracts for extra gold.</p>
               <p style="color: #888; font-size: 0.9rem; font-style: italic;">Tip: Take the "Lost Alchemist" bounty immediately, as it's on the way to your next main objective.</p>
             </div>
@@ -111,11 +111,11 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
           <li class="step">
             <div class="step-num">1</div>
             <div class="step-content">
-              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--gold); margin-top: 0;">The Moving Platforms</h4>
+              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--guide-accent); margin-top: 0;">The Moving Platforms</h4>
               <p style="color: #ccc;">Once inside the Abyss, gravity shifts. Jump across the floating debris. If you fall, you will respawn at the edge with 10% less health. Wait for the platforms to align perfectly before jumping.</p>
               
-              <div style="background: rgba(212, 168, 67, 0.05); border-left: 3px solid var(--gold); padding: 1rem; margin-top: 1rem; border-radius: 0 4px 4px 0;">
-                  <h5 style="color: var(--gold); font-family: var(--font-display); margin-bottom: 0.3rem; font-size: 1.1rem; letter-spacing: 0.5px;">💎 Hidden Chest: First Abyss Core</h5>
+              <div style="background: var(--guide-color-1); border-left: 3px solid var(--guide-accent); padding: 1rem; margin-top: 1rem; border-radius: 0 4px 4px 0;">
+                  <h5 style="color: var(--guide-accent); font-family: var(--font-display); margin-bottom: 0.3rem; font-size: 1.1rem; letter-spacing: 0.5px;">💎 Hidden Chest: First Abyss Core</h5>
                   <p style="margin:0; font-size: 0.9rem; color: #ccc;">On the third platform, instead of jumping forward, look down and to the left. Drop onto the hidden ledge to find a chest containing your first <strong>Abyss Core</strong> (used to level up your Axiom Force).</p>
               </div>
             </div>
@@ -123,22 +123,22 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
           <li class="step">
             <div class="step-num">2</div>
             <div class="step-content">
-              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--gold); margin-top: 0;">Puzzle: The Polar Opposites</h4>
+              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--guide-accent); margin-top: 0;">Puzzle: The Polar Opposites</h4>
               <p style="color: #ccc;">You will enter a room with a Red Node and a Blue Node. Use your Axiom Force (L2 + R2 / LT + RT). Rotate the Red Node twice clockwise, and the Blue Node once counter-clockwise. The laser will connect and open the boss door.</p>
             </div>
           </li>
           <li class="step">
             <div class="step-num">3</div>
             <div class="step-content">
-              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--gold); margin-top: 0;">Boss Fight: The Abyss Warden</h4>
+              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--guide-accent); margin-top: 0;">Boss Fight: The Abyss Warden</h4>
               <p style="color: #ccc;">The Warden guards the Abyss Artifact. It uses a massive halberd and teleportation magic.</p>
               <div class="guide-table-wrap" style="margin-top:1rem; overflow-x: auto;">
                 <table class="guide-table" style="width: 100%; border-collapse: collapse; background: var(--dark-2);">
                   <thead>
-                    <tr style="border-bottom: 2px solid var(--gold);">
-                      <th style="padding: 1rem; text-align: left; color: var(--gold); width: 15%;">Phase</th>
-                      <th style="padding: 1rem; text-align: left; color: var(--gold); width: 30%;">Boss Attack</th>
-                      <th style="padding: 1rem; text-align: left; color: var(--gold);">How to Counter</th>
+                    <tr style="border-bottom: 2px solid var(--guide-accent);">
+                      <th style="padding: 1rem; text-align: left; color: var(--guide-accent); width: 15%;">Phase</th>
+                      <th style="padding: 1rem; text-align: left; color: var(--guide-accent); width: 30%;">Boss Attack</th>
+                      <th style="padding: 1rem; text-align: left; color: var(--guide-accent);">How to Counter</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -165,7 +165,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
           <li class="step">
             <div class="step-num">4</div>
             <div class="step-content">
-              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--gold); margin-top: 0;">Claiming the Artifact</h4>
+              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--guide-accent); margin-top: 0;">Claiming the Artifact</h4>
               <p style="color: #ccc;">Defeating the Warden grants you the <strong>Hernand Abyss Fragment</strong>. This permanently unlocks Tier 1 of your Axiom Force skill tree. Exit through the portal to complete the Rift.</p>
             </div>
           </li>
@@ -179,21 +179,21 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
           <li class="step">
             <div class="step-num">1</div>
             <div class="step-content">
-              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--gold); margin-top: 0;">Meet Master Blacksmith Varr</h4>
+              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--guide-accent); margin-top: 0;">Meet Master Blacksmith Varr</h4>
               <p style="color: #ccc;">Return to the market square. Now that you have an Abyss Fragment, Varr's forge is open to you. Speak to him to unlock the Weapon Upgrade system.</p>
             </div>
           </li>
           <li class="step">
             <div class="step-num">2</div>
             <div class="step-content">
-              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--gold); margin-top: 0;">Upgrade your Sword</h4>
+              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--guide-accent); margin-top: 0;">Upgrade your Sword</h4>
               <p style="color: #ccc;">Use the resources you gathered in the rift to upgrade Kliff's starting sword to +1. This is highly recommended before progressing, as enemies in Chapter 2 have significantly more armor.</p>
             </div>
           </li>
           <li class="step">
             <div class="step-num">3</div>
             <div class="step-content">
-              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--gold); margin-top: 0;">Unlock the Hernand Watchtower</h4>
+              <h4 style="font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 1px; color: var(--guide-accent); margin-top: 0;">Unlock the Hernand Watchtower</h4>
               <p style="color: #ccc;">Before leaving the city, climb the large stone tower near the northern gate. Interacting with the beacon at the top clears the fog of war from your map for this region and unlocks <strong>Fast Travel</strong> back to Hernand.</p>
             </div>
           </li>
@@ -212,7 +212,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             </div>
         </div>
         
-        <h3 style="font-family: var(--font-display); font-size: 1.8rem; color: var(--gold); margin-top: 3rem; margin-bottom: 1rem;">✅ Before Leaving Hernand...</h3>
+        <h3 style="font-family: var(--font-display); font-size: 1.8rem; color: var(--guide-accent); margin-top: 3rem; margin-bottom: 1rem;">✅ Before Leaving Hernand...</h3>
         <p style="color: #ccc; margin-bottom: 1.5rem; font-size: 1.05rem;">Chapter 2 spikes in difficulty. Make sure you have completed the following before taking the carriage to Pailune:</p>
         
         <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 1.5rem; margin-bottom: 3rem;">
@@ -246,7 +246,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
         
         <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 4rem;">
             <a href="/crimson-desert/chapters/prologue.php" style="color: var(--text-dim); text-decoration: none; font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">← Previous: Prologue</a>
-            <a href="/crimson-desert/chapters/chapter-2.php" class="btn btn-gold" style="font-size: 1rem; padding: 0.8rem 1.5rem;">Next: Chapter 2 →</a>
+            <a href="/crimson-desert/chapters/chapter-2.php" class="btn btn-theme" style="font-size: 1rem; padding: 0.8rem 1.5rem;">Next: Chapter 2 →</a>
         </div>
       </section>
 
