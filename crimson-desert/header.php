@@ -29,7 +29,7 @@ if (!isset($pageDesc)) { $pageDesc = "Complete Crimson Desert guide and walkthro
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Bebas+Neue&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 	<link rel="icon" href="/crimson-desert/img/SoloLogoguidevault.png" type="image/png">
-<link rel="stylesheet" href="/css/global.css?v=25">
+<link rel="stylesheet" href="/css/global.css?v=26">
 <link rel="stylesheet" href="/crimson-desert/css/guide.css">
   
   <style>
