@@ -146,11 +146,11 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <span class="label">Chapter 2</span>
         <h2 class="guide-section-title">Combat System</h2>
         <div class="guide-tabs">
-          <div class="guide-tabs-nav">
-            <button class="guide-tab-btn active" data-tab="c-basics">Fundamentals</button>
-            <button class="guide-tab-btn" data-tab="c-builds">Best Builds</button>
-            <button class="guide-tab-btn" data-tab="c-bosses">Boss Strategies</button>
-          </div>
+          <div class="guide-tabs"">
+    <button class="guide-tab-btn active" data-target="c-combat">Combat System</button>
+    <button class="guide-tab-btn" data-target="c-builds">Best Builds</button>
+    <button class="guide-tab-btn" data-target="c-bosses">Boss Strategies</button>
+</div>
 
           <div class="guide-tab-panel active" id="c-basics">
             <div class="guide-cards">
