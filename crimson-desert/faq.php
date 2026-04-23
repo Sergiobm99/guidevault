@@ -18,11 +18,23 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
     </div>
   </header>
 
-  <div class="guide-layout" style="grid-template-columns: 1fr; max-width: 950px; margin: 0 auto;">
+  <div class="guide-layout responsive-layout" style="max-width: 1200px; margin: 0 auto;">
+    
+    <aside class="guide-toc desktop-toc" aria-label="Table of contents">
+        <div class="guide-toc-title" style="color: var(--gold); font-size: 1.2rem; margin-bottom: 1rem; font-family: var(--font-display);">FAQ Categories</div>
+        <ul class="guide-toc-list" style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 1rem;">
+            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#general" style="color: var(--text-dim); transition: color 0.2s;">1. General & Technical</a></li>
+            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#exploration" style="color: var(--text-dim); transition: color 0.2s;">2. Exploration & World</a></li>
+            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#combat" style="color: var(--text-dim); transition: color 0.2s;">3. Combat & Survival</a></li>
+            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#economy" style="color: var(--text-dim); transition: color 0.2s;">4. Economy & Crafting</a></li>
+            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#chapters" style="color: var(--text-dim); transition: color 0.2s;">5. Story Progression</a></li>
+            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#endgame" style="color: var(--text-dim); transition: color 0.2s;">6. Secrets & Endgame</a></li>
+        </ul>
+    </aside>
+
     <main class="guide-content">
 
-      <section class="guide-section reveal">
-        
+      <section class="guide-section reveal" id="general" style="margin-bottom: 4rem;">
         <h2 class="guide-section-title">1. General & Technical</h2>
 
         <div class="guide-accordion open reveal" id="faq-g1">
@@ -84,8 +96,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             </div>
           </div>
         </div>
+      </section>
 
-        <h2 class="guide-section-title reveal" style="margin-top: 4rem;">2. Exploration & World</h2>
+      <section class="guide-section reveal" id="exploration" style="margin-bottom: 4rem;">
+        <h2 class="guide-section-title">2. Exploration & World</h2>
 
         <div class="guide-accordion reveal" id="faq-e1">
           <button class="guide-accordion-trigger" onclick="toggleAcc('faq-e1')">
@@ -146,8 +160,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             </div>
           </div>
         </div>
+      </section>
 
-        <h2 class="guide-section-title reveal" style="margin-top: 4rem;">3. Combat & Survival</h2>
+      <section class="guide-section reveal" id="combat" style="margin-bottom: 4rem;">
+        <h2 class="guide-section-title">3. Combat & Survival</h2>
 
         <div class="guide-accordion reveal" id="faq-c1">
           <button class="guide-accordion-trigger" onclick="toggleAcc('faq-c1')">
@@ -208,8 +224,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             </div>
           </div>
         </div>
+      </section>
 
-        <h2 class="guide-section-title reveal" style="margin-top: 4rem;">4. Economy & Crafting</h2>
+      <section class="guide-section reveal" id="economy" style="margin-bottom: 4rem;">
+        <h2 class="guide-section-title">4. Economy & Crafting</h2>
 
         <div class="guide-accordion reveal" id="faq-cr1">
           <button class="guide-accordion-trigger" onclick="toggleAcc('faq-cr1')">
@@ -270,8 +288,50 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             </div>
           </div>
         </div>
+      </section>
 
-        <h2 class="guide-section-title reveal" style="margin-top: 4rem;">5. Secrets & Endgame</h2>
+      <section class="guide-section reveal" id="chapters" style="margin-bottom: 4rem;">
+        <h2 class="guide-section-title" style="color: #e74c3c;">5. Chapters & Story Progression</h2>
+
+        <div class="guide-accordion reveal" id="faq-ch1">
+          <button class="guide-accordion-trigger" onclick="toggleAcc('faq-ch1')">
+            <span class="guide-accordion-label" style="color: #e74c3c;">How many chapters are in Crimson Desert?</span>
+            <span class="guide-accordion-icon">▾</span>
+          </button>
+          <div class="guide-accordion-body">
+            <div class="guide-accordion-inner">
+              <p>The main storyline is divided into <strong>8 Major Chapters</strong>, plus a Prologue (The Night of the Crimson Sand) and an Epilogue depending on your ending. A standard playthrough focusing only on the chapters takes about 35-40 hours.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-accordion reveal" id="faq-ch2" style="margin-top: 1rem;">
+          <button class="guide-accordion-trigger" onclick="toggleAcc('faq-ch2')">
+            <span class="guide-accordion-label">Are there points of no return?</span>
+            <span class="guide-accordion-icon">▾</span>
+          </button>
+          <div class="guide-accordion-body">
+            <div class="guide-accordion-inner">
+              <p>Yes. The most critical point of no return occurs at the end of <strong>Chapter 6</strong> (before initiating the siege on the Capital). The game will warn you. Ensure you have completed all companion loyalty quests before this point, or they will automatically fail.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-accordion reveal" id="faq-ch3" style="margin-top: 1rem;">
+          <button class="guide-accordion-trigger" onclick="toggleAcc('faq-ch3')">
+            <span class="guide-accordion-label">Can I free-roam after completing the final chapter?</span>
+            <span class="guide-accordion-icon">▾</span>
+          </button>
+          <div class="guide-accordion-body">
+            <div class="guide-accordion-inner">
+              <p>Yes. After the credits roll following Chapter 8, you will be placed back into the world in a "Post-Game" state. You can finish exploring regions, clear remaining Evergaols, and access the Shifting Labyrinth. However, you cannot alter the story choices you made.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="guide-section reveal" id="endgame" style="margin-bottom: 4rem;">
+        <h2 class="guide-section-title" style="color: #3498db;">6. Secrets & Endgame</h2>
 
         <div class="guide-accordion reveal" id="faq-s1">
           <button class="guide-accordion-trigger" onclick="toggleAcc('faq-s1')">
@@ -311,7 +371,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
 
         <div class="guide-accordion reveal" id="faq-s4" style="margin-top: 1rem;">
           <button class="guide-accordion-trigger" onclick="toggleAcc('faq-s4')">
-            <span class="guide-accordion-label">How do I get the "True Ending"?</span>
+            <span class="guide-accordion-label" style="color: #3498db;">How do I get the "True Ending"?</span>
             <span class="guide-accordion-icon">▾</span>
           </button>
           <div class="guide-accordion-body">
@@ -332,15 +392,33 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             </div>
           </div>
         </div>
-
       </section>
-
-      <div class="reveal" style="margin-top: 5rem; text-align: center; padding-bottom: 5rem;">
-          <a href="/crimson-desert/index.php" class="btn btn-gold" style="padding: 1rem 3rem;">Back to Main Guide</a>
-      </div>
 
     </main>
   </div>
+
+<script>
+// Lógica para que funcionen los acordeones de la FAQ
+function toggleAcc(id) {
+    const acc = document.getElementById(id);
+    if (acc) {
+        acc.classList.toggle('open');
+    }
+}
+
+// Animación de entrada Reveal
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+});
+</script>
 
 <?php 
 include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; 
