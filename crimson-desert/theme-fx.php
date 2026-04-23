@@ -5,7 +5,7 @@ $theme = isset($fxTheme) ? $fxTheme : 'embers';
 
 <div id="fx-container" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 100; overflow: hidden;"></div>
 
-<button id="fx-toggle-btn" title="Activar/Desactivar Efectos Visuales" aria-label="Toggle visual effects">
+<button id="fx-toggle-btn" title="Turn Visual Effects On/Off" aria-label="Toggle visual effects">
     <span id="fx-icon">✨</span>
 </button>
 
