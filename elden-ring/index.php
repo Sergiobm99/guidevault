@@ -192,6 +192,16 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             <a href="extras/bestiary" class="btn btn-gold" style="background: transparent; border: 2px solid var(--gold); color: var(--gold);">Open the Boss Bestiary</a>
         </div>
       </section>
+      <div class="guide-card-item" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; background: linear-gradient(90deg, rgba(212, 175, 55, 0.1) 0%, rgba(231, 76, 60, 0.1) 100%); border-left: 4px solid #e74c3c; padding: 2rem; margin: 3rem 0; border-radius: 4px;">
+    <div style="flex: 1 1 300px;">
+        <span class="label" style="color: #e74c3c; font-size: 0.8rem;">NEW TOOL</span>
+        <h3 style="color: var(--gold); font-family: var(--font-display); font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: 1px; text-transform: uppercase;">Interactive AR Calculator</h3>
+        <p style="color: #ccc; margin: 0; font-size: 1rem; line-height: 1.6;">Test your Attack Rating (AR), Defense, and Poise with our real-time build planner. Optimize your character before the final boss.</p>
+    </div>
+    <a href="extras/builds.php#calculator" style="background: #e74c3c; color: white; padding: 1rem 2rem; font-family: var(--font-ui); font-weight: bold; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; border-radius: 4px; text-align: center; flex: 0 1 auto; white-space: nowrap; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        Open Calculator →
+    </a>
+</div>
 
       <section class="guide-section" id="world">
         <span class="label">Chapter 3</span>
@@ -427,6 +437,7 @@ window.guideSiteIndex = [
     { title: "Evergaols Checklist", url: "extras/evergaols", tags: "puzzle, abyss energy, cores", category: "Puzzles" },
     { title: "Divine Towers Guide", url: "extras/divine-towers", tags: "puzzle, ruins, artifacts", category: "Puzzles" },
     { title: "FAQ & Common Questions", url: "faq", tags: "help, tips, multiplayer, game pass", category: "Support" }
+    { title: "Skill Tree, Builds & AR Calculator", url: "builds.php", tags: "berserker, assassin, magic, skills, damage, attack rating, stats, planner", category: "Tools" },
 ];
 </script>
 
