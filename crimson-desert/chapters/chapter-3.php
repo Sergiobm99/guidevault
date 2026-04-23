@@ -245,7 +245,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
             </div>
         </div>
 
-        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; align-items: center; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 4rem;">
+        <div class="chapter-nav">
             <a href="/crimson-desert/chapters/chapter-2.php" style="color: var(--text-dim); text-decoration: none; font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">← Previous: Chapter 2</a>
             <a href="/crimson-desert/chapters/chapter-4.php" class="btn btn-gold">Next: Chapter 4 →</a>
         </div>
