@@ -26,7 +26,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
   <div class="guide-layout responsive-layout">
     
     <aside class="guide-toc desktop-toc" aria-label="Table of contents">
-        <div class="guide-toc-title" style="color: var(--gold); font-size: 1.2rem; margin-bottom: 1rem;">Database Contents</div>
+        <div class="guide-toc-title" style="color: var(--gold); font-size: 1.2rem; margin-bottom: 1rem;">Contents</div>
         <ul class="guide-toc-list" style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 1rem;">
             <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#common" style="color: var(--text-dim); transition: color 0.2s;">1. Common Factions</a></li>
             <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#status" style="color: var(--text-dim); transition: color 0.2s;">2. Status Effects</a></li>
