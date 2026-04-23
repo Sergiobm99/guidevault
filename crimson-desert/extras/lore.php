@@ -42,7 +42,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
         </div>
 
         <aside class="guide-toc desktop-toc" aria-label="Table of contents">
-            <div class="guide-toc-title" style="color: var(--gold); font-size: 1.2rem; margin-bottom: 1rem; font-family: var(--font-display);">Archive Index</div>
+            <div class="guide-toc-title" style="color: var(--gold); font-size: 1.2rem; margin-bottom: 1rem; font-family: var(--font-display);">Contents</div>
             <ul class="guide-toc-list" style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 1rem;">
                 <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#the-continent" style="color: var(--text-dim); transition: color 0.2s;">1. The Continent</a></li>
                 <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#the-factions" style="color: var(--text-dim); transition: color 0.2s;">2. Major Factions</a></li>
