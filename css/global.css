@@ -170,6 +170,30 @@ ul, ol { list-style: none; }
 }
 .mobile-toc-list li a:hover { color: var(--gold) !important; background: rgba(212, 175, 55, 0.05); padding-left: 25px; }
 
+
+/* =========================================
+   NAVEGACIÓN DE CAPÍTULOS (BOTONES ABAJO)
+   ========================================= */
+.chapter-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: 4rem;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .chapter-nav {
+        flex-direction: column-reverse; /* Pone el botón Next arriba y el Previous debajo */
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
 /* =========================================
    MAGIA RESPONSIVA
    ========================================= */
