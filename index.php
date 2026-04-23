@@ -180,13 +180,13 @@ include 'header.php';
           </div>
         </a>
 
-        <a href="/elden-ring/" 
+        <a href="" 
            class="guide-card" 
            data-genres="soulslike action openworld">
           <div class="guide-card-thumb" style="background-image: linear-gradient(180deg, rgba(10,10,15,0.2) 0%, rgba(10,10,15,0.9) 100%), url('img/elden-ring-card-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
             <div class="guide-card-thumb-overlay"></div>
             <div class="guide-card-thumb-badges">
-                <span class="badge badge-new" style="border-color: var(--gold); color: var(--gold);">Live</span>
+                <span class="badge badge-new" style="border-color: var(--gold); color: var(--gold);">Work in Progress</span>
             </div>
           </div>
           <div class="guide-card-body">
