@@ -175,25 +175,32 @@ ul, ol { list-style: none; }
    NAVEGACIÓN DE CAPÍTULOS (BOTONES ABAJO)
    ========================================= */
 .chapter-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
     padding-top: 3rem;
     border-top: 1px solid rgba(255,255,255,0.05);
     margin-top: 4rem;
-    gap: 1rem;
+    gap: 10px !important; /* Espacio reducido para que quepan mejor */
+    width: 100%;
 }
 
 @media (max-width: 768px) {
-    .chapter-nav {
-        flex-direction: row; /* Fuerza a que se queden en la misma línea */
-        flex-wrap: nowrap; /* Evita que salten de línea */
-    }
     .chapter-nav a {
-        font-size: 0.75rem !important; /* Reducimos ligeramente el texto para que quepan ambos */
+        font-size: 0.75rem !important; /* Letra más pequeña en móvil */
+        flex: 1 !important; /* Cada botón ocupa exactamente la mitad (50%) */
+        text-align: center !important;
+        justify-content: center !important;
+        padding: 0.6rem !important; /* Relleno más ajustado */
+        white-space: normal !important; /* Permite que el texto baje a 2 líneas si es largo */
+        line-height: 1.2 !important;
     }
+    
     .chapter-nav .btn {
-        padding: 0.6rem 0.8rem !important; /* Ajustamos el botón para pantallas pequeñas */
+        width: auto !important; /* Evita que el botón intente ocupar el 100% de la pantalla */
+        display: inline-flex !important;
     }
 }
 
