@@ -38,7 +38,7 @@ if (!isset($bodyClass)) {
 </noscript>
   
   <link rel="canonical" href="https://guidevault.online<?php echo parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); ?>">
-  <link rel="icon" href="/crimson-desert/img/SoloLogoguidevault.png" type="image/png">
+  <link rel="icon" href="/img/SoloLogoguidevault.png" type="image/png">
   
   <link rel="stylesheet" href="/css/global.css?v=14">
 
