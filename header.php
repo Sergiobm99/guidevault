@@ -21,7 +21,7 @@ if (!isset($bodyClass)) {
   <title><?php echo isset($pageTitle) ? $pageTitle : 'GuideVault — Complete Game Guides'; ?></title>
   <meta name="description" content="<?php echo isset($pageDesc) ? $pageDesc : 'In-depth game guides, walkthroughs, and boss strategies.'; ?>">
   
-  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="c240c90b-957d-41a1-8b15-3bed8d01958a" data-blockingmode="auto" type="text/javascript"></script>
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="c240c90b-957d-41a1-8b15-3bed8d01958a" defer></script>
 
   <meta property="og:title" content="<?php echo isset($pageTitle) ? $pageTitle : 'GuideVault — Complete Game Guides'; ?>">
   <meta property="og:image" content="https://guidevault.online/crimson-desert/img/SoloLogoguidevault.png">
@@ -29,16 +29,22 @@ if (!isset($bodyClass)) {
   <meta property="og:type" content="website">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Bebas+Neue&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,700&display=swap" rel="stylesheet">
   
   <link rel="canonical" href="https://guidevault.online<?php echo parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); ?>">
   <link rel="icon" href="/crimson-desert/img/SoloLogoguidevault.png" type="image/png">
   
-  <link rel="stylesheet" href="/css/global.css?v=13">
-  <link rel="stylesheet" href="/css/home.css?v=13">
-  
-  <link rel="stylesheet" href="/crimson-desert/css/guide.css?v=13"> 
+  <link rel="stylesheet" href="/css/global.css?v=14">
+
+<link rel="stylesheet" href="/css/guide.css?v=14" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="/css/home.css?v=14" media="print" onload="this.media='all'">
+
+<noscript>
+    <link rel="stylesheet" href="/css/guide.css?v=14">
+    <link rel="stylesheet" href="/css/home.css?v=14">
+</noscript> 
 </head>
 
 <body class="<?php echo htmlspecialchars($bodyClass); ?>">
