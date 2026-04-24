@@ -2,7 +2,7 @@
     <div class="footer-inner">
       <div class="footer-brand" style="display: flex; flex-direction: column; align-items: flex-start; gap: 15px;">
         <a href="/index.php" class="logo-container" style="display: flex; align-items: center; text-decoration: none; gap: 12px;">
-            <img src="/crimson-desert/img/SoloLogoguidevault.png" alt="GuideVault Logo" style="height: 38px; width: auto;">
+            <img src="/img/SoloLogoguidevault.png" alt="GuideVault Logo" style="height: 38px; width: auto;">
             <span style="font-family: 'Cinzel', serif !important; font-size: 1.4rem !important; font-weight: 700 !important; color: #c9a84c !important; letter-spacing: 2px !important; text-transform: uppercase !important; line-height: 1;">
                 GuideVault
             </span>

@@ -57,7 +57,7 @@ if (!isset($bodyClass)) {
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="site-nav" id="site-nav">
     <a href="/index.php" class="logo-container" style="display: flex; align-items: center; text-decoration: none; gap: 12px;">
-      <img src="/crimson-desert/img/SoloLogoguidevault.png" alt="GuideVault Logo" style="height: 40px; width: auto;">
+      <img src="/img/SoloLogoguidevault.png" alt="GuideVault Logo" style="height: 40px; width: auto;">
       <span style="font-family: 'Cinzel', serif !important; font-size: 1.25rem !important; font-weight: 700 !important; color: #c9a84c !important; letter-spacing: 2px !important; text-transform: uppercase !important; padding-top: 3px !important;">
         GuideVault
       </span>
