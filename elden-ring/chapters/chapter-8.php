@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Elden Ring',
+    'url'  => '/elden-ring/index.php'
+];
 $pageTitle = "Chapter 8: The Ashen Capital & Endings | Elden Ring Walkthrough";
 $pageDesc = "Complete guide to Leyndell, Ashen Capital. Defeat Godfrey, Radagon, find Goldmask's final location, and unlock all endings.";
 $bodyClass = "theme-elden-ring";
@@ -306,4 +310,7 @@ function toggleAcc(id) {
 }
 </script>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>
+<?php 
+$fxTheme = 'embers';
+include $_SERVER['DOCUMENT_ROOT'] . '/elden-ring/theme-fx.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>

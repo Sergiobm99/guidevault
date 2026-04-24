@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Elden Ring',
+    'url'  => '/elden-ring/index.php'
+];
 $pageTitle = "Chapter 4: Altus Plateau & Leyndell | Elden Ring Walkthrough";
 $pageDesc = "Complete guide to Altus Plateau, Mt. Gelmir, and Leyndell, Royal Capital. Defeat Morgott the Omen King and solve the Golden Order riddle.";
 $bodyClass = "theme-elden-ring";
@@ -326,4 +330,8 @@ function toggleAcc(id) {
 }
 </script>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>
+<?php
+$fxTheme = 'grace'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/elden-ring/theme-fx.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
+?>

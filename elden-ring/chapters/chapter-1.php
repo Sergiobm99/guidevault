@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Elden Ring',
+    'url'  => '/elden-ring/index.php'
+];
 $pageTitle = "Chapter 1: Limgrave & Stormveil | Elden Ring Walkthrough";
 $pageDesc = "Step-by-step walkthrough for Limgrave and Stormveil Castle. Find all Graces, defeat Margit, and conquer Godrick the Grafted.";
 $bodyClass = "theme-elden-ring";
@@ -271,6 +275,10 @@ function toggleAcc(id) {
 }
 </script>
 
-<?php 
+<?php
+$fxTheme = 'grace'; 
+
+// 2. Cargamos el archivo de efectos (que ya trae el botón de encendido/apagado)
+include $_SERVER['DOCUMENT_ROOT'] . '/elden-ring/theme-fx.php'; 
 include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

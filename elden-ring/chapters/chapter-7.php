@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Elden Ring',
+    'url'  => '/elden-ring/index.php'
+];
 $pageTitle = "Chapter 7: Consecrated Snowfield & The Haligtree | Elden Ring Walkthrough";
 $pageDesc = "Complete guide to the Consecrated Snowfield, Ordina, and Miquella's Haligtree. Find the best talismans, solve the Albinauric Rise, and defeat Malenia.";
 $bodyClass = "theme-elden-ring";
@@ -372,4 +376,7 @@ function toggleAcc(id) {
 }
 </script>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>
+<?php 
+$fxTheme = 'rot';
+include $_SERVER['DOCUMENT_ROOT'] . '/elden-ring/theme-fx.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>

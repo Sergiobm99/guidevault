@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Elden Ring',
+    'url'  => '/elden-ring/index.php'
+];
 $pageTitle = "Chapter 6: The Endgame | Elden Ring Walkthrough";
 $pageDesc = "Complete guide to Crumbling Farum Azula, Miquella's Haligtree, and the Ashen Capital. Defeat Malenia, Maliketh, and the Elden Beast.";
 $bodyClass = "theme-elden-ring";
@@ -373,4 +377,7 @@ function toggleAcc(id) {
 }
 </script>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>
+<?php 
+$fxTheme = 'embers';
+include $_SERVER['DOCUMENT_ROOT'] . '/elden-ring/theme-fx.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>

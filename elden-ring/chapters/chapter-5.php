@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Elden Ring',
+    'url'  => '/elden-ring/index.php'
+];
 $pageTitle = "Chapter 5: Mountaintops of the Giants | Elden Ring Walkthrough";
 $pageDesc = "Complete guide to the Mountaintops of the Giants, Castle Sol, and the Consecrated Snowfield. Defeat the Fire Giant and unlock the Haligtree.";
 $bodyClass = "theme-elden-ring";
@@ -335,4 +339,8 @@ function toggleAcc(id) {
 }
 </script>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>
+<?php 
+$fxTheme = 'snow';
+include $_SERVER['DOCUMENT_ROOT'] . '/elden-ring/theme-fx.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
+?>

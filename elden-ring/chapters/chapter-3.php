@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Elden Ring',
+    'url'  => '/elden-ring/index.php'
+];
 $pageTitle = "Chapter 3: Caelid & Starscourge Radahn | Elden Ring Walkthrough";
 $pageDesc = "Complete guide to Caelid. Find the Golden Scarab, Radagon's Soreseal, survive Scarlet Rot, and defeat General Radahn in the Redmane Festival.";
 $bodyClass = "theme-elden-ring";
@@ -311,4 +315,7 @@ function toggleAcc(id) {
 }
 </script>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>
+<?php 
+$fxTheme = 'rot'; // Esporas rojas de putrefacción
+include $_SERVER['DOCUMENT_ROOT'] . '/elden-ring/theme-fx.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>

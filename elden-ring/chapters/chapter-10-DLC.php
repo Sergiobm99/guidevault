@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Elden Ring',
+    'url'  => '/elden-ring/index.php'
+];
 $pageTitle = "Chapter 10: Shadow of the Erdtree (Part 2) | Elden Ring Walkthrough";
 $pageDesc = "The ultimate guide to the Elden Ring DLC endgame. Conquer the Shadow Keep, find Euporia, solve the Shaman Village, and defeat Consort Radahn.";
 $bodyClass = "theme-elden-ring";
@@ -375,4 +379,8 @@ function toggleAcc(id) {
 }
 </script>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>
+<?php 
+$fxTheme = 'embers';
+include $_SERVER['DOCUMENT_ROOT'] . '/elden-ring/theme-fx.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
+?>

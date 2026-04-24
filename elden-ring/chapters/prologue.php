@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Elden Ring',
+    'url'  => '/elden-ring/index.php'
+];
 $pageTitle = "Prologue: Chapel of Anticipation | Elden Ring Walkthrough";
 $pageDesc = "The true beginning of Elden Ring. How to navigate the Chapel of Anticipation, the Grafted Scion boss fight, and the Cave of Knowledge tutorial.";
 $bodyClass = "theme-elden-ring";

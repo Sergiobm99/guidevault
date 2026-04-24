@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Elden Ring',
+    'url'  => '/elden-ring/index.php'
+];
 $pageTitle = "Chapter 9: Shadow of the Erdtree (Part 1) | Elden Ring Walkthrough";
 $pageDesc = "Massive guide to the first half of the Elden Ring DLC. Conquer Belurat, Castle Ensis, Cerulean Coast, Nameless Mausoleums, and slay Bayle the Dread.";
 $bodyClass = "theme-elden-ring";
@@ -312,4 +316,7 @@ function toggleAcc(id) {
 }
 </script>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>
+<?php
+$fxTheme = 'embers'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/elden-ring/theme-fx.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>

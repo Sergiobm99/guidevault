@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Elden Ring',
+    'url'  => '/elden-ring/index.php'
+];
 $pageTitle = "Chapter 2: Liurnia of the Lakes | Elden Ring Walkthrough";
 $pageDesc = "Step-by-step walkthrough for Liurnia of the Lakes, Raya Lucaria Academy, and Caria Manor. Defeat Rennala, Queen of the Full Moon and find the path to Altus Plateau.";
 $bodyClass = "theme-elden-ring";
@@ -331,4 +335,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>
+<?php 
+$fxTheme = 'magic'; // Polvo de cristal azul
+include $_SERVER['DOCUMENT_ROOT'] . '/elden-ring/theme-fx.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
+?>
