@@ -226,10 +226,13 @@ ul, ol { list-style: none; }
     /* Arreglar el tamaño y alineación de las rayitas del menú */
     .mobile-menu-toggle {
         display: flex !important;
-        width: 30px; /* Un poco más ancho para que sea fácil de tocar */
-        height: 20px;
-        margin-left: 5px; /* Separación extra del botón */
-        z-index: 9999; /* Asegurar que siempre esté por encima de todo */
+        flex-direction: column;
+        justify-content: center !important; /* Centramos las líneas */
+        gap: 4px; /* 👈 AQUÍ CONTROLAS LA SEPARACIÓN. Cambia a 3px para más juntas, o 5px para más separadas */
+        width: 30px; 
+        height: 24px; /* Le damos un poco de margen táctil */
+        margin-left: 5px; 
+        z-index: 9999;
     }
     
     /* Separación de las líneas de la hamburguesa */
