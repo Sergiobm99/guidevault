@@ -24,7 +24,7 @@ if (!isset($bodyClass)) {
   <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="c240c90b-957d-41a1-8b15-3bed8d01958a" defer></script>
 
   <meta property="og:title" content="<?php echo isset($pageTitle) ? $pageTitle : 'GuideVault — Complete Game Guides'; ?>">
-  <meta property="og:image" content="https://guidevault.online/crimson-desert/img/SoloLogoguidevault.png">
+  <meta property="og:image" content="https://guidevault.online/img/SoloLogoguidevault.png">
   <meta property="og:url" content="https://guidevault.online<?php echo parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); ?>">
   <meta property="og:type" content="website">
 
