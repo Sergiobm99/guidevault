@@ -235,9 +235,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           </div>
         </div>
 
-        <div style="text-align: center; margin-top: 3rem;">
+        <!--<div style="text-align: center; margin-top: 3rem;">
             <a href="extras/interactive-map" class="btn btn-gold">Open Interactive World Map</a>
-        </div>
+        </div>-->
       </section>
 
       <section class="guide-section reveal" id="puzzles">
