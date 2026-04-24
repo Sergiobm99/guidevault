@@ -1,4 +1,9 @@
-<?php 
+<?php
+// 1. We identify the parent game for the "Smart Button" in the header
+$parentGuide = [
+    'name' => 'Elden Ring',
+    'url'  => '/elden-ring/index.php'
+];
 $pageTitle = "Best Builds & Calculator: Bleed, Magic, Strength & Faith | Elden Ring Guide";
 $pageDesc = "Dominate the Lands Between with the best optimized builds. Discover the ultimate setups, test your AR with our interactive build planner, and conquer the DLC.";
 $bodyClass = "theme-elden-ring";
@@ -409,7 +414,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                             <div class="calc-group">
                                 <label>🛡️ Offensive Talisman (Slot 1)</label>
                                 <select id="calc-tal1">
-                                    <option value="none">-- Vacío --</option>
+                                    <option value="none">-- Empty --</option>
                                     <option value="t_alexander">Shard of Alexander (+15% Skill)</option>
                                     <option value="t_blood">Lord of Blood's Exultation (+20% ATK)</option>
                                     <option value="t_millicent">Millicent's Prosthesis (+11% Multi-hit)</option>
@@ -426,7 +431,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                             <div class="calc-group">
                                 <label>🛡️ Defensive Talisman (Slot 2)</label>
                                 <select id="calc-tal2">
-                                    <option value="none">-- Vacío --</option>
+                                    <option value="none">-- Empty --</option>
                                     <option value="t_dragoncrest">Dragoncrest Greatshield (+20% Phys Def)</option>
                                     <option value="t_haligdrake">Haligdrake +2 (+20% Holy Def)</option>
                                     <option value="t_bullgoat">Bull-Goat's Talisman (+33% Poise)</option>

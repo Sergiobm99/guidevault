@@ -1,4 +1,9 @@
 <?php 
+// 1. We identify the parent game for the "Smart Button" in the header
+$parentGuide = [
+    'name' => 'Elden Ring',
+    'url'  => '/elden-ring/index.php'
+];
 $pageTitle = "Beginner's Guide & Early Tips | Elden Ring";
 $pageDesc = "Start your journey in The Lands Between the right way. Essential tips, early game weapons, and common mistakes to avoid in Elden Ring.";
 $bodyClass = "theme-elden-ring";
