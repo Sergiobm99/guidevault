@@ -170,7 +170,6 @@ ul, ol { list-style: none; }
 }
 .mobile-toc-list li a:hover { color: var(--gold) !important; background: rgba(212, 175, 55, 0.05); padding-left: 25px; }
 
-
 /* =========================================
    NAVEGACIÓN DE CAPÍTULOS (BOTONES ABAJO)
    ========================================= */
@@ -204,7 +203,6 @@ ul, ol { list-style: none; }
     }
 }
 
-
 /* =========================================
    MAGIA RESPONSIVA
    ========================================= */
@@ -220,6 +218,7 @@ ul, ol { list-style: none; }
     .site-footer .footer-inner { display: flex !important; flex-direction: column !important; gap: 2.5rem !important; align-items: center !important; text-align: center !important; }
     .site-footer .footer-brand .nav-brand { justify-content: center !important; }
 }
+
 @media (min-width: 769px) {
     .responsive-layout { display: grid !important; grid-template-columns: 250px 1fr; gap: 4rem; padding: 4rem 2rem; max-width: var(--max-w); margin: 0 auto; }
     .desktop-toc { position: sticky; top: 100px; align-self: start; }
@@ -286,3 +285,50 @@ ul, ol { list-style: none; }
 .guide-table-wrap, .synergy-table-container { overflow-x: auto !important; -webkit-overflow-scrolling: touch; width: 100%; margin-bottom: 2rem; }
 .guide-table, .synergy-table { width: 100%; min-width: 600px !important; border-collapse: collapse; }
 .guide-table th, .guide-table td, .synergy-table th, .synergy-table td { padding: 1rem; line-height: 1.5; vertical-align: top; }
+
+
+/* ==========================================================================
+   OPTIMIZACIÓN SEO PARA MÓVILES (Tap Targets y Text Size)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Arreglar los "Tap Targets" (Botones y Enlaces) */
+    
+    /* Asegurar que los botones interactivos tengan buena altura y espacio táctil */
+    button, .btn, .guide-tab-btn, .guide-accordion-trigger, .mobile-toc-btn {
+        min-height: 48px !important;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    /* Evitamos romper el display inline natural de enlaces de texto normales pero 
+       les damos padding para que sea más fácil tocarlos */
+    p a, li a {
+        display: inline-block;
+        padding: 8px 4px;
+    }
+
+    /* Si tienes enlaces en el footer o en menús laterales, dales buen margen táctil */
+    .sidebar-nav a, .guide-hero-breadcrumb a {
+        display: inline-block;
+        padding: 12px 6px;
+        margin-bottom: 6px;
+    }
+
+    /* 2. Arreglar el tamaño del texto ("Smaller than 12px") */
+    
+    /* Aumentar el tamaño base de todo el texto de párrafos y listas a 16px */
+    body, p, li, a {
+        font-size: 16px !important; 
+        line-height: 1.6;
+    }
+
+    /* Asegurar que las etiquetas, subtextos y componentes no bajen nunca de 14px */
+    .label, .stat-label, .card-num, .step-num, span {
+        font-size: 14px !important;
+    }
+
+    /* Opcional: Ajustar los subtítulos si parecen demasiado grandes con el nuevo tamaño base */
+    h4, h5 {
+        font-size: 1.15rem !important;
+    }
+}
