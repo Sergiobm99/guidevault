@@ -46,7 +46,7 @@ if (!isset($pageDesc)) { $pageDesc = "Complete Crimson Desert guide and walkthro
   <a href="/index.php" class="logo-container" style="display: flex; align-items: center; text-decoration: none; gap: 12px;">
     
     <img 
-        src="/crimson-desert/img/SoloLogoguidevault.png" 
+        src="/img/SoloLogoguidevault.png" 
         alt="GuideVault Logo" 
         style="height: 40px; width: auto;" 
     >
