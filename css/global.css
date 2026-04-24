@@ -202,6 +202,41 @@ ul, ol { list-style: none; }
         width: auto !important; /* Evita que el botón intente ocupar el 100% de la pantalla */
         display: inline-flex !important;
     }
+    .site-nav {
+        /* Asegurar que los elementos tengan espacio entre ellos */
+        justify-content: space-between !important; 
+        padding: 0 15px !important;
+    }
+
+    /* Ajustar el contenedor de la derecha (Botón + Hamburguesa) */
+    .nav-actions { /* Si tienes un div que envuelve al botón y al menú */
+        display: flex;
+        align-items: center;
+        gap: 15px; /* Separación entre el botón y las rayitas */
+    }
+
+    /* Hacer el botón de "Support Us" más compacto en móvil para que quepa bien */
+    .site-nav .btn {
+        padding: 8px 12px !important;
+        font-size: 0.7rem !important;
+        letter-spacing: 0.1em;
+        white-space: nowrap; /* Evitar que el texto se rompa en dos líneas */
+    }
+
+    /* Arreglar el tamaño y alineación de las rayitas del menú */
+    .mobile-menu-toggle {
+        display: flex !important;
+        width: 30px; /* Un poco más ancho para que sea fácil de tocar */
+        height: 20px;
+        margin-left: 5px; /* Separación extra del botón */
+        z-index: 9999; /* Asegurar que siempre esté por encima de todo */
+    }
+    
+    /* Separación de las líneas de la hamburguesa */
+    .mobile-menu-toggle span {
+        height: 3px; /* Líneas un pelín más gruesas */
+        border-radius: 3px;
+    }
 }
 
 /* =========================================
