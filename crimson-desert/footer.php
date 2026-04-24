@@ -70,7 +70,7 @@
       <div class="footer-brand">
         <a href="/index.php" class="nav-brand">
           <img 
-                src="/crimson-desert/img/SoloLogoguidevault.png" 
+                src="/img/SoloLogoguidevault.png" 
                 alt="GuideVault Logo" 
                 style="height: 38px; width: auto; filter: drop-shadow(0 0 8px rgba(201, 168, 76, 0.2));" 
             >

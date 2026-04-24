@@ -24,7 +24,7 @@ if (!isset($pageDesc)) { $pageDesc = "Complete Crimson Desert guide and walkthro
   <meta property="og:description" content="<?php echo htmlspecialchars($pageDesc, ENT_QUOTES, 'UTF-8'); ?>">
   <meta property="og:type" content="article">
 	<link rel="canonical" href="https://guidevault.online<?php echo parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); ?>">
-  <meta property="og:image" content="https://guidevault.online/crimson-desert/img/SoloLogoguidevault.png">
+  <meta property="og:image" content="https://guidevault.online/img/SoloLogoguidevault.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Bebas+Neue&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
