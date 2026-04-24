@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Chapter 2: Shadows of Pailune | Crimson Desert Guide";
 $pageDesc = "Intrigue, Factions, and the Royal Palace step-by-step walkthrough. Discover all hidden treasures and defeat the Shadow Inquisitor.";
 $bodyClass = "theme-crimson-desert"; 

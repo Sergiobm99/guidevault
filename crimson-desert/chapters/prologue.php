@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Prologue: Dead of Night | Crimson Desert Guide";
 $pageDesc = "Intrigue, Factions, and the Royal Palace step-by-step walkthrough.";
 $bodyClass = "theme-crimson-desert"; 

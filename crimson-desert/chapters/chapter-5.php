@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Chapter 5: The Blue Depths | Crimson Desert Guide";
 $pageDesc = "Navigate the Delesyia Coast, sail past the Naval Blockade, solve the Mechanical Ruins puzzles, and defeat the Iron Sentinel.";
 $bodyClass = "theme-crimson-desert"; 

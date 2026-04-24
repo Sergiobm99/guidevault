@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Regional Maps & Farming Routes | Crimson Desert Guide";
 $pageDesc = "Detailed exploration guide for Pywel. Find every watchtower, chest location, and the best routes to farm Gold and XP.";
 

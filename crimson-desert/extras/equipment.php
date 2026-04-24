@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Equipment & Weapons Database | Crimson Desert Guide";
 $pageDesc = "Complete database of all Mythic weapons, Legendary armor sets, relics, and upgrade materials in Crimson Desert.";
 $bodyClass = "theme-crimson-desert"; 

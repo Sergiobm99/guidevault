@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Post-Game & End-Game Content | Crimson Desert Guide";
 $pageDesc = "Master the Abyssal Nightmare difficulty, conquer the Shifting Labyrinth, and defeat the ultimate superboss: The Nameless Sovereign.";
 $bodyClass = "theme-crimson-desert"; 

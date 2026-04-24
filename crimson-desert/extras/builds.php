@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Skill Tree & Best Builds | Crimson Desert Guide";
 $pageDesc = "Optimize Kliff's combat potential. Comprehensive guide to the Axiom Force skill tree, best early skills, and overpowered endgame builds.";
 $bodyClass = "theme-crimson-desert"; 

@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Chapter 9: The Last Greymane | Crimson Desert Guide";
 $pageDesc = "The epic conclusion. Defeat Myurdin, survive the Secret True Boss, and follow our guide to unlock all 3 distinct endings, New Game+, and Post-Credits secrets.";
 $bodyClass = "theme-crimson-desert"; 

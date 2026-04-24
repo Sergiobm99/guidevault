@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Pywel Interactive Map | GuideVault";
 include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>

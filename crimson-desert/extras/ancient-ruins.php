@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "All 37 Ancient Ruins Puzzles | Crimson Desert Guide";
 $pageDesc = "Complete step-by-step walkthroughs and checklist for all 37 Ancient Ruins & World Puzzles in Crimson Desert.";
 

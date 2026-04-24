@@ -87,10 +87,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </span>
     </a>
     <ul class="nav-links">
-      <li><a href="/" class="nav-link">Home</a></li>
-      <li><a href="/#guides" class="nav-link">Our Guides</a></li>
-      <li><a href="/#coming-soon" class="nav-link">Coming Soon</a></li>
-    </ul>
+    <li><a href="/" class="nav-link">Home</a></li>
+    
+    <?php if (isset($parentGuide)): ?>
+        <li>
+            <a href="<?php echo $parentGuide['url']; ?>" class="nav-link" style="color: var(--gold);">
+                ← <?php echo $parentGuide['name']; ?> Hub
+            </a>
+        </li>
+    <?php endif; ?>
+    
+    <li><a href="/#coming-soon" class="nav-link">Coming Soon</a></li>
+</ul>
     <div class="nav-actions">
       <button class="nav-search-btn" aria-label="Search guides" style="display: none;">⌕</button>
       <button class="mobile-menu-toggle" aria-label="Toggle menu">

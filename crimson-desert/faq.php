@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "The Grand FAQ of Pywel | Crimson Desert Complete Guide";
 $pageDesc = "The most comprehensive FAQ for Crimson Desert. 25+ answers covering combat, deep exploration mechanics, hidden secrets, and technical support.";
 

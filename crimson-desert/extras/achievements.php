@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Trophy & 100% Completion Guide | Crimson Desert";
 $pageDesc = "The ultimate roadmap to the Platinum Trophy. Detailed guide for all story, combat, and hidden achievements in Crimson Desert.";
 

@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Chapter 8: The Fallen Kingdom | Crimson Desert Guide";
 $pageDesc = "The final assault on Demeniss. Master the urban infiltration, raid the Royal Armory, solve the Vault puzzles, and defeat the Corrupted King.";
 $bodyClass = "theme-crimson-desert"; 

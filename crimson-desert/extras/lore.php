@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Lore Archive & Story Explained | Crimson Desert Guide";
 $pageDesc = "Dive deep into the history of Pywel. Understand the factions, the origin of the Abyss, and the complete backstory of Crimson Desert.";
 $bodyClass = "theme-crimson-desert";

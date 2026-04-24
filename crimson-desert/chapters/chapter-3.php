@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Chapter 3: The Frozen Peaks | Crimson Desert Guide";
 $pageDesc = "Survive the extreme cold of Kweiden, solve the Ice Cave puzzles, conquer the Shivering Void, and defeat the Ancient Frost Dragon in our complete walkthrough.";
 $bodyClass = "theme-crimson-desert"; 

@@ -1,7 +1,10 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Beginner's Guide & Early Tips | Crimson Desert";
 $pageDesc = "Start your journey in Pywel the right way. Essential tips, early game weapons, and common mistakes to avoid in Crimson Desert.";
-
 // Aseguramos que la ruta al header sea correcta desde la carpeta /extras/
 include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
@@ -50,6 +53,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 </style>
 
 <div class="theme-crimson-desert">
+    
     <header class="guide-hero" style="min-height: 45vh; background: linear-gradient(180deg, rgba(10,10,10,0.3) 0%, #0a0a0a 100%), url('https://images.unsplash.com/photo-1542359649-31e03cd4d909?w=1920&q=80') center/cover;">
         <div class="guide-hero-inner" style="text-align: center; padding: 0 2rem; position: relative; z-index: 2;">
             <span class="label" style="color: var(--gold); letter-spacing: 0.5em; display: block; margin-bottom: 1rem;">SURVIVAL 101</span>
@@ -58,6 +62,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                 10 essential tips for your first hours in Pywel, common mistakes to avoid, and the best early-game weapons to grab before Chapter 2.
             </p>
         </div>
+        
     </header>
 
     <div class="guide-layout responsive-layout">

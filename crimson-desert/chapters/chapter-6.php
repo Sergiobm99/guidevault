@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Chapter 6: The Scorched Earth | Crimson Desert Guide";
 $pageDesc = "Complete walkthrough for Chapter 6. Master the volcanic hazards of Mount Harsand, save your companions, solve the Magma Puzzles, and find all Hidden Treasures.";
 $bodyClass = "theme-crimson-desert"; 

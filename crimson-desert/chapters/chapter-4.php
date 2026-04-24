@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Chapter 4: The Endless Sand | Crimson Desert Guide";
 $pageDesc = "Master the survival mechanics of the Akapen Desert, find the Nomad Camp, solve the Mirage Puzzles, and defeat the Colossal Sand-Burrower.";
 $bodyClass = "theme-crimson-desert"; 

@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Cosmetics & Mounts Gallery | Crimson Desert Guide";
 $pageDesc = "Discover all armor sets, dyes, capes, and tamable mounts in Pywel. Master the transmog system to look your best in battle.";
 $bodyClass = "theme-crimson-desert"; 

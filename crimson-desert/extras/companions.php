@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Companions Guide: Loyalty & Team Synergy | Crimson Desert";
 $pageDesc = "Complete all companion side quests for Oongka, Yann, and Naira. Master the Rapport system, gifting, and lore to unlock the True Ending.";
 $bodyClass = "theme-crimson-desert"; 

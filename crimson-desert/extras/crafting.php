@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Crafting, Cooking & Alchemy Guide | Crimson Desert";
 $pageDesc = "Master the art of survival in Pywel. Complete list of cooking recipes, alchemy elixirs, weapon forging, and where to find rare crafting materials.";
 $bodyClass = "theme-crimson-desert"; 

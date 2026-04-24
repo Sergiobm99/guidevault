@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Chapter 7: The Heart of the Abyss | Crimson Desert Guide";
 $pageDesc = "Enter the floating realm of the Abyss. Master zero-gravity puzzles, unlock the Abyss Wings, defeat the Abyss Overlord, and make the choice that dictates your ending.";
 $bodyClass = "theme-crimson-desert"; 

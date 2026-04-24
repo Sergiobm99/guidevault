@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "All 40 Abyss Puzzles Solutions | Crimson Desert Guide";
 $pageDesc = "Complete step-by-step walkthroughs and solutions for all 40 Abyss Puzzles in Crimson Desert. Claim every Abyss Artifact.";
 

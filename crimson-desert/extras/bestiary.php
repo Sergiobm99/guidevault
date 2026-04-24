@@ -1,4 +1,8 @@
 <?php 
+$parentGuide = [
+    'name' => 'Crimson Desert',
+    'url'  => '/crimson-desert/index.php'
+];
 $pageTitle = "Bestiary & Boss Weaknesses | Crimson Desert Guide";
 $pageDesc = "Complete monster compendium. Discover enemy weaknesses, elemental resistances, and tactics for every major boss in Pywel.";
 $bodyClass = "theme-crimson-desert"; 
