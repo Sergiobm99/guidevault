@@ -406,25 +406,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           </a>
         </div>
       </section>
-<section class="guide-section reveal" id="support" style="margin-bottom: 4rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 3rem;">
-        <span class="label" style="color: var(--gold);">Support GuideVault</span>
-        <h2 class="guide-section-title">Support the Guide</h2>
-        <p class="guide-section-intro">If you found this guide helpful, consider supporting the project. Your help allows us to keep creating high-quality, ad-free content for the community.</p>
 
-        <div class="guide-cards">
-          <a href="https://patreon.com/TU_ENLACE_AQUI" target="_blank" rel="noopener" class="guide-card-item reveal" style="text-decoration:none; border-color: #FF424D; background: rgba(255, 66, 77, 0.05);">
-            <span class="guide-card-icon">❤️</span>
-            <h3 style="color:#FF424D; transition:color 0.2s;">Support on Patreon</h3>
-            <p>Join our community! Get exclusive early access to guides, behind-the-scenes content, and a special Discord role.</p>
-          </a>
-          
-          <a href="https://paypal.me/TU_ENLACE_AQUI" target="_blank" rel="noopener" class="guide-card-item reveal" style="text-decoration:none; border-color: #009cde; background: rgba(0, 156, 222, 0.05);">
-            <span class="guide-card-icon">☕</span>
-            <h3 style="color:#009cde; transition:color 0.2s;">Buy me a Coffee</h3>
-            <p>Make a one-time donation via PayPal to show your appreciation and help keep the website servers running smoothly.</p>
-          </a>
-        </div>
-      </section>
     </main>
   </div>
 </div>
