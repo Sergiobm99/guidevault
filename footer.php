@@ -13,7 +13,7 @@
       </div>
 
       <div class="footer-col">
-        <h4>Guides</h4>
+        <h3>Guides</h3>
         <ul>
           <li><a href="https://guidevault.online/crimson-desert">Crimson Desert</a></li>
           <li><a href="/#coming-soon">Elden Ring (Soon)</a></li>
@@ -22,7 +22,7 @@
       </div>
 
       <div class="footer-col">
-        <h4>Support</h4>
+        <h3>Support</h3>
         <ul>
           <li><a href="https://www.patreon.com" target="_blank">Patreon</a></li>
           <li><a href="https://www.paypal.com/donate" target="_blank">Donate via PayPal</a></li>
@@ -31,7 +31,7 @@
       </div>
 
       <div class="footer-col">
-        <h4>GuideVault</h4>
+        <h3>GuideVault</h3>
         <ul>
           <li><a href="/#guides">All Guides</a></li>
           <li><a href="/privacy-policy.php">Privacy Policy</a></li>
