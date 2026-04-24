@@ -3,7 +3,7 @@ $pageTitle = "Post-Game & End-Game Content | Crimson Desert Guide";
 $pageDesc = "Master the Abyssal Nightmare difficulty, conquer the Shifting Labyrinth, and defeat the ultimate superboss: The Nameless Sovereign.";
 $bodyClass = "theme-crimson-desert"; 
 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
   <header class="guide-hero" style="min-height: 45vh; padding-top: calc(var(--nav-h) + 2rem);">
@@ -245,5 +245,5 @@ function toggleAcc(id) {
 
 <?php
 $fxTheme = 'void'; include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/theme-fx.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

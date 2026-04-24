@@ -3,7 +3,7 @@ $pageTitle = "Chapter 1: The First Encounter | Crimson Desert Guide";
 $pageDesc = "Intrigue, Factions, and the Royal Palace step-by-step walkthrough.";
 $bodyClass = "theme-crimson-desert"; 
 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
   <header class="guide-hero" style="min-height: 40vh; padding-top: calc(var(--nav-h) + 2rem);">
@@ -157,5 +157,5 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
 
 <?php
 $fxTheme = 'sand'; include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/theme-fx.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

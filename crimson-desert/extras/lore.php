@@ -3,7 +3,7 @@ $pageTitle = "Lore Archive & Story Explained | Crimson Desert Guide";
 $pageDesc = "Dive deep into the history of Pywel. Understand the factions, the origin of the Abyss, and the complete backstory of Crimson Desert.";
 $bodyClass = "theme-crimson-desert";
 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
 <div class="theme-crimson-desert">

@@ -4,7 +4,7 @@ $pageDesc = "Complete database of all Mythic weapons, Legendary armor sets, reli
 $bodyClass = "theme-crimson-desert"; 
 
 // Cargamos el header desde la raíz
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
   <header class="guide-hero" style="min-height: 40vh; padding-top: calc(var(--nav-h) + 2rem);">
@@ -269,5 +269,5 @@ function toggleAcc(id) {
 
 <?php 
 // Cargamos el footer desde la raíz
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

@@ -2,43 +2,46 @@
 // FUNCIONES GLOBALES DE LA WEB
 // =========================================
 
-// --- Menú Hamburguesa Móvil (Header) ---
-document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
-    document.querySelector('.nav-links').classList.toggle('active');
-});
-
-// --- Índice Desplegable Móvil (Table of Contents) ---
-const tocToggle = document.getElementById('tocToggle');
-if (tocToggle) { // Comprobamos si el botón existe en la página actual
-    tocToggle.addEventListener('click', function() {
-        const list = document.getElementById('tocList');
-        const icon = document.getElementById('tocIcon');
-        
-        list.classList.toggle('show');
-        
-        if (list.classList.contains('show')) {
-            icon.textContent = '▲';
-        } else {
-            icon.textContent = '▼';
-        }
-    });
-
-    // Cerrar el índice al hacer clic en un enlace
-    document.querySelectorAll('.mobile-toc-list a').forEach(item => {
-        item.addEventListener('click', () => {
-            document.getElementById('tocList').classList.remove('show');
-            document.getElementById('tocIcon').textContent = '▼';
-        });
-    });
-}
 document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- Menú Hamburguesa Móvil (Header) ---
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks) navLinks.classList.toggle('active');
+        });
+    }
+
+    // --- Índice Desplegable Móvil (Table of Contents) ---
+    const tocToggle = document.getElementById('tocToggle');
+    if (tocToggle) { 
+        tocToggle.addEventListener('click', function() {
+            const list = document.getElementById('tocList');
+            const icon = document.getElementById('tocIcon');
+            
+            if (list) list.classList.toggle('show');
+            if (icon && list) {
+                icon.textContent = list.classList.contains('show') ? '▲' : '▼';
+            }
+        });
+
+        document.querySelectorAll('.mobile-toc-list a').forEach(item => {
+            item.addEventListener('click', () => {
+                const list = document.getElementById('tocList');
+                const icon = document.getElementById('tocIcon');
+                if (list) list.classList.remove('show');
+                if (icon) icon.textContent = '▼';
+            });
+        });
+    }
+
     /* =======================================================
        1. SMART SEARCH BAR
        ======================================================= */
     const searchInput = document.getElementById('hubSearchInput');
     const resultsContainer = document.getElementById('hubSearchResults');
 
-    // Usamos window.guideSiteIndex para que cada página defina sus propios enlaces
     if (searchInput && resultsContainer) {
         const siteIndex = window.guideSiteIndex || [];
 
@@ -89,11 +92,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 const targetId = btn.getAttribute('data-tab');
                 
                 const parentNav = btn.closest('.guide-tabs-nav');
-                parentNav.querySelectorAll('.guide-tab-btn').forEach(b => b.classList.remove('active'));
+                if (parentNav) {
+                    parentNav.querySelectorAll('.guide-tab-btn').forEach(b => b.classList.remove('active'));
+                }
                 btn.classList.add('active');
 
                 const tabsContainer = btn.closest('.guide-tabs');
-                tabsContainer.querySelectorAll('.guide-tab-panel').forEach(p => p.classList.remove('active'));
+                if (tabsContainer) {
+                    tabsContainer.querySelectorAll('.guide-tab-panel').forEach(p => p.classList.remove('active'));
+                }
                 
                 const targetPanel = document.getElementById(targetId);
                 if(targetPanel) targetPanel.classList.add('active');
@@ -102,15 +109,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* =======================================================
-       3. MOBILE TOC TOGGLE
+       3. ANIMACIÓN DE ENTRADA (REVEAL ON SCROLL) - ¡AQUÍ ESTÁ LA MAGIA!
        ======================================================= */
-    const tocBtn = document.getElementById('tocToggle');
-    const tocList = document.getElementById('tocList');
-    if (tocBtn && tocList) {
-        tocBtn.addEventListener('click', () => {
-            tocList.classList.toggle('active');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
         });
-    }
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => {
+        observer.observe(el);
+    });
 
     /* =======================================================
        4. SPARKS ANIMATION

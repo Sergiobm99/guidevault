@@ -3,7 +3,7 @@ $pageTitle = "Beginner's Guide & Early Tips | Crimson Desert";
 $pageDesc = "Start your journey in Pywel the right way. Essential tips, early game weapons, and common mistakes to avoid in Crimson Desert.";
 
 // Aseguramos que la ruta al header sea correcta desde la carpeta /extras/
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
 <style>
@@ -288,5 +288,5 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <?php 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

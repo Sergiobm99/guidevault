@@ -3,7 +3,7 @@ $pageTitle = "Chapter 3: The Frozen Peaks | Crimson Desert Guide";
 $pageDesc = "Survive the extreme cold of Kweiden, solve the Ice Cave puzzles, conquer the Shivering Void, and defeat the Ancient Frost Dragon in our complete walkthrough.";
 $bodyClass = "theme-crimson-desert"; 
 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
   <header class="guide-hero" style="min-height: 40vh; padding-top: calc(var(--nav-h) + 2rem);">
@@ -266,5 +266,5 @@ function toggleAcc(id) {
 
 <?php
 $fxTheme = 'gold'; include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/theme-fx.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

@@ -3,7 +3,7 @@ $pageTitle = "Chapter 4: The Endless Sand | Crimson Desert Guide";
 $pageDesc = "Master the survival mechanics of the Akapen Desert, find the Nomad Camp, solve the Mirage Puzzles, and defeat the Colossal Sand-Burrower.";
 $bodyClass = "theme-crimson-desert"; 
 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
   <header class="guide-hero" style="min-height: 40vh; padding-top: calc(var(--nav-h) + 2rem);">
@@ -297,5 +297,5 @@ function toggleAcc(id) {
 
 <?php
 $fxTheme = 'sand'; include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/theme-fx.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

@@ -3,7 +3,7 @@ $pageTitle = "Cosmetics & Mounts Gallery | Crimson Desert Guide";
 $pageDesc = "Discover all armor sets, dyes, capes, and tamable mounts in Pywel. Master the transmog system to look your best in battle.";
 $bodyClass = "theme-crimson-desert"; 
 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
   <header class="guide-hero" style="min-height: 40vh; padding-top: calc(var(--nav-h) + 2rem);">
@@ -278,5 +278,5 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
   </div>
 
 <?php 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

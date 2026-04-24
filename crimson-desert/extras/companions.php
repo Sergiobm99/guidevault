@@ -3,7 +3,7 @@ $pageTitle = "Companions Guide: Loyalty & Team Synergy | Crimson Desert";
 $pageDesc = "Complete all companion side quests for Oongka, Yann, and Naira. Master the Rapport system, gifting, and lore to unlock the True Ending.";
 $bodyClass = "theme-crimson-desert"; 
 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
 <header class="guide-hero" style="min-height: 40vh; padding-top: calc(var(--nav-h) + 2rem);">
@@ -269,4 +269,4 @@ function toggleAcc(id) {
 }
 </script>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; ?>

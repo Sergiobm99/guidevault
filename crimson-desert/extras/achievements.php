@@ -2,7 +2,7 @@
 $pageTitle = "Trophy & 100% Completion Guide | Crimson Desert";
 $pageDesc = "The ultimate roadmap to the Platinum Trophy. Detailed guide for all story, combat, and hidden achievements in Crimson Desert.";
 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
   <header class="guide-hero" style="min-height: 40vh; padding-top: calc(var(--nav-h) + 2rem);">
@@ -226,5 +226,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 <?php 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

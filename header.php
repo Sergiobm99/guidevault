@@ -65,15 +65,14 @@ if (!isset($bodyClass)) {
   <link rel="canonical" href="https://guidevault.online<?php echo parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); ?>">
   <link rel="icon" href="/img/SoloLogoguidevault.png" type="image/png">
   
-  <link rel="stylesheet" href="/css/global.css?v=14">
+<link rel="stylesheet" href="/css/global.css?v=15">
+  <link rel="stylesheet" href="/css/guide.css?v=15" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/home.css?v=15" media="print" onload="this.media='all'">
 
-<link rel="stylesheet" href="/css/guide.css?v=14" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="/css/home.css?v=14" media="print" onload="this.media='all'">
-
-<noscript>
-    <link rel="stylesheet" href="/css/guide.css?v=14">
-    <link rel="stylesheet" href="/css/home.css?v=14">
-</noscript> 
+  <noscript>
+      <link rel="stylesheet" href="/css/guide.css?v=15">
+      <link rel="stylesheet" href="/css/home.css?v=15">
+  </noscript> 
 </head>
 
 <body class="<?php echo htmlspecialchars($bodyClass); ?>">
@@ -94,5 +93,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </ul>
     <div class="nav-actions">
       <button class="nav-search-btn" aria-label="Search guides" style="display: none;">⌕</button>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>

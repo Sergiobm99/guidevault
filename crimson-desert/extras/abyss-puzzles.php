@@ -2,7 +2,7 @@
 $pageTitle = "All 40 Abyss Puzzles Solutions | Crimson Desert Guide";
 $pageDesc = "Complete step-by-step walkthroughs and solutions for all 40 Abyss Puzzles in Crimson Desert. Claim every Abyss Artifact.";
 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
   <header class="guide-hero" style="min-height: 40vh; padding-top: calc(var(--nav-h) + 2rem);">
@@ -233,5 +233,5 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
 </script>
 
 <?php 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

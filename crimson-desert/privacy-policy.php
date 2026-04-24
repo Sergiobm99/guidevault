@@ -1,7 +1,7 @@
 <?php 
 $pageTitle = "Privacy Policy | GuideVault";
 $pageDesc = "Privacy Policy and data protection guidelines for GuideVault.";
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
 <div class="container" style="max-width: 800px; margin: 40px auto; padding: 20px; font-family: 'Rajdhani', sans-serif;">
@@ -35,5 +35,5 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
 </div>
 
 <?php 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

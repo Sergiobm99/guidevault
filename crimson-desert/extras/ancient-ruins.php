@@ -2,7 +2,7 @@
 $pageTitle = "All 37 Ancient Ruins Puzzles | Crimson Desert Guide";
 $pageDesc = "Complete step-by-step walkthroughs and checklist for all 37 Ancient Ruins & World Puzzles in Crimson Desert.";
 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
   <header class="guide-hero" style="min-height: 40vh; padding-top: calc(var(--nav-h) + 2rem);">
@@ -187,5 +187,5 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
 </script>
 
 <?php 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

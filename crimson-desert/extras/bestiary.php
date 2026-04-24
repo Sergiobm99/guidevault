@@ -3,7 +3,7 @@ $pageTitle = "Bestiary & Boss Weaknesses | Crimson Desert Guide";
 $pageDesc = "Complete monster compendium. Discover enemy weaknesses, elemental resistances, and tactics for every major boss in Pywel.";
 $bodyClass = "theme-crimson-desert"; 
 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
   <header class="guide-hero" style="min-height: 40vh; padding-top: calc(var(--nav-h) + 2rem);">
@@ -351,5 +351,5 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <?php 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

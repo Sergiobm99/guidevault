@@ -4,7 +4,7 @@ $pageTitle = "Crimson Desert — Complete Guide | GuideVault";
 $pageDesc = "The most complete Crimson Desert guide. Combat mechanics, all puzzle solutions, hidden treasures, boss strategies, best builds, and Abyss secrets.";
 
 // 2. Cargamos el header
-include 'header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
   <header class="guide-hero">
@@ -434,5 +434,5 @@ window.guideSiteIndex = [
 
 <?php 
 // 3. Cargamos el footer
-include 'footer.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

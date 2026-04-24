@@ -2,7 +2,7 @@
 $pageTitle = "Regional Maps & Farming Routes | Crimson Desert Guide";
 $pageDesc = "Detailed exploration guide for Pywel. Find every watchtower, chest location, and the best routes to farm Gold and XP.";
 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
   <header class="guide-hero" style="min-height: 40vh; padding-top: calc(var(--nav-h) + 2rem);">
@@ -158,5 +158,5 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
   </div>
 
 <?php 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

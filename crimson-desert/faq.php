@@ -2,7 +2,7 @@
 $pageTitle = "The Grand FAQ of Pywel | Crimson Desert Complete Guide";
 $pageDesc = "The most comprehensive FAQ for Crimson Desert. 25+ answers covering combat, deep exploration mechanics, hidden secrets, and technical support.";
 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
   <header class="guide-hero" style="min-height: 40vh; padding-top: calc(var(--nav-h) + 2rem);">
@@ -421,5 +421,5 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <?php 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

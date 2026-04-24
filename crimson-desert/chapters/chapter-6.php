@@ -3,7 +3,7 @@ $pageTitle = "Chapter 6: The Scorched Earth | Crimson Desert Guide";
 $pageDesc = "Complete walkthrough for Chapter 6. Master the volcanic hazards of Mount Harsand, save your companions, solve the Magma Puzzles, and find all Hidden Treasures.";
 $bodyClass = "theme-crimson-desert"; 
 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
   <header class="guide-hero" style="min-height: 45vh; padding-top: calc(var(--nav-h) + 2rem);">
@@ -294,5 +294,5 @@ function toggleAcc(id) {
 
 <?php
 $fxTheme = 'embers'; include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/theme-fx.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

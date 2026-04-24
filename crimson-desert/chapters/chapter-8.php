@@ -3,7 +3,7 @@ $pageTitle = "Chapter 8: The Fallen Kingdom | Crimson Desert Guide";
 $pageDesc = "The final assault on Demeniss. Master the urban infiltration, raid the Royal Armory, solve the Vault puzzles, and defeat the Corrupted King.";
 $bodyClass = "theme-crimson-desert"; 
 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
   <header class="guide-hero" style="min-height: 45vh; padding-top: calc(var(--nav-h) + 2rem);">
@@ -246,5 +246,5 @@ function toggleAcc(id) {
 
 <?php
 $fxTheme = 'embers'; include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/theme-fx.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

@@ -3,7 +3,7 @@ $pageTitle = "Skill Tree & Best Builds | Crimson Desert Guide";
 $pageDesc = "Optimize Kliff's combat potential. Comprehensive guide to the Axiom Force skill tree, best early skills, and overpowered endgame builds.";
 $bodyClass = "theme-crimson-desert"; 
 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
 <style>
@@ -449,5 +449,5 @@ include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/header.php';
 </script>
 
 <?php 
-include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/footer.php'; 
+include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>
