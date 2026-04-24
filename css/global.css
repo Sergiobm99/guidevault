@@ -18,7 +18,7 @@
   --gold-glow:    rgba(212, 168, 67, 0.15);
 
   --text:         #E8E0D0;
---text-dim:     #A09483; 
+    --text-dim:     #A09483; 
   --text-muted:   #7A6F62;
 
   --green:        #4A8C5C;
@@ -124,7 +124,8 @@ ul, ol { list-style: none; }
   font-family: var(--font-ui); font-size: 0.8rem; font-weight: 700;
   letter-spacing: 0.15em; text-transform: uppercase;
   padding: 0.75rem 1.75rem; border-radius: 2px;
-  transition: all 0.25s var(--ease); cursor: pointer; border: none; text-decoration: none;
+  transition: transform 0.25s var(--ease), background-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  will-change: transform;
 }
 .btn-gold { background: var(--gold); color: var(--black); }
 .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212, 168, 67, 0.35); }
@@ -165,7 +166,7 @@ ul, ol { list-style: none; }
 .mobile-toc-list li a {
     display: block; padding: 14px 20px; color: var(--text); text-decoration: none;
     font-family: var(--font-ui); font-size: 1.15rem; font-weight: 500;
-    border-bottom: 1px solid rgba(255,255,255,0.03); transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255,255,255,0.03); transition: color 0.3s ease, background-color 0.3s ease, padding-left 0.3s ease;
     text-transform: uppercase; letter-spacing: 1px;
 }
 .mobile-toc-list li a:hover { color: var(--gold) !important; background: rgba(212, 175, 55, 0.05); padding-left: 25px; }
@@ -244,14 +245,17 @@ ul, ol { list-style: none; }
 }
 .hero-search-container input:focus { border-color: var(--gold); background-color: rgba(0, 0, 0, 0.8); box-shadow: 0 0 15px var(--gold-glow); }
 .search-results-dropdown { position: absolute; top: 100%; left: 0; right: 0; background: #111; border: 1px solid rgba(212, 168, 67, 0.3); border-top: none; border-radius: 0 0 8px 8px; z-index: 1000; display: none; max-height: 300px; overflow-y: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.8); }
-.search-result-item { padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; color: #ccc; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.05); transition: all 0.2s; }
+.search-result-item { padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; color: #ccc; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  will-change: transform; }
 .search-result-item:hover { background: rgba(212, 168, 67, 0.1); color: var(--gold); padding-left: 25px; }
 
 /* =========================================
    ANIMACIONES DE FONDO Y PARTÍCULAS
    ========================================= */
 @keyframes ambientPulse { 0% { opacity: 0.7; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } 100% { opacity: 0.7; transform: scale(1); } }
-.hero-bg { animation: ambientPulse 10s ease-in-out infinite; transform-origin: center center; }
+.hero-bg { animation: ambientPulse 10s ease-in-out infinite; 
+  transform-origin: center center; 
+  will-change: opacity, transform; }
 
 /* =========================================
    EFECTO PREMIUM: REVEAL ON SCROLL
@@ -263,7 +267,8 @@ ul, ol { list-style: none; }
    COMPONENTES Y CHECKLIST
    ========================================= */
 .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
-.gallery-item { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; position: relative; }
+.gallery-item { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  will-change: transform; position: relative; }
 .gallery-item:hover { transform: translateY(-5px); border-color: var(--guide-accent, var(--gold)); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
 .gallery-img { width: 100%; height: 220px; object-fit: cover; border-bottom: 2px solid var(--guide-color-1, rgba(212, 175, 55, 0.2)); }
 .gallery-content { padding: 1.5rem; }
