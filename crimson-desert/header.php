@@ -7,13 +7,39 @@ if (!isset($pageDesc)) { $pageDesc = "Complete Crimson Desert guide and walkthro
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-56TK58QJLD"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  let scriptsLoaded = false;
+  function loadThirdPartyScripts() {
+    if (scriptsLoaded) return;
+    scriptsLoaded = true;
 
-  gtag('config', 'G-56TK58QJLD');
+    // Cargar Cookiebot
+    let cb = document.createElement('script');
+    cb.id = 'Cookiebot';
+    cb.src = 'https://consent.cookiebot.com/uc.js';
+    cb.dataset.cbid = 'TU-ID-DE-COOKIEBOT'; // ¡Pon tu ID aquí!
+    cb.defer = true;
+    document.head.appendChild(cb);
+
+    // Cargar Google Tag Manager
+    let gtm = document.createElement('script');
+    gtm.src = 'https://www.googletagmanager.com/gtag/js?id=G-56TK58QJLD';
+    gtm.async = true;
+    document.head.appendChild(gtm);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-56TK58QJLD');
+  }
+
+  // Cargar cuando el usuario haga scroll, mueva el ratón o toque la pantalla
+  window.addEventListener('scroll', loadThirdPartyScripts, {passive: true});
+  window.addEventListener('mousemove', loadThirdPartyScripts, {passive: true});
+  window.addEventListener('touchstart', loadThirdPartyScripts, {passive: true});
+  
+  // O cargar automáticamente después de 4 segundos si no hace nada
+  setTimeout(loadThirdPartyScripts, 4000);
 </script>
 	<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="c240c90b-957d-41a1-8b15-3bed8d01958a" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8">
@@ -28,7 +54,7 @@ if (!isset($pageDesc)) { $pageDesc = "Complete Crimson Desert guide and walkthro
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Bebas+Neue&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
-	<link rel="icon" href="/crimson-desert/img/SoloLogoguidevault.png" type="image/png">
+	<link rel="icon" href="/img/SoloLogoguidevault.png" type="image/png">
 <link rel="stylesheet" href="/css/global.css?v=31">
 <link rel="stylesheet" href="/crimson-desert/css/guide.css">
   

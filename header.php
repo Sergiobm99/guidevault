@@ -7,13 +7,39 @@ if (!isset($bodyClass)) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-56TK58QJLD"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  let scriptsLoaded = false;
+  function loadThirdPartyScripts() {
+    if (scriptsLoaded) return;
+    scriptsLoaded = true;
 
-  gtag('config', 'G-56TK58QJLD');
+    // Cargar Cookiebot
+    let cb = document.createElement('script');
+    cb.id = 'Cookiebot';
+    cb.src = 'https://consent.cookiebot.com/uc.js';
+    cb.dataset.cbid = 'TU-ID-DE-COOKIEBOT'; // ¡Pon tu ID aquí!
+    cb.defer = true;
+    document.head.appendChild(cb);
+
+    // Cargar Google Tag Manager
+    let gtm = document.createElement('script');
+    gtm.src = 'https://www.googletagmanager.com/gtag/js?id=G-56TK58QJLD';
+    gtm.async = true;
+    document.head.appendChild(gtm);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-56TK58QJLD');
+  }
+
+  // Cargar cuando el usuario haga scroll, mueva el ratón o toque la pantalla
+  window.addEventListener('scroll', loadThirdPartyScripts, {passive: true});
+  window.addEventListener('mousemove', loadThirdPartyScripts, {passive: true});
+  window.addEventListener('touchstart', loadThirdPartyScripts, {passive: true});
+  
+  // O cargar automáticamente después de 4 segundos si no hace nada
+  setTimeout(loadThirdPartyScripts, 4000);
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
