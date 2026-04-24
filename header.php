@@ -38,8 +38,7 @@ if (!isset($bodyClass)) {
   window.addEventListener('mousemove', loadThirdPartyScripts, {passive: true});
   window.addEventListener('touchstart', loadThirdPartyScripts, {passive: true});
   
-  // O cargar automáticamente después de 4 segundos si no hace nada
-  setTimeout(loadThirdPartyScripts, 4000);
+
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

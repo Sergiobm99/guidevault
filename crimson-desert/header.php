@@ -37,9 +37,6 @@ if (!isset($pageDesc)) { $pageDesc = "Complete Crimson Desert guide and walkthro
   window.addEventListener('scroll', loadThirdPartyScripts, {passive: true});
   window.addEventListener('mousemove', loadThirdPartyScripts, {passive: true});
   window.addEventListener('touchstart', loadThirdPartyScripts, {passive: true});
-  
-  // O cargar automáticamente después de 4 segundos si no hace nada
-  setTimeout(loadThirdPartyScripts, 4000);
 </script>
 	<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="c240c90b-957d-41a1-8b15-3bed8d01958a" data-blockingmode="auto" type="text/javascript"></script>
   <meta charset="UTF-8">
