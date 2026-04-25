@@ -33,7 +33,7 @@ if (basename($_SERVER['PHP_SELF']) !== 'index.php'):
         <div class="support-card-icon">🔴</div>
         <h3>Subscribe on Patreon</h3>
         <p>Every donation helps keep the guide updated with every new patch.</p>
-        <a href="https://www.patreon.com" target="_blank" class="btn-patreon">❤️ Join on Patreon</a>
+        <a href="https://www.patreon.com/guidevault" target="_blank" class="btn-patreon">❤️ Join on Patreon</a>
         <p style="margin-top:1rem;font-size:0.78rem;color:var(--text-muted)">Cancel anytime</p>
       </div>
     </div>

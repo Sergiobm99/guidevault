@@ -11,7 +11,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
   <header class="guide-hero">
     <div class="guide-hero-bg" ></div>
 
-    <div class="guide-hero-pattern"></div>
     <div id="sparksContainer" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 5;"></div>    
     
     <div class="guide-hero-inner" style="position: relative; z-index: 10;">
