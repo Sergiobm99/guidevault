@@ -323,7 +323,7 @@
 
 /* ── FILTER BAR ── */
 .filter-section {
-  background: rgba(8, 8, 8, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255,255,255,0.05);
   padding: 1.25rem 0;
   position: sticky;

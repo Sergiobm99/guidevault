@@ -6,10 +6,9 @@ $pageDesc = "The most complete Crimson Desert guide. Combat mechanics, all puzzl
 // 2. Cargamos el header
 include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
-
+<div class="theme-crimson-desert">
   <header class="guide-hero">
     <div class="guide-hero-bg"></div>
-    <div class="guide-hero-pattern"></div>
 <div id="sparksContainer" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 5;"></div>    
     <div class="guide-hero-inner">
       <nav class="guide-hero-breadcrumb" aria-label="Breadcrumb">
@@ -393,7 +392,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
     </main>
   </div>
-
+</div>
 <script>
 // =======================================================
 // DATOS DEL BUSCADOR PARA CRIMSON DESERT
