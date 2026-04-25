@@ -375,3 +375,15 @@ ul, ol { list-style: none; }
         font-size: 1.15rem !important;
     }
 }
+/* Estilos de imagen de portada (Hero Background) */
+/* Fondo de la imagen exclusiva de Elden Ring */
+.theme-elden-ring .guide-hero-bg {
+    position: absolute;
+    inset: 0;
+    /* Oscurecemos un poco la imagen para que se lea el texto y resalte el neón */
+    background: 
+        linear-gradient(180deg, rgba(10, 10, 12, 0.4) 0%, rgba(10, 10, 12, 0.95) 100%), 
+        url('/elden-ring/img/elden-ring.webp') no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+}

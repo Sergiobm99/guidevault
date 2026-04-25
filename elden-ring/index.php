@@ -9,10 +9,12 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
 <div class="theme-elden-ring">
   <header class="guide-hero">
-    <div class="guide-hero-bg" style="background: linear-gradient(180deg, rgba(212, 175, 55, 0.08) 0%, var(--black) 100%);"></div>
+    <div class="guide-hero-bg" ></div>
+
     <div class="guide-hero-pattern"></div>
     <div id="sparksContainer" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 5;"></div>    
-    <div class="guide-hero-inner">
+    
+    <div class="guide-hero-inner" style="position: relative; z-index: 10;">
       <nav class="guide-hero-breadcrumb" aria-label="Breadcrumb">
           <a href="/">Home</a>
         <span class="guide-hero-breadcrumb-sep">/</span>
@@ -234,10 +236,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             <p>Masters of Glintstone Sorcery based in Liurnia. Allying with Ranni unlocks the game's most elaborate questline.</p>
           </div>
         </div>
-
-        <!--<div style="text-align: center; margin-top: 3rem;">
-            <a href="extras/interactive-map" class="btn btn-gold">Open Interactive World Map</a>
-        </div>-->
       </section>
 
       <section class="guide-section reveal" id="puzzles">

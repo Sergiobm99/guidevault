@@ -13,7 +13,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 ?>
 
 <div class="theme-elden-ring">
-    <header class="guide-hero" style="min-height: 45vh; background: linear-gradient(180deg, rgba(212, 175, 55, 0.15) 0%, #0a0a0a 100%), url('https://images.unsplash.com/photo-1699923835067-c6b2518f9733?q=80&w=1920&auto=format&fit=crop') center/cover;">
+    <header class="guide-hero" style="min-height: 45vh; background: linear-gradient(180deg, rgba(10,10,10,0.3) 0%, #0a0a0a 100%), url('https://images.unsplash.com/photo-1542359649-31e03cd4d909?w=1920&q=80') center/cover;">
         <div class="guide-hero-inner" style="text-align: center; padding: 0 2rem; position: relative; z-index: 2;">
             <span class="label" style="color: var(--gold); letter-spacing: 0.5em; display: block; margin-bottom: 1rem;">SURVIVAL 101</span>
             <h1 class="guide-hero-title" style="font-size: clamp(3rem, 5vw, 4.5rem); color: var(--gold); line-height: 1.1; text-shadow: 0 4px 20px rgba(0,0,0,0.8);">BEGINNER'S GUIDE</h1>
