@@ -323,12 +323,14 @@
 
 /* ── FILTER BAR ── */
 .filter-section {
-  background: var(--dark-1);
+  background: rgba(8, 8, 8, 0.1);
   border-bottom: 1px solid rgba(255,255,255,0.05);
   padding: 1.25rem 0;
   position: sticky;
   top: var(--nav-h);
   z-index: 100;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 30px rgb(0 0 0 / 25%);
 }
 
 .filter-inner {
@@ -370,6 +372,7 @@
   border: 1px solid transparent;
   cursor: pointer;
   transition: all 0.2s var(--ease);
+  
 }
 
 .filter-tab:hover {
