@@ -30,13 +30,43 @@
   pointer-events: none;
 }
 
+/* Definimos la variable de ángulo para la rotación */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* Creamos la animación continua */
+@keyframes travel-light {
+  0% { --angle: 0deg; }
+  100% { --angle: 360deg; }
+}
+
 .hero-lines::before {
   content: '';
   position: absolute;
   top: 15%; right: -5%;
   width: 55%; height: 70%;
-  border: 1px solid rgba(212, 168, 67, 0.06);
   transform: rotate(-8deg);
+  
+  /* En lugar de border, usamos padding (1px de grosor de la línea) */
+  padding: 1px;
+  
+  /* Degradado cónico que pinta la luz dorada y el resto casi transparente */
+  background: conic-gradient(from var(--angle), 
+    rgba(212, 168, 67, 0.02) 0%, 
+    rgba(212, 168, 67, 0.02) 80%, 
+    rgba(212, 168, 67, 0.4) 100%
+  );
+  
+  /* Máscara que "recorta" el centro para que solo se vea el borde exterior */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  
+  /* Animación de 8 segundos dando la vuelta */
+  animation: travel-light 8s linear infinite;
 }
 
 .hero-lines::after {
@@ -44,8 +74,23 @@
   position: absolute;
   top: 20%; right: 0%;
   width: 45%; height: 55%;
-  border: 1px solid rgba(212, 168, 67, 0.04);
   transform: rotate(-8deg);
+  
+  padding: 1px;
+  
+  /* La luz interior es un poco más suave */
+  background: conic-gradient(from var(--angle), 
+    rgba(212, 168, 67, 0.02) 0%, 
+    rgba(212, 168, 67, 0.02) 75%, 
+    rgba(212, 168, 67, 0.25) 100%
+  );
+  
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  
+  /* Animación más lenta y girando en sentido inverso */
+  animation: travel-light 12s linear infinite reverse;
 }
 
 .hero-inner {

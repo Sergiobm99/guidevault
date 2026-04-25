@@ -275,8 +275,8 @@ include 'header.php';
   </section>
 
 <?php 
-  $fxTheme = 'gold'; 
-  include $_SERVER['DOCUMENT_ROOT'] . '/crimson-desert/theme-fx.php'; 
+  
+  include $_SERVER['DOCUMENT_ROOT'] . '/gaming-fx.php';
 ?>
 
 <?php
