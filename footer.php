@@ -25,7 +25,7 @@ if (basename($_SERVER['PHP_SELF']) !== 'index.php'):
         <div class="support-card-icon">🅿️</div>
         <h3>Donate via PayPal</h3>
         <p>Any amount — no minimum. Every donation helps keep the guide updated with every new patch.</p>
-        <a href="https://www.paypal.com/donate" target="_blank" class="btn-paypal">💙 Donate with PayPal</a>
+        <a href="https://www.paypal.me/Sergiobm99" target="_blank" class="btn-paypal">💙 Donate with PayPal</a>
         <p style="margin-top:1rem;font-size:0.78rem;color:var(--text-muted)">One-time · No subscription required</p>
       </div>
 

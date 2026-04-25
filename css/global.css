@@ -87,8 +87,8 @@ ul, ol { list-style: none; }
 /* ── NAVIGATION ── */
 .site-nav {
   position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); z-index: 8000;
-  background: rgba(8, 8, 8, 0.96); border-bottom: 1px solid rgba(212, 168, 67, 0.1);
-  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  background: rgba(8, 8, 8, 0.1); border-bottom: 1px solid rgba(212, 168, 67, 0.05);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 0 30px rgb(0 0 0 / 25%);
   display: flex; align-items: center; padding: 0 2rem; gap: 2rem; transition: border-color 0.3s var(--ease);
 }
 .site-nav.scrolled { border-bottom-color: rgba(212, 168, 67, 0.25); }
