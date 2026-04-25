@@ -49,7 +49,7 @@ if (!isset($bodyClass)) {
   <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="c240c90b-957d-41a1-8b15-3bed8d01958a" defer></script>
 
   <meta property="og:title" content="<?php echo isset($pageTitle) ? $pageTitle : 'GuideVault — Complete Game Guides'; ?>">
-  <meta property="og:image" content="https://guidevault.online/img/SoloLogoguidevault.png">
+  <meta property="og:image" content="https://guidevault.online/img/Logoguidevault-bg.png">
   <meta property="og:url" content="https://guidevault.online<?php echo parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); ?>">
   <meta property="og:type" content="website">
 
@@ -63,7 +63,7 @@ if (!isset($bodyClass)) {
 </noscript>
   
   <link rel="canonical" href="https://guidevault.online<?php echo parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); ?>">
-  <link rel="icon" href="/img/SoloLogoguidevault.png" type="image/png">
+  <link rel="icon" href="/img/Logoguidevault-bg.png" type="image/png">
   
 <link rel="stylesheet" href="/css/global.css?v=15">
   <link rel="stylesheet" href="/css/guide.css?v=15" media="print" onload="this.media='all'">
@@ -81,9 +81,8 @@ if (!isset($bodyClass)) {
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="site-nav" id="site-nav">
     <a href="/index.php" class="logo-container" style="display: flex; align-items: center; text-decoration: none; gap: 12px;">
-      <img src="/img/SoloLogoguidevault.png" alt="GuideVault Logo" style="height: 40px; width: auto;">
+      <img src="/img/Logoguidevault-bg.png" style="height: 80px; width: auto;">
       <span style="font-family: 'Cinzel', serif !important; font-size: 1.25rem !important; font-weight: 700 !important; color: #c9a84c !important; letter-spacing: 2px !important; text-transform: uppercase !important; padding-top: 3px !important;">
-        GuideVault
       </span>
     </a>
     <ul class="nav-links">

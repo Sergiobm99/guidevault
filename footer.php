@@ -71,9 +71,8 @@ if (basename($_SERVER['PHP_SELF']) !== 'index.php'):
     <div class="footer-inner">
       <div class="footer-brand" style="display: flex; flex-direction: column; align-items: flex-start; gap: 15px;">
         <a href="/index.php" class="logo-container" style="display: flex; align-items: center; text-decoration: none; gap: 12px;">
-            <img src="/img/SoloLogoguidevault.png" alt="GuideVault Logo" style="height: 38px; width: auto;">
+            <img src="/img/Logoguidevault-bg.png" alt="GuideVault Logo" style="height: 80px; width: auto;">
             <span style="font-family: 'Cinzel', serif !important; font-size: 1.4rem !important; font-weight: 700 !important; color: #c9a84c !important; letter-spacing: 2px !important; text-transform: uppercase !important; line-height: 1;">
-                GuideVault
             </span>
         </a>
         <p style="color: #888; font-size: 0.9rem; line-height: 1.6; max-width: 300px; margin: 0;">
