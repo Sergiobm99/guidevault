@@ -180,7 +180,7 @@ include 'header.php';
           </div>
         </a>
 
-        <a href="" 
+        <a href="/elden-ring/index.php" 
            class="guide-card" 
            data-genres="soulslike action openworld">
           <div class="guide-card-thumb" style="background-image: linear-gradient(180deg, rgba(10,10,15,0.2) 0%, rgba(10,10,15,0.9) 100%), url('img/elden-ring-card-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
