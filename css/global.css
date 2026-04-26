@@ -252,7 +252,7 @@ ul, ol { list-style: none; }
     /* EFECTO CRISTAL EN EL MENÚ MÓVIL DESPLEGABLE */
     .site-nav .nav-links { 
         display: none; position: absolute; top: 100%; left: 0; width: 100%; 
-        background: rgba(10, 10, 12, 0.65); /* Transparente */
+        background: rgba(10, 10, 12, 0.90); /* Transparente */
         backdrop-filter: blur(12px) brightness(0.8);
         -webkit-backdrop-filter: blur(12px) brightness(0.8);
         flex-direction: column; align-items: center; padding: 1.5rem 0; 
