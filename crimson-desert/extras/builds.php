@@ -61,6 +61,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#synergies" style="color: var(--text-dim); transition: color 0.2s;">3. Skill Synergies</a></li>
             <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#calculator" style="color: var(--text-dim); transition: color 0.2s;">4. Build Planner</a></li>
             <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#early-skills" style="color: var(--text-dim); transition: color 0.2s;">5. Best Early-Game Skills</a></li>
+            <li class="guide-toc-item" style="margin-bottom: 0.5rem;">
+    <a href="#create-card" style="color: var(--text-dim); transition: color 0.2s;">6. Create Your Legend Card</a>
+</li>
         </ul>
     </aside>
 
@@ -403,7 +406,86 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 0;"><strong>Tree: Mercenary.</strong> Cinematic execution on stunned enemies that restores 15% of your health.</p>
           </div>
         </div>
+        <section class="guide-section reveal" id="create-card" style="margin-bottom: 4rem;">
+    <h2 class="guide-section-title" style="color: var(--gold); font-size: 2.2rem; margin-bottom: 1rem;">6. Create Your Legend Card</h2>
+    <p style="color: #ccc; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">
+        Showcase your build to the community! Customize your player name, build archetype, and selected gear to generate a high-quality shareable card.
+    </p>
+<div class="build-crafter-container theme-crimson-desert">
+    <div class="crafter-controls glass-panel">
+        <h3>Forge Your Build</h3>
+        
+        <div class="input-group">
+            <label for="playerName">Player Name</label>
+            <input type="text" id="playerName" value="Dark Vagabond" oninput="drawCard()">
+        </div>
 
+        <div class="input-group">
+            <label for="buildName">Build Name</label>
+            <input type="text" id="buildName" value="Shadow Assassin" oninput="drawCard()">
+        </div>
+
+       <div class="input-group">
+    <label for="mainWeapon">Main Weapon</label>
+    <select id="mainWeapon" onchange="drawCard()">
+        <option value="Bare Hands">-- Select Weapon --</option>
+        
+        <optgroup label="One-Handed Swords">
+            <option value="Sword of the Lord">Sword of the Lord</option>
+            <option value="Tauria Curved Sword">Tauria Curved Sword</option>
+            <option value="Hollow Visage">Hollow Visage</option>
+            <option value="Legionary's Gladius">Legionary's Gladius</option>
+            <option value="Melted Ambition">Melted Ambition</option>
+            <option value="Survivor's Solitude">Survivor's Solitude</option>
+            <option value="Acria Sword">Acria Sword</option>
+            <option value="Wolf's Fang">Wolf's Fang</option>
+            <option value="The Grove's Thorn">The Grove's Thorn</option>
+            <option value="Volono Sword">Volono Sword</option>
+        </optgroup>
+
+        <optgroup label="Two-Handed & Heavy">
+            <option value="Hwando">Hwando</option>
+            <option value="Soul Spear">Soul Spear</option>
+            <option value="Frozen Anguish">Frozen Anguish</option>
+            <option value="Vessel of Dark Pursuit">Vessel of Dark Pursuit</option>
+            <option value="Ignir">Ignir</option>
+            <option value="Righteous Verdict">Righteous Verdict</option>
+            <option value="Darkbringer">Darkbringer</option>
+            <option value="Mining Knuckledrill">Mining Knuckledrill</option>
+            <option value="Acorn Mace">Acorn Mace</option>
+        </optgroup>
+
+        <optgroup label="Daggers & Rapiers">
+            <option value="Goblin King's Treasure Dagger">Goblin King's Treasure Dagger</option>
+            <option value="Kylus Dagger">Kylus Dagger</option>
+            <option value="Fallen Kingdom's Rapier">Fallen Kingdom's Rapier</option>
+        </optgroup>
+
+        <optgroup label="Ranged & Magic">
+            <option value="Sorcerer's Staff">Sorcerer's Staff</option>
+            <option value="Nobleman's Bow">Nobleman's Bow</option>
+            <option value="Tommasoan Bow">Tommasoan Bow</option>
+            <option value="Sior Blaster">Sior Blaster (Pistol)</option>
+            <option value="Demenissian Hero's Musket">Demenissian Hero's Musket</option>
+            <option value="Eastern Witch's Fan">Eastern Witch's Fan</option>
+        </optgroup>
+
+    </select>
+</div>
+
+        <div class="input-group">
+            <label for="coreStat">Core Stat</label>
+            <input type="number" id="coreStat" value="99" min="1" max="99" oninput="drawCard()">
+        </div>
+
+        <button class="crafter-export-btn" onclick="downloadCard()">Download Card</button>
+    </div>
+
+    <div class="crafter-preview">
+        <canvas id="buildCard" width="400" height="500"></canvas>
+    </div>
+</div>
+</section>
         <div class="chapter-nav">
             <a href="/crimson-desert/extras/bestiary.php" style="color: var(--text-dim); text-decoration: none; font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">← Previous: Bestiary</a>
             <a href="/crimson-desert/extras/companions.php" class="btn btn-gold">Next: Companions →</a>
@@ -414,81 +496,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     </main>
   </div>
 
-<script>
-    function toggleAcc(id) {
-        const acc = document.getElementById(id);
-        if (acc) {
-            acc.classList.toggle('open');
-        }
-    }
-
-    const ITEMS = {
-        // Armas
-        w_rusty: { atk: 15, def: 0, crit: 0, spd: 10 },
-        w_shadow: { atk: 42, def: 0, crit: 5, spd: 0 },
-        w_frost: { atk: 85, def: 0, crit: -5, spd: -15 },
-        w_justice: { atk: 120, def: 10, crit: 0, spd: -20 },
-        w_bow: { atk: 60, def: 0, crit: 15, spd: 0 },
-        w_dual: { atk: 95, def: -10, crit: 20, spd: 5 },
-        w_gauntlets: { atk: 50, def: 0, crit: 10, spd: 15 },
-        w_storm: { atk: 75, def: 0, crit: 5, spd: 5 },
-        w_acid: { atk: 35, def: 0, crit: 0, spd: 0 },
-        w_mace: { atk: 60, def: 40, crit: 0, spd: -10 },
-        w_scythe: { atk: 110, def: 0, crit: 20, spd: -10 },
-        
-        // Armaduras
-        a_merc: { atk: 0, def: 10, crit: 0, spd: 5 },
-        a_assassin: { atk: 0, def: 25, crit: 15, spd: 10 },
-        a_commander: { atk: 5, def: 85, crit: 0, spd: -5 },
-        a_scholar: { atk: 0, def: 20, crit: 5, spd: 0 },
-        a_scorch: { atk: 15, def: 35, crit: 0, spd: 0 },
-        a_brawler: { atk: 0, def: 30, crit: 5, spd: 10 },
-        a_tempest: { atk: 10, def: 50, crit: 0, spd: 0 },
-        a_alchemist: { atk: 0, def: 40, crit: 0, spd: 0 },
-        a_fortress: { atk: -10, def: 120, crit: 0, spd: -20 },
-        a_dragon: { atk: 20, def: 150, crit: 5, spd: -10 },
-
-        // Reliquias
-        r_wolf: { atk: 10, def: 0, crit: 0, spd: 5 },
-        r_bear: { atk: 0, def: 20, crit: 0, spd: 0 },
-        r_abyss: { atk: 25, def: -10, crit: 0, spd: 0 },
-        r_arrows: { atk: 20, def: 0, crit: 0, spd: 0 },
-        r_gladiator: { atk: 5, def: 0, crit: 10, spd: 0 },
-        r_rune: { atk: 15, def: 0, crit: 5, spd: 0 },
-        r_horn: { atk: 5, def: 15, crit: 0, spd: 0 },
-        r_bulwark: { atk: 0, def: 30, crit: -5, spd: -5 },
-        r_origin: { atk: 30, def: 0, crit: 15, spd: 5 }
-    };
-
-    const BASE_STATS = { atk: 5, def: 5, crit: 5, spd: 100 };
-
-    function calculateBuild() {
-        const weaponId = document.getElementById('calc-weapon').value;
-        const armorId = document.getElementById('calc-armor').value;
-        const accId = document.getElementById('calc-acc').value;
-
-        let totalAtk = BASE_STATS.atk;
-        let totalDef = BASE_STATS.def;
-        let totalCrit = BASE_STATS.crit;
-        let totalSpd = BASE_STATS.spd;
-
-        if (weaponId !== 'none' && ITEMS[weaponId]) { totalAtk += ITEMS[weaponId].atk; totalDef += ITEMS[weaponId].def; totalCrit += ITEMS[weaponId].crit; totalSpd += ITEMS[weaponId].spd; }
-        if (armorId !== 'none' && ITEMS[armorId]) { totalAtk += ITEMS[armorId].atk; totalDef += ITEMS[armorId].def; totalCrit += ITEMS[armorId].crit; totalSpd += ITEMS[armorId].spd; }
-        if (accId !== 'none' && ITEMS[accId]) { totalAtk += ITEMS[accId].atk; totalDef += ITEMS[accId].def; totalCrit += ITEMS[accId].crit; totalSpd += ITEMS[accId].spd; }
-
-        document.getElementById('res-atk').innerText = totalAtk;
-        document.getElementById('res-def').innerText = totalDef;
-        document.getElementById('res-crit').innerText = totalCrit + '%';
-        document.getElementById('res-spd').innerText = totalSpd + '%';
-    }
-
-    document.getElementById('calc-weapon').addEventListener('change', calculateBuild);
-    document.getElementById('calc-armor').addEventListener('change', calculateBuild);
-    document.getElementById('calc-acc').addEventListener('change', calculateBuild);
-
-    calculateBuild();
-</script>
-
+<script src="/js/build-crafter.js"></script>
 <?php 
 include $_SERVER['DOCUMENT_ROOT'] . '/footer.php'; 
 ?>

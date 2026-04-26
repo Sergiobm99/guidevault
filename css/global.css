@@ -451,3 +451,83 @@ ul, ol { list-style: none; }
     from { stroke-dashoffset: 300; }
     to { stroke-dashoffset: 0; }
 }
+/* Contenedor principal del Crafter */
+.build-crafter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+}
+
+/* Panel de cristal oscuro */
+.glass-panel {
+    background: rgba(15, 15, 18, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 175, 55, 0.2); /* Borde dorado sutil */
+    border-radius: 12px;
+    padding: 2rem;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    color: #d4af37; /* Dorado */
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.input-group input, 
+.input-group select {
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus, 
+.input-group select:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+.crafter-export-btn { 
+    width: 100%; 
+    padding: 15px; 
+    background: linear-gradient(45deg, #8a6d22, #d4af37); 
+    color: #000; 
+    font-weight: 700; 
+    font-size: 1.1rem; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    transition: transform 0.2s, box-shadow 0.2s; 
+    margin-top: 20px; 
+    font-family: 'Rajdhani', sans-serif; 
+    letter-spacing: 1px; 
+}
+.crafter-export-btn:hover { 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4); 
+}
+
+.crafter-preview canvas {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
