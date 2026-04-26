@@ -800,3 +800,39 @@
   .newsletter-form { flex-direction: column; }
   .guide-card-soon { display: none; }
 }
+/* ============================================================
+   AJUSTES PARA MÓVILES (Filtros más compactos)
+   ============================================================ */
+@media (max-width: 768px) {
+    /* 1. Reducimos el espacio vertical a la mitad */
+    .filter-section {
+        padding: 0.6rem 0; 
+    }
+
+    /* 2. Juntamos un poco más los elementos */
+    .filter-inner {
+        padding: 0 1rem;
+        gap: 0.5rem;
+    }
+
+    /* 3. Hacemos que los botones sean un pelín más pequeños */
+    .filter-tab {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.7rem;
+        white-space: nowrap; /* Evita que el texto de un botón se parta en dos líneas */
+    }
+
+    /* 4. TRUCO PRO: En lugar de apilarse hacia abajo, permitimos scroll horizontal */
+    .filter-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto; /* Permite deslizar con el dedo de lado a lado */
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch; /* Scroll suave en iPhone */
+        padding-bottom: 2px; /* Evita que se corte la sombra/borde inferior */
+    }
+    
+    /* Ocultamos la barrita de scroll para que quede elegante */
+    .filter-tabs::-webkit-scrollbar {
+        display: none;
+    }
+}
