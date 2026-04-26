@@ -34,7 +34,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     .result-item:last-child { border-bottom: none; }
     .result-label { font-weight: 600; color: var(--text-dim, #aaa); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
     .result-value { font-size: 1.4rem; font-weight: 700; }
-    .val-atk { color: #e74c3c; } .val-def { color: #3498db; } .val-crit { color: #f1c40f; }
+    .val-atk { color: #e74c3c; } .val-def { color: #3498db; } .val-crit { color: #f1c40f; } .val-spd { color: #2ecc71; }
 </style>
 
   <header class="guide-hero" style="min-height: 40vh; padding-top: calc(var(--nav-h) + 2rem);">
@@ -58,8 +58,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <ul class="guide-toc-list" style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 1rem;">
             <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#branches" style="color: var(--text-dim); transition: color 0.2s;">1. Axiom Force Branches</a></li>
             <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#endgame-builds" style="color: var(--text-dim); transition: color 0.2s;">2. Top 10 Endgame Builds</a></li>
-            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#calculator" style="color: var(--text-dim); transition: color 0.2s;">3. Build Planner</a></li>
-            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#early-skills" style="color: var(--text-dim); transition: color 0.2s;">4. Best Early-Game Skills</a></li>
+            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#synergies" style="color: var(--text-dim); transition: color 0.2s;">3. Skill Synergies</a></li>
+            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#calculator" style="color: var(--text-dim); transition: color 0.2s;">4. Build Planner</a></li>
+            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#early-skills" style="color: var(--text-dim); transition: color 0.2s;">5. Best Early-Game Skills</a></li>
         </ul>
     </aside>
 
@@ -72,7 +73,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         </div>
 
         <h2 class="guide-section-title" style="color: var(--gold); font-size: 2.2rem; margin-bottom: 1rem;">1. The Axiom Force Branches</h2>
-        <p style="color: #ccc; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">Kliff earns Skill Points (SP) by leveling up, clearing Abyss Rifts, and finding hidden Meditation Shrines.</p>
+        <p style="color: #ccc; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">Kliff earns Skill Points (SP) by leveling up, clearing Abyss Rifts, and finding hidden Meditation Shrines scattered across Pywel.</p>
 
         <div class="guide-table-wrap">
           <table class="guide-table" style="background: var(--dark-2);">
@@ -80,24 +81,28 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <tr style="border-bottom: 2px solid var(--gold); color: var(--gold);">
                 <th style="padding: 1rem;">Branch</th>
                 <th style="padding: 1rem;">Focus</th>
+                <th style="padding: 1rem;">Core Mechanic</th>
                 <th style="padding: 1rem;">Ultimate Skill (Level 30)</th>
               </tr>
             </thead>
             <tbody>
               <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); color: #ccc;">
                 <td style="padding: 1rem;"><strong>Mercenary (Red)</strong></td>
-                <td style="padding: 1rem;">Physical Damage, Parrying, Combos.</td>
-                <td style="padding: 1rem;"><strong>Executioner's Trance:</strong> Heavy attacks cannot be interrupted.</td>
+                <td style="padding: 1rem;">Physical Damage, Combos.</td>
+                <td style="padding: 1rem;">Generates <em>Fury</em> on hit.</td>
+                <td style="padding: 1rem;"><strong>Executioner's Trance:</strong> Heavy attacks cannot be interrupted and heal for 10% damage dealt.</td>
               </tr>
               <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); color: #ccc;">
                 <td style="padding: 1rem;"><strong>Survivor (Green)</strong></td>
-                <td style="padding: 1rem;">Stamina Regen, Stealth, Commands.</td>
-                <td style="padding: 1rem;"><strong>Greymane Leader:</strong> Tactical Commands cost no stamina.</td>
+                <td style="padding: 1rem;">Stamina Regen, Stealth, Traps.</td>
+                <td style="padding: 1rem;">Enhances Dodge and Movement.</td>
+                <td style="padding: 1rem;"><strong>Greymane Leader:</strong> Tactical Commands cost no stamina, and allies gain +30% attack speed.</td>
               </tr>
               <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); color: #ccc;">
                 <td style="padding: 1rem;"><strong>Abyss (Purple)</strong></td>
-                <td style="padding: 1rem;">Elemental Magic, Telekinesis, CC.</td>
-                <td style="padding: 1rem;"><strong>Void Singularity:</strong> Create a massive damage black hole.</td>
+                <td style="padding: 1rem;">Elemental Magic, CC, Telekinesis.</td>
+                <td style="padding: 1rem;">Uses <em>Axiom Gauge</em> instead of Stamina.</td>
+                <td style="padding: 1rem;"><strong>Void Singularity:</strong> Create a massive black hole that pulls in enemies and detonates.</td>
               </tr>
             </tbody>
           </table>
@@ -106,7 +111,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
       <section class="guide-section reveal" id="endgame-builds" style="margin-bottom: 4rem;">
         <h2 class="guide-section-title" style="color: var(--gold); font-size: 2.2rem; margin-bottom: 1rem;">2. Top 10 Endgame Builds</h2>
-        <p style="color: #ccc; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">From silent assassins to battlefield commanders, here are the most powerful archetypes in Pywel.</p>
+        <p style="color: #ccc; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">From silent assassins to battlefield commanders, here are the most powerful archetypes in Pywel. Each build includes the optimal skill rotation.</p>
 
         <div class="guide-accordion open reveal" id="acc-build-1" style="background: var(--dark-2); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; margin-bottom: 1rem;">
           <button class="guide-accordion-trigger" onclick="toggleAcc('acc-build-1')" style="width: 100%; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: var(--gold); border-bottom: 1px solid rgba(255,255,255,0.05);">
@@ -115,12 +120,15 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           </button>
           <div class="guide-accordion-body" style="max-height:800px">
             <div class="guide-accordion-inner" style="padding: 1.5rem;">
-              <p style="color: #ccc; margin-bottom: 1rem;">Eliminate high-value targets before the fight begins.</p>
-              <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
+              <p style="color: #ccc; margin-bottom: 1rem;">Eliminate high-value targets before the fight begins. Focuses on insane burst damage from behind.</p>
+              <ul style="list-style: square; padding-left: 1.5rem; color: #ccc; margin-bottom: 1rem;">
                 <li><strong>Weapon:</strong> Corsair's Cutlass</li>
                 <li><strong>Armor:</strong> Assassin of Pailune</li>
-                <li><strong>Skills:</strong> Silent Step, Shadow Strike, Abyss Cloak.</li>
+                <li><strong>Core Skills:</strong> Silent Step, Shadow Strike, Abyss Cloak.</li>
               </ul>
+              <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0;">
+                <p style="margin: 0; font-size: 0.9rem; color: #aaa;"><strong>Combat Rotation:</strong> Activate <em>Abyss Cloak</em> ➔ Sneak behind strongest enemy ➔ <em>Shadow Strike</em> (Guaranteed Crit) ➔ <em>Smoke Bomb</em> to drop aggro.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -133,11 +141,14 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <div class="guide-accordion-body">
             <div class="guide-accordion-inner" style="padding: 1.5rem;">
               <p style="color: #ccc; margin-bottom: 1rem;">Stand your ground, trade hits, and never die.</p>
-              <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
-                <li><strong>Weapon:</strong> The King's Justice</li>
+              <ul style="list-style: square; padding-left: 1.5rem; color: #ccc; margin-bottom: 1rem;">
+                <li><strong>Weapon:</strong> The King's Justice (Greatsword)</li>
                 <li><strong>Armor:</strong> Greymane Commander Set</li>
-                <li><strong>Skills:</strong> Executioner's Trance, Iron Lungs, Axiom Shield.</li>
+                <li><strong>Core Skills:</strong> Executioner's Trance, Iron Lungs, Axiom Shield.</li>
               </ul>
+              <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-left: 3px solid #e74c3c; border-radius: 0 4px 4px 0;">
+                <p style="margin: 0; font-size: 0.9rem; color: #aaa;"><strong>Combat Rotation:</strong> Cast <em>Axiom Shield</em> ➔ Wade into enemies ➔ Charge <em>Heavy Smash</em> (Uninterruptible via Trance) ➔ Heal from the massive AoE damage.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -150,11 +161,14 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <div class="guide-accordion-body">
             <div class="guide-accordion-inner" style="padding: 1.5rem;">
               <p style="color: #ccc; margin-bottom: 1rem;">Control the battlefield keeping enemies at a distance.</p>
-              <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
+              <ul style="list-style: square; padding-left: 1.5rem; color: #ccc; margin-bottom: 1rem;">
                 <li><strong>Weapon:</strong> Blade of the Origin</li>
                 <li><strong>Armor:</strong> Scholar of the Void Set</li>
-                <li><strong>Skills:</strong> Void Singularity, Telekinetic Throw, Elemental Imbue.</li>
+                <li><strong>Core Skills:</strong> Void Singularity, Telekinetic Throw, Elemental Imbue.</li>
               </ul>
+              <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-left: 3px solid #9b59b6; border-radius: 0 4px 4px 0;">
+                <p style="margin: 0; font-size: 0.9rem; color: #aaa;"><strong>Combat Rotation:</strong> Cast <em>Void Singularity</em> to group enemies ➔ Use <em>Telekinetic Throw</em> on explosive barrels into the singularity ➔ Detonate.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -170,7 +184,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li><strong>Weapon:</strong> Explosive Longbow</li>
                 <li><strong>Armor:</strong> Scorchflame Armor Set</li>
-                <li><strong>Skills:</strong> Infinite Arrows, Explosive Arrows, Evasive Roll.</li>
+                <li><strong>Core Skills:</strong> Infinite Arrows, Explosive Arrows, Evasive Roll.</li>
               </ul>
             </div>
           </div>
@@ -187,7 +201,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li><strong>Weapon:</strong> Dual Chillfallen Swords</li>
                 <li><strong>Armor:</strong> Frostcursed Plate Set</li>
-                <li><strong>Skills:</strong> Dual Wielding Mastery, Wind Slash, Turning Slash.</li>
+                <li><strong>Core Skills:</strong> Dual Wielding Mastery, Wind Slash, Turning Slash.</li>
               </ul>
             </div>
           </div>
@@ -204,8 +218,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li><strong>Weapon:</strong> Mercenary Spiked Gauntlets</li>
                 <li><strong>Armor:</strong> Brawler's Leather Wraps</li>
-                <li><strong>Skills:</strong> Suplex, Disarm, Axiom Shockwave.</li>
-                <li><strong>Playstyle:</strong> Close the gap, stun, and execute spectacular grabs that damage surrounding enemies.</li>
+                <li><strong>Core Skills:</strong> Suplex, Disarm, Axiom Shockwave.</li>
               </ul>
             </div>
           </div>
@@ -222,8 +235,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li><strong>Weapon:</strong> Stormcaller Longsword</li>
                 <li><strong>Armor:</strong> Tempest Battleplate</li>
-                <li><strong>Skills:</strong> Lightning Dash, Elemental Infusion, Arcane Parry.</li>
-                <li><strong>Playstyle:</strong> Buff your sword with lightning, dash through enemies to apply status effects, and detonate them.</li>
+                <li><strong>Core Skills:</strong> Lightning Dash, Elemental Infusion, Arcane Parry.</li>
               </ul>
             </div>
           </div>
@@ -240,8 +252,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li><strong>Weapon:</strong> Acid-Laced Blade</li>
                 <li><strong>Armor:</strong> Alchemist's Trench Coat</li>
-                <li><strong>Skills:</strong> Crafting Mastery, Toxic Cloud, Decoy.</li>
-                <li><strong>Playstyle:</strong> Lure enemies into choke points filled with explosive barrels and poison traps.</li>
+                <li><strong>Core Skills:</strong> Crafting Mastery, Toxic Cloud, Decoy.</li>
               </ul>
             </div>
           </div>
@@ -258,8 +269,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li><strong>Weapon:</strong> Commander's Broadsword</li>
                 <li><strong>Armor:</strong> Greymane Tactician Set</li>
-                <li><strong>Skills:</strong> Rallying Cry, Squad Formations, Greymane Leader.</li>
-                <li><strong>Playstyle:</strong> Buff your allies, command archers to fire volleys, and shield your frontliners.</li>
+                <li><strong>Core Skills:</strong> Rallying Cry, Squad Formations, Greymane Leader.</li>
               </ul>
             </div>
           </div>
@@ -276,16 +286,34 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li><strong>Weapon:</strong> Vanguard Mace & Tower Shield</li>
                 <li><strong>Armor:</strong> Fortress Plate</li>
-                <li><strong>Skills:</strong> Perfect Block, Shield Bash, Retaliation.</li>
-                <li><strong>Playstyle:</strong> Wait for the enemy to strike, execute a perfect block to break their posture, and punish with a critical counter.</li>
+                <li><strong>Core Skills:</strong> Perfect Block, Shield Bash, Retaliation.</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
+      <section class="guide-section reveal" id="synergies" style="margin-bottom: 4rem;">
+        <h2 class="guide-section-title" style="color: var(--gold); font-size: 2.2rem; margin-bottom: 1rem;">3. Skill Synergies</h2>
+        <p style="color: #ccc; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">Combining skills from different branches creates devastating hidden effects.</p>
+        <div class="guide-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+          <div class="guide-card-item" style="background: var(--dark-2); padding: 1.5rem; border-left: 4px solid #3498db;">
+            <h4 style="color: #3498db; margin-top: 0;">Shatterstorm (Ice + Heavy)</h4>
+            <p style="font-size: 0.9rem; color: #aaa;">Freeze an enemy with <em>Frost Imbue</em>, then hit them with <em>Executioner's Trance</em>. They instantly shatter, dealing 300% physical damage in an AoE.</p>
+          </div>
+          <div class="guide-card-item" style="background: var(--dark-2); padding: 1.5rem; border-left: 4px solid #9b59b6;">
+            <h4 style="color: #9b59b6; margin-top: 0;">Phantom Grapple (Axiom + Stealth)</h4>
+            <p style="font-size: 0.9rem; color: #aaa;">Use <em>Axiom Pull</em> while invisible from <em>Abyss Cloak</em>. You will instantly teleport behind the pulled enemy for a free lethal execution.</p>
+          </div>
+          <div class="guide-card-item" style="background: var(--dark-2); padding: 1.5rem; border-left: 4px solid #e74c3c;">
+            <h4 style="color: #e74c3c; margin-top: 0;">Volatile Command (Fire + Mercenaries)</h4>
+            <p style="font-size: 0.9rem; color: #aaa;">Cast <em>Toxic Cloud</em>, then use <em>Rallying Cry</em>. Your archer companions will fire flaming arrows, instantly igniting the cloud into a massive explosion.</p>
+          </div>
+        </div>
+      </section>
+
       <section class="guide-section reveal" id="calculator" style="margin-bottom: 4rem;">
-        <h2 class="guide-section-title" style="color: var(--gold); font-size: 2.2rem; margin-bottom: 1rem;">3. Interactive Build Planner</h2>
+        <h2 class="guide-section-title" style="color: var(--gold); font-size: 2.2rem; margin-bottom: 1rem;">4. Interactive Build Planner</h2>
         <p style="color: #ccc; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">Test your own equipment combinations to see how they affect Kliff's overall combat stats.</p>
 
         <div class="build-calculator">
@@ -295,16 +323,17 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                         <label>⚔️ Primary Weapon</label>
                         <select id="calc-weapon">
                             <option value="none">-- Unequipped (Fists: ATK 5) --</option>
-                            <option value="w_rusty">Rusty Greymane Dagger (ATK: 15)</option>
+                            <option value="w_rusty">Rusty Greymane Dagger (ATK: 15, SPD: +10%)</option>
                             <option value="w_shadow">Corsair's Cutlass (ATK: 42, CRIT: +5%)</option>
-                            <option value="w_frost">Frostbane Greatsword (ATK: 85, CRIT: -5%)</option>
+                            <option value="w_frost">Frostbane Greatsword (ATK: 85, SPD: -15%)</option>
                             <option value="w_justice">The King's Justice (ATK: 120, DEF: +10)</option>
                             <option value="w_bow">Explosive Longbow (ATK: 60, CRIT: +15%)</option>
-                            <option value="w_dual">Dual Chillfallen Swords (ATK: 95, DEF: -10)</option>
+                            <option value="w_dual">Dual Chillfallen Swords (ATK: 95, SPD: +5%)</option>
                             <option value="w_gauntlets">Mercenary Gauntlets (ATK: 50, CRIT: +10%)</option>
                             <option value="w_storm">Stormcaller Longsword (ATK: 75, Mag: +20)</option>
                             <option value="w_acid">Acid-Laced Blade (ATK: 35, DoT: +30)</option>
                             <option value="w_mace">Vanguard Mace & Shield (ATK: 60, DEF: +40)</option>
+                            <option value="w_scythe" style="color: #9b59b6;">Abyssal Scythe (ATK: 110, CRIT: +20%, SPD: -10%)</option>
                         </select>
                     </div>
 
@@ -312,7 +341,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                         <label>🛡️ Armor Set</label>
                         <select id="calc-armor">
                             <option value="none">-- Unequipped --</option>
-                            <option value="a_merc">Mercenary Rags (DEF: 10)</option>
+                            <option value="a_merc">Mercenary Rags (DEF: 10, SPD: +5%)</option>
                             <option value="a_assassin">Assassin of Pailune (DEF: 25, CRIT: +15%)</option>
                             <option value="a_commander">Greymane Commander Set (DEF: 85, ATK: +5)</option>
                             <option value="a_scholar">Scholar of the Void (DEF: 20, CRIT: +5%)</option>
@@ -320,7 +349,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                             <option value="a_brawler">Brawler's Wraps (DEF: 30, CRIT: +5%)</option>
                             <option value="a_tempest">Tempest Battleplate (DEF: 50, ATK: +10)</option>
                             <option value="a_alchemist">Alchemist's Coat (DEF: 40)</option>
-                            <option value="a_fortress">Fortress Plate (DEF: 120, ATK: -10)</option>
+                            <option value="a_fortress">Fortress Plate (DEF: 120, SPD: -20%)</option>
+                            <option value="a_dragon" style="color: var(--gold);">Dragon-scale Mail (DEF: 150, ATK: +20)</option>
                         </select>
                     </div>
 
@@ -328,7 +358,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                         <label>💍 Accessory / Relic</label>
                         <select id="calc-acc">
                             <option value="none">-- Empty Slot --</option>
-                            <option value="r_wolf">Wolf Tooth Pendant (ATK: +10)</option>
+                            <option value="r_wolf">Wolf Tooth Pendant (ATK: +10, SPD: +5%)</option>
                             <option value="r_bear">Black Bear Crest (DEF: +20)</option>
                             <option value="r_abyss">Abyss Memory Shard (ATK: +25, DEF: -10)</option>
                             <option value="r_arrows">Infinite Arrow Quiver (ATK: +20)</option>
@@ -336,6 +366,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                             <option value="r_rune">Lightning Rune (ATK: +15, CRIT: +5%)</option>
                             <option value="r_horn">Horn of the Vanguard (DEF: +15, ATK: +5)</option>
                             <option value="r_bulwark">Bulwark Ring (DEF: +30, CRIT: -5%)</option>
+                            <option value="r_origin" style="color: #9b59b6;">Core of the Origin (ATK: +30, CRIT: +15%)</option>
                         </select>
                     </div>
                 </div>
@@ -344,14 +375,15 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                     <h4 style="margin-top: 0; color: var(--accent, #D4AF37); text-align: center; border-bottom: 1px solid var(--border-color, #333); padding-bottom: 10px; font-family: var(--font-display);">Total Stats</h4>
                     <div class="result-item"><span class="result-label">Attack (ATK)</span><span class="result-value val-atk" id="res-atk" style="color: #e74c3c;">5</span></div>
                     <div class="result-item"><span class="result-label">Defense (DEF)</span><span class="result-value val-def" id="res-def" style="color: #3498db;">5</span></div>
-                    <div class="result-item" style="border-bottom: none;"><span class="result-label">Crit Chance</span><span class="result-value val-crit" id="res-crit" style="color: #f1c40f;">5%</span></div>
+                    <div class="result-item"><span class="result-label">Crit Chance</span><span class="result-value val-crit" id="res-crit" style="color: #f1c40f;">5%</span></div>
+                    <div class="result-item" style="border-bottom: none;"><span class="result-label">Attack Speed</span><span class="result-value val-spd" id="res-spd" style="color: #2ecc71;">100%</span></div>
                 </div>
             </div>
         </div>
       </section>
 
       <section class="guide-section reveal" id="early-skills" style="margin-bottom: 4rem;">
-        <h2 class="guide-section-title" style="color: var(--gold); font-size: 2.2rem; margin-bottom: 1rem;">4. Best Early-Game Skills to Unlock</h2>
+        <h2 class="guide-section-title" style="color: var(--gold); font-size: 2.2rem; margin-bottom: 1rem;">5. Best Early-Game Skills to Unlock</h2>
         <p style="color: #ccc; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">Spend your first 5 Skill Points on these to make Chapters 1 to 3 a breeze:</p>
         
         <div class="guide-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
@@ -392,40 +424,43 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
     const ITEMS = {
         // Armas
-        w_rusty: { atk: 15, def: 0, crit: 0 },
-        w_shadow: { atk: 42, def: 0, crit: 5 },
-        w_frost: { atk: 85, def: 0, crit: -5 },
-        w_justice: { atk: 120, def: 10, crit: 0 },
-        w_bow: { atk: 60, def: 0, crit: 15 },
-        w_dual: { atk: 95, def: -10, crit: 20 },
-        w_gauntlets: { atk: 50, def: 0, crit: 10 },
-        w_storm: { atk: 75, def: 0, crit: 5 },
-        w_acid: { atk: 35, def: 0, crit: 0 },
-        w_mace: { atk: 60, def: 40, crit: 0 },
+        w_rusty: { atk: 15, def: 0, crit: 0, spd: 10 },
+        w_shadow: { atk: 42, def: 0, crit: 5, spd: 0 },
+        w_frost: { atk: 85, def: 0, crit: -5, spd: -15 },
+        w_justice: { atk: 120, def: 10, crit: 0, spd: -20 },
+        w_bow: { atk: 60, def: 0, crit: 15, spd: 0 },
+        w_dual: { atk: 95, def: -10, crit: 20, spd: 5 },
+        w_gauntlets: { atk: 50, def: 0, crit: 10, spd: 15 },
+        w_storm: { atk: 75, def: 0, crit: 5, spd: 5 },
+        w_acid: { atk: 35, def: 0, crit: 0, spd: 0 },
+        w_mace: { atk: 60, def: 40, crit: 0, spd: -10 },
+        w_scythe: { atk: 110, def: 0, crit: 20, spd: -10 },
         
         // Armaduras
-        a_merc: { atk: 0, def: 10, crit: 0 },
-        a_assassin: { atk: 0, def: 25, crit: 15 },
-        a_commander: { atk: 5, def: 85, crit: 0 },
-        a_scholar: { atk: 0, def: 20, crit: 5 },
-        a_scorch: { atk: 15, def: 35, crit: 0 },
-        a_brawler: { atk: 0, def: 30, crit: 5 },
-        a_tempest: { atk: 10, def: 50, crit: 0 },
-        a_alchemist: { atk: 0, def: 40, crit: 0 },
-        a_fortress: { atk: -10, def: 120, crit: 0 },
+        a_merc: { atk: 0, def: 10, crit: 0, spd: 5 },
+        a_assassin: { atk: 0, def: 25, crit: 15, spd: 10 },
+        a_commander: { atk: 5, def: 85, crit: 0, spd: -5 },
+        a_scholar: { atk: 0, def: 20, crit: 5, spd: 0 },
+        a_scorch: { atk: 15, def: 35, crit: 0, spd: 0 },
+        a_brawler: { atk: 0, def: 30, crit: 5, spd: 10 },
+        a_tempest: { atk: 10, def: 50, crit: 0, spd: 0 },
+        a_alchemist: { atk: 0, def: 40, crit: 0, spd: 0 },
+        a_fortress: { atk: -10, def: 120, crit: 0, spd: -20 },
+        a_dragon: { atk: 20, def: 150, crit: 5, spd: -10 },
 
         // Reliquias
-        r_wolf: { atk: 10, def: 0, crit: 0 },
-        r_bear: { atk: 0, def: 20, crit: 0 },
-        r_abyss: { atk: 25, def: -10, crit: 0 },
-        r_arrows: { atk: 20, def: 0, crit: 0 },
-        r_gladiator: { atk: 5, def: 0, crit: 10 },
-        r_rune: { atk: 15, def: 0, crit: 5 },
-        r_horn: { atk: 5, def: 15, crit: 0 },
-        r_bulwark: { atk: 0, def: 30, crit: -5 }
+        r_wolf: { atk: 10, def: 0, crit: 0, spd: 5 },
+        r_bear: { atk: 0, def: 20, crit: 0, spd: 0 },
+        r_abyss: { atk: 25, def: -10, crit: 0, spd: 0 },
+        r_arrows: { atk: 20, def: 0, crit: 0, spd: 0 },
+        r_gladiator: { atk: 5, def: 0, crit: 10, spd: 0 },
+        r_rune: { atk: 15, def: 0, crit: 5, spd: 0 },
+        r_horn: { atk: 5, def: 15, crit: 0, spd: 0 },
+        r_bulwark: { atk: 0, def: 30, crit: -5, spd: -5 },
+        r_origin: { atk: 30, def: 0, crit: 15, spd: 5 }
     };
 
-    const BASE_STATS = { atk: 5, def: 5, crit: 5 }; // Atk base ajustado a puños
+    const BASE_STATS = { atk: 5, def: 5, crit: 5, spd: 100 };
 
     function calculateBuild() {
         const weaponId = document.getElementById('calc-weapon').value;
@@ -435,14 +470,16 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         let totalAtk = BASE_STATS.atk;
         let totalDef = BASE_STATS.def;
         let totalCrit = BASE_STATS.crit;
+        let totalSpd = BASE_STATS.spd;
 
-        if (weaponId !== 'none' && ITEMS[weaponId]) { totalAtk += ITEMS[weaponId].atk; totalDef += ITEMS[weaponId].def; totalCrit += ITEMS[weaponId].crit; }
-        if (armorId !== 'none' && ITEMS[armorId]) { totalAtk += ITEMS[armorId].atk; totalDef += ITEMS[armorId].def; totalCrit += ITEMS[armorId].crit; }
-        if (accId !== 'none' && ITEMS[accId]) { totalAtk += ITEMS[accId].atk; totalDef += ITEMS[accId].def; totalCrit += ITEMS[accId].crit; }
+        if (weaponId !== 'none' && ITEMS[weaponId]) { totalAtk += ITEMS[weaponId].atk; totalDef += ITEMS[weaponId].def; totalCrit += ITEMS[weaponId].crit; totalSpd += ITEMS[weaponId].spd; }
+        if (armorId !== 'none' && ITEMS[armorId]) { totalAtk += ITEMS[armorId].atk; totalDef += ITEMS[armorId].def; totalCrit += ITEMS[armorId].crit; totalSpd += ITEMS[armorId].spd; }
+        if (accId !== 'none' && ITEMS[accId]) { totalAtk += ITEMS[accId].atk; totalDef += ITEMS[accId].def; totalCrit += ITEMS[accId].crit; totalSpd += ITEMS[accId].spd; }
 
         document.getElementById('res-atk').innerText = totalAtk;
         document.getElementById('res-def').innerText = totalDef;
         document.getElementById('res-crit').innerText = totalCrit + '%';
+        document.getElementById('res-spd').innerText = totalSpd + '%';
     }
 
     document.getElementById('calc-weapon').addEventListener('change', calculateBuild);

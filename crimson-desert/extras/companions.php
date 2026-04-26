@@ -36,10 +36,12 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#oongka" style="color: var(--text-dim); transition: color 0.2s;">2. Oongka (The Shieldbreaker)</a></li>
             <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#yann" style="color: var(--text-dim); transition: color 0.2s;">3. Yann (The Sharpshooter)</a></li>
             <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#naira" style="color: var(--text-dim); transition: color 0.2s;">4. Naira (The Alchemist)</a></li>
-            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#gifts" style="color: var(--text-dim); transition: color 0.2s;">5. Gifting & Affinity</a></li>
-            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#conflict" style="color: var(--text-dim); transition: color 0.2s;">6. Conflict & Disapproval</a></li>
-            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#rewards" style="color: var(--text-dim); transition: color 0.2s;">7. Max Rapport Rewards</a></li>
-            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#synergy" style="color: var(--text-dim); transition: color 0.2s;">8. Team Synergy Matrix</a></li>
+            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#lyra" style="color: var(--text-dim); transition: color 0.2s;">5. Lyra (The Shadow Thief)</a></li>
+            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#gifts" style="color: var(--text-dim); transition: color 0.2s;">6. Gifting & Affinity</a></li>
+            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#conflict" style="color: var(--text-dim); transition: color 0.2s;">7. Conflict & Disapproval</a></li>
+            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#camp" style="color: var(--text-dim); transition: color 0.2s;">8. Camp Management</a></li>
+            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#rewards" style="color: var(--text-dim); transition: color 0.2s;">9. Max Rapport Rewards</a></li>
+            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#synergy" style="color: var(--text-dim); transition: color 0.2s;">10. Team Synergy Matrix</a></li>
         </ul>
     </aside>
 
@@ -133,6 +135,32 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         </div>
       </section>
 
+      <section class="guide-section reveal" id="lyra" style="margin-bottom: 4rem;">
+        <h2 class="guide-section-title" style="color: var(--gold); font-size: 2.2rem; margin-bottom: 1rem;">5. Lyra (The Shadow Thief)</h2>
+        <div class="companion-stats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+            <div class="stat-card" style="background: var(--dark-2); padding: 1.5rem; border-left: 4px solid #9b59b6;">
+                <span class="label" style="color: #9b59b6; font-weight: bold; text-transform: uppercase; font-size: 0.8rem;">Combat Role</span>
+                <p style="color: #ccc; margin-top: 0.5rem;">Assassin / Trapper</p>
+            </div>
+            <div class="stat-card" style="background: var(--dark-2); padding: 1.5rem; border-left: 4px solid var(--gold);">
+                <span class="label" style="color: var(--gold); font-weight: bold; text-transform: uppercase; font-size: 0.8rem;">Legendary Gear</span>
+                <p style="color: #ccc; margin-top: 0.5rem;">Nightfall Daggers</p>
+            </div>
+        </div>
+        <div class="guide-accordion" id="acc-comp-4" style="background: var(--dark-2); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px;">
+          <button class="guide-accordion-trigger" onclick="toggleAcc('acc-comp-4')" style="width: 100%; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: var(--gold); border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <span class="guide-accordion-label" style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 1px;">Quest: A Thief's Honor</span>
+            <span class="guide-accordion-icon">▾</span>
+          </button>
+          <div class="guide-accordion-body">
+            <div class="guide-accordion-inner" style="padding: 1.5rem;">
+              <p style="color: #ccc; margin-bottom: 0.5rem;"><strong>Location:</strong> Hernand Market (Night).</p>
+              <p style="color: #ccc; margin: 0;">Infiltrate the corrupt merchant's mansion without killing any guards. If you are spotted, the quest fails until the next night.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="guide-section reveal" id="gifts" style="margin-bottom: 4rem;">
         <h2 class="guide-section-title" style="color: var(--gold); font-size: 2.2rem; margin-bottom: 1rem;">Gifting & Affinity Guide</h2>
         <p style="color: #ccc; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">To reach Max Rapport faster, you can offer unique items found across Pywel. Each companion has a "Loved Item" that grants massive affinity points.</p>
@@ -157,6 +185,13 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                 <p style="font-size: 0.9rem; color: #ccc; margin: 0; line-height: 1.6;">
                     <strong style="color: var(--gold);">Best Gift:</strong> <em>Glowing Mycelium</em> (Whispering Swamps).<br>
                     <strong style="color: var(--gold);">Effect:</strong> Unlocks "Alchemical Surplus" (Chance to double crafted potions).
+                </p>
+            </div>
+            <div class="guide-card-item" style="background: var(--dark-2); padding: 1.5rem; border-radius: 4px; border-top: 3px solid #9b59b6;">
+                <h4 style="color: #9b59b6; font-family: var(--font-display); font-size: 1.3rem; margin-top: 0; margin-bottom: 0.5rem;">Lyra's Favorites</h4>
+                <p style="font-size: 0.9rem; color: #ccc; margin: 0; line-height: 1.6;">
+                    <strong style="color: var(--gold);">Best Gift:</strong> <em>Flawless Diamond</em> (Mines of Khur).<br>
+                    <strong style="color: var(--gold);">Effect:</strong> Unlocks "Sleight of Hand" (Automatically opens common locked chests).
                 </p>
             </div>
         </div>
@@ -196,6 +231,22 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         </div>
       </section>
 
+      <section class="guide-section reveal" id="camp" style="margin-bottom: 4rem;">
+        <h2 class="guide-section-title" style="color: var(--gold); font-size: 2.2rem; margin-bottom: 1rem;">Camp Management & Expeditions</h2>
+        <p style="color: #ccc; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">You can only bring 3 companions into active combat. The rest remain at your Mercenary Camp, but they don't have to stay idle.</p>
+
+        <div class="guide-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+          <div class="guide-card-item" style="background: var(--dark-2); padding: 1.5rem; border-top: 3px solid #e74c3c;">
+            <h4 style="color: #e74c3c; margin-top: 0; font-family: var(--font-display); font-size: 1.3rem;">📜 Dispatch Missions</h4>
+            <p style="font-size: 0.9rem; color: #aaa;">Interact with the Command Tent to send idle companions on timed missions. They will gather resources, gold, and crafting materials in real-time while you play. <em>Tip: Send Lyra on "Scouting" missions for a chance to find rare keys.</em></p>
+          </div>
+          <div class="guide-card-item" style="background: var(--dark-2); padding: 1.5rem; border-top: 3px solid #3498db;">
+            <h4 style="color: #3498db; margin-top: 0; font-family: var(--font-display); font-size: 1.3rem;">🏕️ Upgrading the Camp</h4>
+            <p style="font-size: 0.9rem; color: #aaa;">Spend resources to upgrade your camp facilities. Upgrading the <strong>Medical Tent</strong> increases Naira's healing efficiency. Upgrading the <strong>Forge</strong> allows you to craft higher-tier weapons without visiting a city.</p>
+          </div>
+        </div>
+      </section>
+
       <section class="guide-section reveal" id="rewards" style="margin-bottom: 4rem;">
         <h2 class="guide-section-title" style="color: var(--gold); font-size: 2.2rem; margin-bottom: 1rem;">Max Rapport: Bonded Skills</h2>
         <p style="color: #ccc; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">Once you reach the <strong>"Eternal Brother/Sister"</strong> rank, Kliff unlocks a permanent passive skill that works even when the companion is not in the active party:</p>
@@ -213,6 +264,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                 <span class="label" style="color: var(--gold); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; display: block; margin-bottom: 0.5rem;">Naira's Bond</span>
                 <p style="color: #ccc; font-size: 0.95rem; margin: 0;">Toxic Touch: Kliff's daggers and arrows have a 5% chance to apply Poison.</p>
             </div>
+            <div class="stat-card" style="background: var(--dark-2); padding: 1.5rem; border-top: 3px solid var(--gold);">
+                <span class="label" style="color: var(--gold); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; display: block; margin-bottom: 0.5rem;">Lyra's Bond</span>
+                <p style="color: #ccc; font-size: 0.95rem; margin: 0;">Shadow Step: Kliff's dodge roll has 20% more invincibility frames.</p>
+            </div>
         </div>
 
         <h2 class="guide-section-title" style="color: var(--gold); font-size: 2.2rem; margin-bottom: 1rem;">Unique Cosmetic Unlocks</h2>
@@ -220,7 +275,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <ul style="color: #ccc; padding-left: 1.5rem; margin-bottom: 4rem; line-height: 1.8;">
             <li style="margin-bottom: 0.5rem;"><strong>Oongka:</strong> Unlocks the <em>Iron Guard</em> plate armor and golden-trimmed shield.</li>
             <li style="margin-bottom: 0.5rem;"><strong>Yann:</strong> Unlocks the <em>Ghost Stalker</em> cloak (semi-transparent in snow).</li>
-            <li><strong>Naira:</strong> Unlocks the <em>High Alchemist</em> robes with unique particle effects.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Naira:</strong> Unlocks the <em>High Alchemist</em> robes with unique particle effects.</li>
+            <li><strong>Lyra:</strong> Unlocks the <em>Midnight Silk</em> outfit, masking her footsteps entirely.</li>
         </ul>
       </section>
 
@@ -251,13 +307,13 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                         <td style="padding: 1rem;">+20% Healing Efficiency</td>
                         <td style="padding: 1rem;">Healing Mist</td>
                     </tr>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); color: #ccc;">
+                        <td style="padding: 1rem;"><strong>Lyra</strong></td>
+                        <td style="padding: 1rem;">+15% Movement Speed</td>
+                        <td style="padding: 1rem;">Shadow Dance</td>
+                    </tr>
                 </tbody>
             </table>
-        </div>
-
-        <div class="chapter-nav">
-            <a href="/crimson-desert/extras/builds.php" style="color: var(--text-dim); text-decoration: none; font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">← Previous: Best Builds</a>
-            <a href="/crimson-desert/extras/crafting.php" class="btn btn-gold">Next: Crafting & Cooking →</a>
         </div>
       </section>
 

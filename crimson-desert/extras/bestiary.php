@@ -101,6 +101,12 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                 <td><span class="pill pill-red">Fire</span></td>
                 <td>Stolen Goods, Gold Coins</td>
               </tr>
+              <tr>
+                <td><strong>Sandstorm Scorpions</strong></td>
+                <td>Deep Akapen</td>
+                <td><span class="pill pill-blue" style="color: #3498db; border-color: #3498db;">Ice</span></td>
+                <td>Scorpion Venom, Chitin Plate</td>
+              </tr>
 
               <tr>
                 <td><strong>Dire Wolves</strong></td>
@@ -125,6 +131,12 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                 <td>Akapen Desert</td>
                 <td><span class="pill pill-blue" style="color: #3498db; border-color: #3498db;">Ice</span></td>
                 <td>Sandcrawler Shell, Monster Meat</td>
+              </tr>
+              <tr>
+                <td><strong>Pywelian Griffons</strong></td>
+                <td>Highland Canyons</td>
+                <td><span class="pill pill-gold" style="color:#ffd700; border-color:#ffd700;">Lightning</span></td>
+                <td>Griffon Talon, Flawless Feather</td>
               </tr>
 
               <tr>
@@ -176,9 +188,14 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                 <td><span class="pill pill-red">Fire</span></td>
                 <td>Nightshade, Void Essence</td>
               </tr>
+              <tr>
+                <td><strong>Abyssal Behemoths</strong></td>
+                <td>Rift Cores</td>
+                <td><span class="pill pill-blue">Poison</span></td>
+                <td>Behemoth Heart, Pure Void Matter</td>
+              </tr>
             </tbody>
           </table>
-
         </div>
       </section>
 
@@ -189,7 +206,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <div class="companion-stats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 3rem;">
             <div class="stat-card" style="background: var(--dark-2); padding: 1.5rem; border-top: 3px solid #e74c3c;">
                 <h4 style="color: #e74c3c; margin-bottom: 0.5rem; font-family: var(--font-display); font-size: 1.3rem;">🔥 Burn / Fire</h4>
-                <p style="font-size: 0.9rem; color: #ccc;">Deals continuous damage over time. Prevents enemies from naturally regenerating health.</p>
+                <p style="font-size: 0.9rem; color: #ccc;">Deals continuous damage over time. Prevents enemies from naturally regenerating health. Extremely effective against beasts.</p>
             </div>
             <div class="stat-card" style="background: var(--dark-2); padding: 1.5rem; border-top: 3px solid #3498db;">
                 <h4 style="color: #3498db; margin-bottom: 0.5rem; font-family: var(--font-display); font-size: 1.3rem;">❄️ Freeze / Ice</h4>
@@ -197,11 +214,11 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             </div>
             <div class="stat-card" style="background: var(--dark-2); padding: 1.5rem; border-top: 3px solid #f1c40f;">
                 <h4 style="color: #f1c40f; margin-bottom: 0.5rem; font-family: var(--font-display); font-size: 1.3rem;">⚡ Shock / Lightning</h4>
-                <p style="font-size: 0.9rem; color: #ccc;">Interrupts enemy attacks and reduces their physical defense by 20% for a short duration.</p>
+                <p style="font-size: 0.9rem; color: #ccc;">Interrupts enemy attacks and reduces their physical defense by 20% for a short duration. Arcs to nearby wet enemies.</p>
             </div>
             <div class="stat-card" style="background: var(--dark-2); padding: 1.5rem; border-top: 3px solid #2ecc71;">
                 <h4 style="color: #2ecc71; margin-bottom: 0.5rem; font-family: var(--font-display); font-size: 1.3rem;">🧪 Poison</h4>
-                <p style="font-size: 0.9rem; color: #ccc;">Deals damage over time and reduces enemy stamina regeneration, making them easier to stagger.</p>
+                <p style="font-size: 0.9rem; color: #ccc;">Deals damage over time and reduces enemy stamina regeneration, making them easier to stagger and grapple.</p>
             </div>
             <div class="stat-card" style="background: var(--dark-2); padding: 1.5rem; border-top: 3px solid #9b59b6;">
                 <h4 style="color: #9b59b6; margin-bottom: 0.5rem; font-family: var(--font-display); font-size: 1.3rem;">✨ Axiom Resonance</h4>
@@ -246,6 +263,22 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           </div>
         </div>
 
+        <div class="guide-accordion reveal" id="acc-beast-sw" style="background: var(--dark-2); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; margin-bottom: 1rem;">
+          <button class="guide-accordion-trigger" onclick="toggleAcc('acc-beast-sw')" style="width: 100%; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: var(--gold); border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <span class="guide-accordion-label" style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 1px;">🕷️ Matriarch of the Swarm (Chapter 4)</span>
+            <span class="guide-accordion-icon">▾</span>
+          </button>
+          <div class="guide-accordion-body">
+            <div class="guide-accordion-inner" style="padding: 1.5rem;">
+              <p style="color: #ccc; margin-bottom: 1rem;">A grotesque queen commanding endless waves of spider-like minions in the underground caverns.</p>
+              <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
+                <li style="margin-bottom: 0.5rem;"><strong>Elemental Weakness:</strong> Ice / Axiom Force.</li>
+                <li><strong>Counter Tactic:</strong> Focus your squad commands on AoE defense. Freeze the Matriarch to prevent her from laying eggs, and use Axiom Shockwave to instantly clear the minion waves when they surround you.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         <div class="guide-accordion reveal" id="acc-beast-3" style="background: var(--dark-2); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; margin-bottom: 1rem;">
           <button class="guide-accordion-trigger" onclick="toggleAcc('acc-beast-3')" style="width: 100%; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: var(--gold); border-bottom: 1px solid rgba(255,255,255,0.05);">
             <span class="guide-accordion-label" style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 1px;">🤖 The Iron Sentinel (Chapter 5)</span>
@@ -257,6 +290,22 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
                 <li style="margin-bottom: 0.5rem;"><strong>Elemental Weakness:</strong> Lightning.</li>
                 <li><strong>Counter Tactic:</strong> Slashing weapons deal 10% damage. You must use Blunt weapons (Hammers) or Explosive Arrows to break its ceramic armor before you can deal actual HP damage to its exposed core.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-accordion reveal" id="acc-beast-ok" style="background: var(--dark-2); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; margin-bottom: 1rem;">
+          <button class="guide-accordion-trigger" onclick="toggleAcc('acc-beast-ok')" style="width: 100%; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: var(--gold); border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <span class="guide-accordion-label" style="font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 1px;">⚔️ The Obsidian King (Chapter 7)</span>
+            <span class="guide-accordion-icon">▾</span>
+          </button>
+          <div class="guide-accordion-body">
+            <div class="guide-accordion-inner" style="padding: 1.5rem;">
+              <p style="color: #ccc; margin-bottom: 1rem;">The corrupted monarch of Demeniss. Wields a colossal greatsword with devastating reach.</p>
+              <ul style="list-style: square; padding-left: 1.5rem; color: #ccc;">
+                <li style="margin-bottom: 0.5rem;"><strong>Elemental Weakness:</strong> Poison / Lightning.</li>
+                <li><strong>Counter Tactic:</strong> Do not attempt to block his overhead smashes, they will break your guard instantly. Use Perfect Dodge to get behind him. When he charges his dark aura, interrupt him with a heavy lightning attack.</li>
               </ul>
             </div>
           </div>
@@ -281,6 +330,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
       <section class="guide-section reveal" id="hunts" style="margin-bottom: 4rem;">
         <h2 class="guide-section-title" style="color: var(--gold); font-size: 2.2rem; margin-bottom: 1rem;">4. Elite Hunts (Bounty Board)</h2>
+        <p style="color: #ccc; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">Hidden world bosses that offer the best unique accessories and massive XP drops.</p>
         
         <div class="guide-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
           <div class="guide-card-item reveal" style="background: var(--dark-2); padding: 1.5rem; border-radius: 4px; border-top: 3px solid #9b59b6;">
@@ -297,6 +347,16 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             <span class="guide-card-icon" style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">👻</span>
             <h3 style="color: #e74c3c; font-family: var(--font-display); font-size: 1.3rem; margin-top: 0;">Echo of the First Unifier</h3>
             <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 0;"><strong>Location:</strong> Demeniss Royal Vaults.<br><strong>Loot:</strong> Crown Fragment.<br>Requires the Master Key. Reflects all projectile attacks back at Kliff.</p>
+          </div>
+          <div class="guide-card-item reveal" style="background: var(--dark-2); padding: 1.5rem; border-radius: 4px; border-top: 3px solid #3498db;">
+            <span class="guide-card-icon" style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">🦑</span>
+            <h3 style="color: #3498db; font-family: var(--font-display); font-size: 1.3rem; margin-top: 0;">Goliath of the Depths</h3>
+            <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 0;"><strong>Location:</strong> Delesyia Coast (Rainstorm).<br><strong>Loot:</strong> Abyssal Pearl.<br>Uses massive area-of-effect water attacks. Axiom shields are mandatory here.</p>
+          </div>
+          <div class="guide-card-item reveal" style="background: var(--dark-2); padding: 1.5rem; border-radius: 4px; border-top: 3px solid #2ecc71;">
+            <span class="guide-card-icon" style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">🥷</span>
+            <h3 style="color: #2ecc71; font-family: var(--font-display); font-size: 1.3rem; margin-top: 0;">The Crimson Shadow</h3>
+            <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 0;"><strong>Location:</strong> Hernand Rooftops.<br><strong>Loot:</strong> Assassin's Cowl.<br>An elusive rogue that will ambush you. Use trap skills to lock him down.</p>
           </div>
         </div>
 

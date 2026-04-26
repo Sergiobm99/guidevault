@@ -38,6 +38,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#ingredients" style="color: var(--text-dim); transition: color 0.2s;">4. Rare Ingredients</a></li>
             <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#masterwork" style="color: var(--text-dim); transition: color 0.2s;">5. "Masterwork" Crafting</a></li>
             <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#routes" style="color: var(--text-dim); transition: color 0.2s;">6. Farming Routes</a></li>
+            <li class="guide-toc-item" style="margin-bottom: 0.5rem;"><a href="#vendors" style="color: var(--text-dim); transition: color 0.2s;">7. Specialized Vendors</a></li>
         </ul>
     </aside>
 
@@ -93,6 +94,18 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                 <td style="padding: 1rem;">100% Resistance to Freezing (Essential for Ch. 6).</td>
                 <td style="padding: 1rem;">20 Minutes</td>
               </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); color: #ccc;">
+                <td style="padding: 1rem;"><strong>Pywelian Roast</strong></td>
+                <td style="padding: 1rem;">Bear Meat, Wild Garlic, Cave Mushroom</td>
+                <td style="padding: 1rem;">+25% Physical Damage and +10% Stamina Regen.</td>
+                <td style="padding: 1rem;">25 Minutes</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); color: #ccc;">
+                <td style="padding: 1rem;"><strong>Ginseng Brew</strong></td>
+                <td style="padding: 1rem;">Golden Ginseng, Spring Water, Honey</td>
+                <td style="padding: 1rem;">Instantly cures all debuffs and grants immunity for 5 mins.</td>
+                <td style="padding: 1rem;">5 Minutes</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -127,7 +140,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <ul style="padding-left: 1.5rem; color: #ccc; line-height: 1.8; margin: 0;">
                 <li style="margin-bottom: 0.5rem;"><strong>Abyss Resistance Potion:</strong> Reduces damage taken from Abyss-type enemies by 40%. <br><em style="color: var(--gold-dim);">Recipe: Void Essence + Blue Petal.</em></li>
                 <li style="margin-bottom: 0.5rem;"><strong>Healing Salve:</strong> Restores 50% HP instantly. <br><em style="color: var(--gold-dim);">Recipe: Green Herb (x3) + Spring Water.</em></li>
-                <li><strong>Antidote:</strong> Instantly cures Poison and Toxic status. <br><em style="color: var(--gold-dim);">Recipe: Charcoal + Lichen.</em></li>
+                <li style="margin-bottom: 0.5rem;"><strong>Antidote:</strong> Instantly cures Poison and Toxic status. <br><em style="color: var(--gold-dim);">Recipe: Charcoal + Lichen.</em></li>
+                <li><strong>Elixir of Iron Skin:</strong> Nullifies the next 3 instances of physical damage completely. <br><em style="color: var(--gold-dim);">Recipe: Troll Hide Extract + Liquid Mercury.</em></li>
               </ul>
             </div>
           </div>
@@ -142,7 +156,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             <div class="guide-accordion-inner" style="padding: 1.5rem;">
               <ul style="padding-left: 1.5rem; color: #ccc; line-height: 1.8; margin: 0;">
                 <li style="margin-bottom: 0.5rem;"><strong>Axiom Overdrive:</strong> Eliminates cooldowns for all Axiom abilities for 15 seconds. <br><em style="color: var(--gold-dim);">Recipe: Star-metal Dust + Void Essence.</em></li>
-                <li><strong>Liquid Shadow:</strong> Grants near-invisibility to enemies for 3 minutes (breaks upon attacking). <br><em style="color: var(--gold-dim);">Recipe: Nightshade + Black Pearl.</em></li>
+                <li style="margin-bottom: 0.5rem;"><strong>Liquid Shadow:</strong> Grants near-invisibility to enemies for 3 minutes (breaks upon attacking). <br><em style="color: var(--gold-dim);">Recipe: Nightshade + Black Pearl.</em></li>
+                <li><strong>Sight of the Owl:</strong> Highlights hidden traps, fake walls, and invisible enemies for 5 minutes. <br><em style="color: var(--gold-dim);">Recipe: Harpy Eye + Glowing Mycelium.</em></li>
               </ul>
             </div>
           </div>
@@ -183,6 +198,11 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
                 <td style="padding: 1rem;">Upgrading heavy armor sets for Kliff and Oongka.</td>
                 <td style="padding: 1rem;">Hunted in the Kweiden Highlands.</td>
               </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); color: #ccc;">
+                <td style="padding: 1rem;"><strong>Crimson Crystal</strong></td>
+                <td style="padding: 1rem;">Imbuing weapons with permanent fire/blood effects.</td>
+                <td style="padding: 1rem;">Deep Akapen Desert ruins or high-tier bounties.</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -211,6 +231,11 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             <span class="guide-card-icon" style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">🐉</span>
             <h3 style="color: var(--gold); font-family: var(--font-display); font-size: 1.3rem; margin-top: 0;">Dragon Scale</h3>
             <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 0;">Extremely rare. Obtained by breaking the horns or tail of the Frost Dragon World Boss before defeating it.</p>
+          </div>
+          <div class="guide-card-item" style="background: var(--dark-2); padding: 1.5rem; border-radius: 4px; border-top: 3px solid #e74c3c;">
+            <span class="guide-card-icon" style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">🐚</span>
+            <h3 style="color: #e74c3c; font-family: var(--font-display); font-size: 1.3rem; margin-top: 0;">Desert Pearl</h3>
+            <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 0;">Found inside giant clam shells along the hidden oasis in Akapen. Extremely valuable for Masterwork alchemy.</p>
           </div>
         </div>
       </section>
@@ -254,12 +279,54 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             </p>
         </div>
 
-        <div class="chapter-nav">
-            <a href="/crimson-desert/extras/companions.php" style="color: var(--text-dim); text-decoration: none; font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">← Previous: Companions</a>
-            <a href="/crimson-desert/extras/equipment.php" class="btn btn-gold">Next: Equipment →</a>
+        <div class="route-box reveal" style="background: var(--dark-2); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid #e74c3c;">
+            <h4 style="color: #e74c3c; font-family: var(--font-display); font-size: 1.3rem; margin-top: 0; margin-bottom: 0.5rem;">📍 The Delesyia Coastal Run (Best for Pearls & Fish)</h4>
+            <p style="font-size: 0.95rem; color: #ccc; line-height: 1.6; margin: 0;">
+                <strong style="color: var(--text);">Start:</strong> Delesyia Lighthouse.<br>
+                <strong style="color: var(--text);">Path:</strong> Walk along the southern beach at low tide. Harvest the giant clam shells, spear the Abyss Koi in the shallows, and avoid the Giant Armored Crabs.<br>
+                <strong style="color: var(--text);">Yield:</strong> ~5 Desert Pearls, ~12 Abyss Koi per 8-minute run.
+            </p>
         </div>
-
       </section>
+
+      <section class="guide-section reveal" id="vendors" style="margin-bottom: 4rem;">
+        <h2 class="guide-section-title" style="color: var(--gold); font-size: 2.2rem; margin-bottom: 1rem;">7. Specialized Vendor Locations</h2>
+        <p class="guide-section-intro" style="color: #ccc; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">Some rare materials can only be purchased from hidden merchants who change locations or only appear under specific conditions.</p>
+        
+        <div class="guide-table-wrap">
+          <table class="guide-table" style="background: var(--dark-2);">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--gold); color: var(--gold);">
+                <th style="padding: 1rem;">Vendor</th>
+                <th style="padding: 1rem;">Location / Condition</th>
+                <th style="padding: 1rem;">Exclusive Inventory</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); color: #ccc;">
+                <td style="padding: 1rem;"><strong>The Midnight Smuggler</strong></td>
+                <td style="padding: 1rem;">Pailune Slums (Only between 00:00 and 03:00 in-game time)</td>
+                <td style="padding: 1rem;">Rare Spices, Lockpicks, Assassin's Cowl recipe.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); color: #ccc;">
+                <td style="padding: 1rem;"><strong>Nomad Blacksmith</strong></td>
+                <td style="padding: 1rem;">Wanders the Akapen Desert. Look for a blue campfire smoke.</td>
+                <td style="padding: 1rem;">Star-Metal Ingots (Limited to 3 per week), Masterwork Hammers.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); color: #ccc;">
+                <td style="padding: 1rem;"><strong>Hermit Alchemist</strong></td>
+                <td style="padding: 1rem;">Top of the Kweiden Peaks (Requires Grappling Hook to reach)</td>
+                <td style="padding: 1rem;">Pure Void Matter, Dragon's Blood, Tear of the Oracle recipe.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="chapter-nav">
+          <a href="/crimson-desert/extras/companions.php" style="color: var(--text-dim); text-decoration: none; font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">← Previous: Companions</a>
+          <a href="/crimson-desert/extras/equipment.php" class="btn btn-gold">Next: Equipment →</a>
+      </div>
 
     </main>
   </div>
