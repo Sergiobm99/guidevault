@@ -18,7 +18,7 @@
   --gold-glow:    rgba(212, 168, 67, 0.15);
 
   --text:         #E8E0D0;
- --text-dim:     #BAB0A1;
+  --text-dim:     #BAB0A1;
   --text-muted:   #9C9182;
 
   --green:        #4A8C5C;
@@ -87,8 +87,10 @@ ul, ol { list-style: none; }
 /* ── NAVIGATION ── */
 .site-nav {
   position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); z-index: 8000;
-  background: rgba(255, 255, 255, 0.1); border-bottom: 1px solid rgba(212, 168, 67, 0.05);
-  backdrop-filter: blur(12px) brightness(0.8); -webkit-backdrop-filter: blur(12px) brightness(0.8); box-shadow: 0 0 30px rgb(0 0 0 / 25%);
+  /* EFECTO CRISTAL: Opacidad al 75% */
+  background: rgba(8, 8, 8, 0.75); 
+  border-bottom: 1px solid rgba(212, 168, 67, 0.05);
+  backdrop-filter: blur(16px) brightness(0.8); -webkit-backdrop-filter: blur(16px) brightness(0.8); box-shadow: 0 0 30px rgb(0 0 0 / 25%);
   display: flex; align-items: center; padding: 0 2rem; gap: 2rem; transition: border-color 0.3s var(--ease);
 }
 .site-nav.scrolled { border-bottom-color: rgba(212, 168, 67, 0.15); }
@@ -183,61 +185,56 @@ ul, ol { list-style: none; }
     padding-top: 3rem;
     border-top: 1px solid rgba(255,255,255,0.05);
     margin-top: 4rem;
-    gap: 10px !important; /* Espacio reducido para que quepan mejor */
+    gap: 10px !important; 
     width: 100%;
 }
 
 @media (max-width: 768px) {
     .chapter-nav a {
-        font-size: 0.75rem !important; /* Letra más pequeña en móvil */
-        flex: 1 !important; /* Cada botón ocupa exactamente la mitad (50%) */
+        font-size: 0.75rem !important; 
+        flex: 1 !important; 
         text-align: center !important;
         justify-content: center !important;
-        padding: 0.6rem !important; /* Relleno más ajustado */
-        white-space: normal !important; /* Permite que el texto baje a 2 líneas si es largo */
+        padding: 0.6rem !important; 
+        white-space: normal !important; 
         line-height: 1.2 !important;
     }
     
     .chapter-nav .btn {
-        width: auto !important; /* Evita que el botón intente ocupar el 100% de la pantalla */
+        width: auto !important; 
         display: inline-flex !important;
     }
     .site-nav {
-        /* Asegurar que los elementos tengan espacio entre ellos */
         justify-content: space-between !important; 
         padding: 0 15px !important;
     }
 
-    /* Ajustar el contenedor de la derecha (Botón + Hamburguesa) */
-    .nav-actions { /* Si tienes un div que envuelve al botón y al menú */
+    .nav-actions { 
         display: flex;
         align-items: center;
-        gap: 15px; /* Separación entre el botón y las rayitas */
+        gap: 15px; 
     }
 
-    /* Hacer el botón de "Support Us" más compacto en móvil para que quepa bien */
     .site-nav .btn {
         padding: 8px 12px !important;
         font-size: 0.7rem !important;
         letter-spacing: 0.1em;
-        white-space: nowrap; /* Evitar que el texto se rompa en dos líneas */
+        white-space: nowrap; 
     }
 
-    /* Arreglar el tamaño y alineación de las rayitas del menú */
     .mobile-menu-toggle {
         display: flex !important;
         flex-direction: column;
-        justify-content: center !important; /* Centramos las líneas */
-        gap: 4px; /* 👈 AQUÍ CONTROLAS LA SEPARACIÓN. Cambia a 3px para más juntas, o 5px para más separadas */
+        justify-content: center !important; 
+        gap: 4px; 
         width: 30px; 
-        height: 24px; /* Le damos un poco de margen táctil */
+        height: 24px; 
         margin-left: 5px; 
         z-index: 9999;
     }
     
-    /* Separación de las líneas de la hamburguesa */
     .mobile-menu-toggle span {
-        height: 3px; /* Líneas un pelín más gruesas */
+        height: 3px; 
         border-radius: 3px;
     }
 }
@@ -252,7 +249,15 @@ ul, ol { list-style: none; }
     .site-nav { padding-left: 10px !important; padding-right: 10px !important; gap: 10px !important; position: relative; }
     .mobile-menu-toggle { display: flex; }
     .mobile-toc-container { display: block; }
-    .site-nav .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: #09090b; flex-direction: column; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); z-index: 999; margin: 0; }
+    /* EFECTO CRISTAL EN EL MENÚ MÓVIL DESPLEGABLE */
+    .site-nav .nav-links { 
+        display: none; position: absolute; top: 100%; left: 0; width: 100%; 
+        background: rgba(10, 10, 12, 0.65); /* Transparente */
+        backdrop-filter: blur(12px) brightness(0.8);
+        -webkit-backdrop-filter: blur(12px) brightness(0.8);
+        flex-direction: column; align-items: center; padding: 1.5rem 0; 
+        border-bottom: 1px solid rgba(212, 168, 67, 0.05); z-index: 999; margin: 0; 
+    }
     .site-nav .nav-links.active { display: flex !important; }
     .site-footer .footer-inner { display: flex !important; flex-direction: column !important; gap: 2.5rem !important; align-items: center !important; text-align: center !important; }
     .site-footer .footer-brand .nav-brand { justify-content: center !important; }
@@ -278,10 +283,10 @@ ul, ol { list-style: none; }
 .hero-search-container { position: relative; margin-top: 2.5rem; max-width: 650px; }
 .hero-search-container input {
     width: 100%; padding: 16px 20px 16px 45px; border-radius: 8px; border: 1px solid rgba(212, 168, 67, 0.4);
-    background: rgba(0, 0, 0, 0.6) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="%23c9a84c" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>') no-repeat 15px center;
-    color: #fff; font-size: 1.1rem; font-family: var(--font-ui); outline: none; transition: all 0.3s ease; backdrop-filter: blur(5px);
+    background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="%23c9a84c" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>') no-repeat 15px center;
+    color: #fff; font-size: 1.1rem; font-family: var(--font-ui); outline: none; transition: all 0.3s ease; backdrop-filter: blur(8px);
 }
-.hero-search-container input:focus { border-color: var(--gold); background-color: rgba(0, 0, 0, 0.8); box-shadow: 0 0 15px var(--gold-glow); }
+.hero-search-container input:focus { border-color: var(--gold); background-color: rgba(0, 0, 0, 0.3); box-shadow: 0 0 15px var(--gold-glow); }
 .search-results-dropdown { position: absolute; top: 100%; left: 0; right: 0; background: #111; border: 1px solid rgba(212, 168, 67, 0.3); border-top: none; border-radius: 0 0 8px 8px; z-index: 1000; display: none; max-height: 300px; overflow-y: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.8); }
 .search-result-item { padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; color: #ccc; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   will-change: transform; }
@@ -375,29 +380,74 @@ ul, ol { list-style: none; }
         font-size: 1.15rem !important;
     }
 }
-/* Estilos de imagen de portada (Hero Background) */
-/* Fondo de la imagen exclusiva de Elden Ring */
+
+/* ============================================================
+   ESTILOS DE IMAGEN DE PORTADA (Hero Background) Y GEOMETRÍA ÁUREA
+   ============================================================ */
+
+/* Fondo exclusivo de Elden Ring */
 .theme-elden-ring .guide-hero-bg {
     position: absolute;
     inset: 0;
-    /* Oscurecemos un poco la imagen para que se lea el texto y resalte el neón */
     background: 
         linear-gradient(180deg, rgba(10, 10, 12, 0.4) 0%, rgba(10, 10, 12, 0.95) 100%), 
         url('/elden-ring/img/elden-ring.webp') no-repeat center center;
     background-size: cover;
     z-index: 0;
 }
+
+/* Fondo exclusivo de Crimson Desert */
 .theme-crimson-desert .guide-hero-bg {
     position: absolute;
     inset: 0;
-    /* Degradado oscuro (ajustado a tonos tierra/rojizos) + Imagen */
     background: 
         linear-gradient(180deg, rgba(20, 10, 5, 0.4) 0%, rgba(13, 13, 13, 0.95) 100%), 
         url('/crimson-desert/img/crimson-desert-open.png') no-repeat center center;
     background-size: cover;
     z-index: 0;
 }
-/* Opcional: Sombra de texto para mejorar la lectura sobre la imagen */
+
+/* Sombra de texto para la portada de Crimson Desert */
 .theme-crimson-desert .guide-hero-title {
     text-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+}
+
+/* Base de la Geometría Áurea */
+.aurea-bg {
+    position: absolute;
+    inset: 0; 
+    z-index: 2; /* Sobre la imagen */
+    overflow: hidden;
+    pointer-events: none; 
+    opacity: 0.55; 
+}
+.aurea-bg svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Líneas apagadas */
+.aurea-base {
+    fill: none;
+    stroke: rgba(212, 175, 55, 0.05);
+    stroke-width: 0.1;
+}
+
+/* Neón de luz viajando */
+.aurea-light {
+    fill: none;
+    stroke: #FFF9DB;
+    stroke-width: 0.15; 
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 120 60 20 100; 
+    animation: aurea-flow 18s linear infinite;
+    filter: 
+        drop-shadow(0 0 2px rgba(255, 215, 75, 1)) 
+        drop-shadow(0 0 5px rgba(212, 175, 55, 0.6));
+}
+
+@keyframes aurea-flow {
+    from { stroke-dashoffset: 300; }
+    to { stroke-dashoffset: 0; }
 }
