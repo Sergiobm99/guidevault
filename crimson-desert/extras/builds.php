@@ -10,33 +10,6 @@ $bodyClass = "theme-crimson-desert";
 include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; 
 ?>
 
-<style>
-    .build-calculator {
-        background: var(--panel-color, #0f0f0f);
-        border: 1px solid var(--border-color, rgba(212, 175, 55, 0.2));
-        border-radius: 8px;
-        padding: 25px;
-        margin: 2rem 0;
-        font-family: 'Rajdhani', sans-serif;
-        color: var(--text-main, #e0d4be);
-        box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-    }
-    .calc-header { border-bottom: 1px solid var(--border-color, rgba(212, 175, 55, 0.2)); padding-bottom: 15px; margin-bottom: 20px; }
-    .calc-header p { font-size: 0.9rem; color: var(--text-muted, #888); margin-top: 5px; }
-    .calc-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
-    @media (max-width: 768px) { .calc-grid { grid-template-columns: 1fr; } }
-    .calc-selectors { display: flex; flex-direction: column; gap: 15px; }
-    .calc-group label { display: block; font-size: 0.85rem; color: var(--text-dim, #aaa); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; font-weight: 600; }
-    .calc-group select { width: 100%; background: var(--bg-main, #1a1a1a); color: var(--text-main, #fff); border: 1px solid var(--border-color, #333); padding: 10px 15px; border-radius: 4px; font-size: 1rem; outline: none; transition: border-color 0.2s; cursor: pointer; }
-    .calc-group select:focus { border-color: var(--accent, #D4AF37); }
-    .calc-results { background: var(--bg-main, #080808); border: 1px solid var(--border-color, #222); border-radius: 6px; padding: 20px; display: flex; flex-direction: column; justify-content: center; }
-    .result-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px dashed var(--border-color, #333); }
-    .result-item:last-child { border-bottom: none; }
-    .result-label { font-weight: 600; color: var(--text-dim, #aaa); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
-    .result-value { font-size: 1.4rem; font-weight: 700; }
-    .val-atk { color: #e74c3c; } .val-def { color: #3498db; } .val-crit { color: #f1c40f; } .val-spd { color: #2ecc71; }
-</style>
-
   <header class="guide-hero" style="min-height: 40vh; padding-top: calc(var(--nav-h) + 2rem);">
     <div class="guide-hero-bg" style="background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(138, 43, 226, 0.2) 0%, transparent 65%), radial-gradient(ellipse 50% 70% at 80% 20%, rgba(40, 10, 80, 0.8) 0%, transparent 60%), linear-gradient(180deg, #05020a 0%, #11051a 60%, #05020a 100%);"></div>
     <div class="guide-hero-inner">

@@ -451,169 +451,102 @@ ul, ol { list-style: none; }
     from { stroke-dashoffset: 300; }
     to { stroke-dashoffset: 0; }
 }
-/* Contenedor principal del Crafter */
-.build-crafter-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 2rem;
-    justify-content: center;
-}
+    /* 1. ESTILOS DE LA CALCULADORA ORIGINAL */
+    .build-calculator {
+        background: var(--panel-color, #0f0f0f);
+        border: 1px solid var(--border-color, rgba(212, 175, 55, 0.2));
+        border-radius: 8px; padding: 25px; margin: 2rem 0;
+        font-family: 'Rajdhani', sans-serif; color: var(--text-main, #e0d4be);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    .calc-header { border-bottom: 1px solid var(--border-color, rgba(212, 175, 55, 0.2)); padding-bottom: 15px; margin-bottom: 20px; }
+    .calc-header p { font-size: 0.9rem; color: var(--text-muted, #888); margin-top: 5px; }
+    .calc-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+    @media (max-width: 768px) { .calc-grid { grid-template-columns: 1fr; } }
+    .calc-selectors { display: flex; flex-direction: column; gap: 15px; }
+    .calc-results { background: var(--bg-main, #080808); border: 1px solid var(--border-color, #222); border-radius: 6px; padding: 20px; display: flex; flex-direction: column; justify-content: center; }
+    .result-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px dashed var(--border-color, #333); }
+    .result-item:last-child { border-bottom: none; }
+    .result-label { font-weight: 600; color: var(--text-dim, #aaa); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
+    .result-value { font-size: 1.4rem; font-weight: 700; }
+    .val-atk { color: #e74c3c; } .val-def { color: #3498db; } .val-crit { color: #f1c40f; } .val-spd { color: #2ecc71; }
 
-/* Panel de cristal oscuro */
-.glass-panel {
-    background: rgba(15, 15, 18, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(212, 175, 55, 0.2); /* Borde dorado sutil */
-    border-radius: 12px;
-    padding: 2rem;
-    flex: 1;
-    min-width: 300px;
-    max-width: 400px;
-}
+    /* 2. ESTILOS DEL GENERADOR DE TARJETAS Y FORMULARIOS MÓVILES */
+    .build-crafter-container {
+        display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; align-items: flex-start;
+    }
+    .crafter-controls {
+        flex: 1; min-width: 300px;
+        background: #111; padding: 1.5rem; border-radius: 8px;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+    .crafter-preview {
+        flex: 1; min-width: 300px; display: flex; justify-content: center;
+    }
+    .crafter-preview canvas {
+        max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    }
 
-.input-group {
-    margin-bottom: 1.5rem;
-}
+    /* Corrección forzada para inputs y selects en móviles iOS/Android */
+    .calc-group, .input-group { margin-bottom: 1.2rem; }
+    .calc-group label, .input-group label { 
+        display: block; font-size: 0.85rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; font-weight: 600; 
+    }
+    .calc-group select, .input-group input, .input-group select { 
+        width: 100%; 
+        background: #1a1a1a; 
+        color: #fff; 
+        border: 1px solid #333; 
+        padding: 12px 15px; 
+        border-radius: 4px; 
+        font-size: 1rem; 
+        outline: none; 
+        transition: border-color 0.2s; 
+        cursor: pointer;
+        /* Anular los estilos feos del sistema operativo */
+        -webkit-appearance: none; 
+        -moz-appearance: none; 
+        appearance: none; 
+    }
+    /* Añadir flecha personalizada dorada a los desplegables */
+    .calc-group select, .input-group select {
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23D4AF37%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+        background-repeat: no-repeat;
+        background-position: right 15px top 50%;
+        background-size: 12px auto;
+        padding-right: 40px;
+    }
+    .calc-group select:focus, .input-group input:focus, .input-group select:focus { 
+        border-color: #D4AF37; 
+    }
 
-.input-group label {
-    display: block;
-    color: #d4af37; /* Dorado */
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+    /* Botón Dorado de Descarga */
+    .crafter-export-btn {
+        width: 100%; padding: 16px; margin-top: 10px;
+        background: linear-gradient(45deg, #8a6d22, #d4af37);
+        color: #000; font-weight: 800; font-size: 1.1rem;
+        font-family: 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: 1.5px;
+        border: none; border-radius: 4px; cursor: pointer;
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        -webkit-appearance: none; /* Evita que iOS lo convierta en texto azul */
+    }
 
-.input-group input, 
-.input-group select {
-    width: 100%;
-    padding: 0.8rem;
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid #333;
-    color: #fff;
-    border-radius: 4px;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.input-group input:focus, 
-.input-group select:focus {
-    border-color: #d4af37;
-    box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
-}
-
-.crafter-export-btn { 
-    width: 100%; 
-    padding: 15px; 
-    background: linear-gradient(45deg, #8a6d22, #d4af37); 
-    color: #000; 
-    font-weight: 700; 
-    font-size: 1.1rem; 
-    border: none; 
-    border-radius: 4px; 
-    cursor: pointer; 
-    text-transform: uppercase; 
-    transition: transform 0.2s, box-shadow 0.2s; 
-    margin-top: 20px; 
-    font-family: 'Rajdhani', sans-serif; 
-    letter-spacing: 1px; 
-}
-.crafter-export-btn:hover { 
-    transform: translateY(-2px); 
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4); 
-}
-
-.crafter-preview canvas {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-}
-.patreon-upsell-box {
-    margin-top: 3rem;
-    padding: 3rem;
-    text-align: center;
-    border: 2px solid rgba(212, 175, 55, 0.3);
-    position: relative;
-    overflow: hidden;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* El brillo de fondo para que parezca "épico" */
-.patreon-upsell-box::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
-    pointer-events: none;
-}
-
-.upsell-badge {
-    display: inline-block;
-    padding: 5px 15px;
-    background: rgba(212, 175, 55, 0.2);
-    border: 1px solid #d4af37;
-    color: #d4af37;
-    font-size: 0.8rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    border-radius: 50px;
-    margin-bottom: 1.5rem;
-}
-
-.patreon-upsell-box h2 {
-    color: #fff;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-family: 'Rajdhani', sans-serif;
-}
-
-.upsell-features {
-    list-style: none;
-    padding: 0;
-    margin: 2rem 0;
-    text-align: left;
-    display: inline-block;
-}
-
-.upsell-features li {
-    color: #ccc;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.upsell-features li span {
-    font-size: 1.4rem;
-}
-
-/* Botón de Patreon con su color oficial pero estilo GuideVault */
-.patreon-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: #FF424D; /* Color oficial Patreon */
-    color: white;
-    padding: 15px 35px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.patreon-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(255, 66, 77, 0.4);
-}
+    /* 3. ESTILOS DE LA CAJA DE PATREON */
+    .patreon-upsell-box { 
+        margin-top: 4rem; padding: 3rem 2rem; text-align: center; 
+        border: 1px solid rgba(212, 175, 55, 0.4); border-radius: 12px; 
+        background: linear-gradient(180deg, rgba(30,25,15,0.9) 0%, rgba(10,10,12,0.95) 100%);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .upsell-badge { 
+        display: inline-block; padding: 5px 15px; 
+        border: 1px solid #d4af37; color: #d4af37; font-size: 0.8rem; font-weight: bold;
+        letter-spacing: 2px; border-radius: 50px; margin-bottom: 1rem; background: rgba(212, 175, 55, 0.1);
+    }
+    .upsell-features li { margin-bottom: 0.8rem; color: #ccc; }
+    .patreon-btn { 
+        background: #FF424D; color: #fff !important; padding: 14px 28px; 
+        border-radius: 4px; text-decoration: none; font-weight: bold; font-family: 'Rajdhani', sans-serif;
+        text-transform: uppercase; letter-spacing: 1px; transition: background 0.3s;
+    }
+    .patreon-btn:hover { background: #ff5e67; }
