@@ -187,6 +187,27 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     <a href="extras/builds" class="btn btn-gold">Explore Skill Trees & Builds</a>
     <a href="extras/bestiary" class="btn btn-gold" style="background: transparent; border: 2px solid var(--gold); color: var(--gold);">Open the Boss Bestiary</a>
 </div>
+<div class="legend-card-promo-centered glass-panel" style="margin: 4rem auto; padding: 3rem; border: 1px solid rgba(212, 175, 55, 0.4); border-radius: 12px; background: linear-gradient(180deg, rgba(30,25,15,0.9) 0%, rgba(10,10,12,0.95) 100%); max-width: 850px; text-align: center; box-shadow: 0 15px 45px rgba(0,0,0,0.7); position: relative; overflow: hidden;">
+    
+    <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(212,175,55,0.05) 0%, transparent 70%); pointer-events: none;"></div>
+
+    <div style="position: relative; z-index: 1;">
+        <div style="color: #d4af37; font-size: 0.9rem; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 1rem;">✨ New Interactive Feature</div>
+        
+        <h3 style="color: #ffffff; font-size: 2.2rem; margin: 0 0 1rem 0; font-family: 'Rajdhani', sans-serif; line-height: 1.2;">Forge Your Legend Card</h3>
+        
+        <p style="color: #cccccc; margin: 0 auto 2rem auto; font-size: 1.1rem; line-height: 1.7; max-width: 600px;">
+            Showcase your ultimate Kliff build to the Pywel community. Customize your gear, calculate real-time stats, and generate a premium shareable card.
+        </p>
+
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+            <a href="/crimson-desert/extras/builds.php#create-card" style="background: linear-gradient(45deg, #8a6d22, #d4af37); color: #000; padding: 16px 40px; text-decoration: none; font-weight: 800; border-radius: 4px; display: inline-block; font-family: 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: 2px; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+    Create My Card ➔
+</a>
+            <span style="color: #888; font-size: 0.85rem; font-style: italic;">Patrons unlock Mythic, Abyssal & Bloodstone themes</span>
+        </div>
+    </div>
+</div>
       </section>
 
       <section class="guide-section reveal" id="world">
