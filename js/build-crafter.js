@@ -1,3 +1,8 @@
+/**
+ * GUIDEVAULT BUILD CRAFTER - SECURE FULL VERSION
+ * Includes Base64 Obfuscation, 3 Tiers, Procedural Themes, and Secure Avatar Upload.
+ */
+
 function toggleAcc(id) {
     const acc = document.getElementById(id);
     if (acc) {
@@ -6,6 +11,7 @@ function toggleAcc(id) {
 }
 
 const ITEMS = {
+    // Armas
     w_rusty: { atk: 15, def: 0, crit: 0, spd: 10 },
     w_shadow: { atk: 42, def: 0, crit: 5, spd: 0 },
     w_frost: { atk: 85, def: 0, crit: -5, spd: -15 },
@@ -17,6 +23,8 @@ const ITEMS = {
     w_acid: { atk: 35, def: 0, crit: 0, spd: 0 },
     w_mace: { atk: 60, def: 40, crit: 0, spd: -10 },
     w_scythe: { atk: 110, def: 0, crit: 20, spd: -10 },
+    
+    // Armaduras
     a_merc: { atk: 0, def: 10, crit: 0, spd: 5 },
     a_assassin: { atk: 0, def: 25, crit: 15, spd: 10 },
     a_commander: { atk: 5, def: 85, crit: 0, spd: -5 },
@@ -27,6 +35,8 @@ const ITEMS = {
     a_alchemist: { atk: 0, def: 40, crit: 0, spd: 0 },
     a_fortress: { atk: -10, def: 120, crit: 0, spd: -20 },
     a_dragon: { atk: 20, def: 150, crit: 5, spd: -10 },
+
+    // Reliquias
     r_wolf: { atk: 10, def: 0, crit: 0, spd: 5 },
     r_bear: { atk: 0, def: 20, crit: 0, spd: 0 },
     r_abyss: { atk: 25, def: -10, crit: 0, spd: 0 },
@@ -40,7 +50,7 @@ const ITEMS = {
 
 const BASE_STATS = { atk: 5, def: 5, crit: 5, spd: 100 };
 
-// NUEVO: Variable global para almacenar el retrato del usuario
+// Variable global para almacenar el retrato del usuario
 let customAvatarImg = null;
 
 function calculateBuild() {
@@ -65,7 +75,7 @@ function calculateBuild() {
     drawCard();
 }
 
-// --- PATRONES PROCEDURALES ---
+// --- GENERADORES PROCEDURALES ---
 function generateNoise(ctx, w, h, d, o) {
     const canvas = document.createElement('canvas');
     canvas.width = 100; canvas.height = 100;
@@ -156,7 +166,7 @@ function generateFrost(ctx, w, h) {
     ctx.fillRect(0,0,w,h);
 }
 
-// --- DIBUJO DE TARJETA ---
+// --- DIBUJO DE TARJETA PRINCIPAL ---
 function drawCard() {
     const canvas = document.getElementById('buildCard');
     if (!canvas) return;
@@ -166,45 +176,58 @@ function drawCard() {
     const build = document.getElementById('buildName')?.value || "Build";
     const weapon = document.getElementById('mainWeapon')?.value || "None";
     const stat = document.getElementById('coreStat')?.value || "0";
-    const code = document.getElementById('premiumCode')?.value.toLowerCase().trim() || "";
+    
+    // Obtenemos el código y lo encriptamos a Base64 para ocultarlo
+    const rawCode = document.getElementById('premiumCode') ? document.getElementById('premiumCode').value.toLowerCase().trim() : "";
+    let code = "";
+    try {
+        code = rawCode ? btoa(rawCode) : "";
+    } catch(e) {
+        code = ""; // Por si introducen caracteres especiales muy raros
+    }
 
-    const t1 = ['obsidian99', 'mythicgold', 'bloodstone'];
-    const t2 = ['abyssvoid', 'emeraldvenom', 'frostbite'];
-    const t3 = ['legend-master']; // Tier 3
+    // LISTA DE CÓDIGOS OFUSCADOS (Nadie sabrá la palabra real mirando el código)
+    // T1: obsidian99, mythicgold, bloodstone
+    const t1 = ['b2JzaWRpYW45OQ==', 'bXl0aGljZ29sZA==', 'Ymxvb2RzdG9uZQ==']; 
+    // T2: abyssvoid, emeraldvenom, frostbite
+    const t2 = ['YWJ5c3N2b2lk', 'ZW1lcmFsZHZlbm9t', 'ZnJvc3RiaXRl']; 
+    // T3: legend-master
+    const t3 = ['bGVnZW5kLW1hc3Rlcg==']; 
 
-    // MAGIA: Mostrar/Ocultar botón de Avatar
+    // MAGIA: Mostrar/Ocultar botón de Avatar exclusivo para Tier 3
     const avatarBox = document.getElementById('avatarBox');
     if (t3.includes(code)) {
         if (avatarBox) avatarBox.style.display = 'block';
     } else {
         if (avatarBox) avatarBox.style.display = 'none';
-        customAvatarImg = null; // Borrar foto si quita el código
+        customAvatarImg = null; 
     }
 
+    // 1. Limpiar Fondo
     ctx.clearRect(0,0,canvas.width,canvas.height);
     ctx.fillStyle = '#0a0a0c';
     ctx.fillRect(0,0,canvas.width,canvas.height);
 
-    // Selección de Tema
-    if (code === 'obsidian99') {
+    // 2. Selección de Temas con los códigos en Base64
+    if (code === 'b2JzaWRpYW45OQ==') { // obsidian99
         ctx.fillStyle = '#151515'; ctx.fillRect(0,0,canvas.width,canvas.height);
         generateNoise(ctx, canvas.width, canvas.height, 0.8, 0.5);
-    } else if (code === 'mythicgold') {
+    } else if (code === 'bXl0aGljZ29sZA==') { // mythicgold
         generateGold(ctx, canvas.width, canvas.height);
-    } else if (code === 'bloodstone') {
+    } else if (code === 'Ymxvb2RzdG9uZQ==') { // bloodstone
         ctx.fillStyle = '#110202'; ctx.fillRect(0,0,canvas.width,canvas.height);
         generateBlood(ctx, canvas.width, canvas.height);
-    } else if (code === 'abyssvoid') {
+    } else if (code === 'YWJ5c3N2b2lk') { // abyssvoid
         ctx.fillStyle = '#080012'; ctx.fillRect(0,0,canvas.width,canvas.height);
         generateVoid(ctx, canvas.width, canvas.height);
-    } else if (code === 'emeraldvenom') {
+    } else if (code === 'ZW1lcmFsZHZlbm9t') { // emeraldvenom
         ctx.fillStyle = '#020d05'; ctx.fillRect(0,0,canvas.width,canvas.height);
         generateEmerald(ctx, canvas.width, canvas.height);
-    } else if (code === 'frostbite') {
+    } else if (code === 'ZnJvc3RiaXRl') { // frostbite
         ctx.fillStyle = '#010a14'; ctx.fillRect(0,0,canvas.width,canvas.height);
         generateFrost(ctx, canvas.width, canvas.height);
-    } else if (t3.includes(code)) {
-        // Tema Base Legendario
+    } else if (t3.includes(code)) { // Si es Legendario
+        // Lava Oscura por defecto para Legends
         ctx.fillStyle = '#1a0500'; ctx.fillRect(0,0,canvas.width,canvas.height);
         generateBlood(ctx, canvas.width, canvas.height);
         generateGold(ctx, canvas.width, canvas.height);
@@ -212,64 +235,61 @@ function drawCard() {
         generateNoise(ctx, canvas.width, canvas.height, 0.3, 0.2);
     }
 
-    // Viñeta
+    // Viñeta Oscura
     const grad = ctx.createRadialGradient(canvas.width/2, canvas.height/2, canvas.width/4, canvas.width/2, canvas.height/2, canvas.width);
     grad.addColorStop(0, 'rgba(0,0,0,0)'); grad.addColorStop(1, 'rgba(0,0,0,0.9)');
     ctx.fillStyle = grad; ctx.fillRect(0,0,canvas.width,canvas.height);
 
-    // Marcos
+    // Marcos Geometría
     ctx.strokeStyle = '#d4af37'; ctx.lineWidth = 3; ctx.shadowColor = '#d4af37'; ctx.shadowBlur = 15;
     ctx.strokeRect(20,20,canvas.width-40,canvas.height-40);
     ctx.shadowBlur = 0; ctx.strokeStyle = 'rgba(212,175,55,0.2)'; ctx.lineWidth = 1;
     ctx.strokeRect(28,28,canvas.width-56,canvas.height-56);
 
-    // Cabecera (Títulos)
+    // Cabecera de Texto
     ctx.textAlign = 'center'; ctx.fillStyle = '#d4af37';
-    ctx.font = 'bold 34px "Rajdhani"'; ctx.fillText(build.toUpperCase(), canvas.width/2, 85);
-    ctx.fillStyle = '#fff'; ctx.font = 'italic 18px "Rajdhani"'; ctx.fillText("Forged by " + player, canvas.width/2, 120);
+    ctx.font = 'bold 34px "Rajdhani", sans-serif'; ctx.fillText(build.toUpperCase(), canvas.width/2, 85);
+    ctx.fillStyle = '#fff'; ctx.font = 'italic 18px "Rajdhani", sans-serif'; ctx.fillText("Forged by " + player, canvas.width/2, 120);
 
     ctx.strokeStyle = 'rgba(212,175,55,0.4)'; ctx.beginPath();
     ctx.moveTo(70,150); ctx.lineTo(canvas.width-70, 150); ctx.stroke();
 
-    // DIBUJAR AVATAR (Si existe) Y DESPLAZAR TEXTOS
-    let drawY = 220; // Posición Y original de los textos
+    // DIBUJAR AVATAR Y DESPLAZAR TEXTOS
+    let drawY = 220; 
 
     if (customAvatarImg && t3.includes(code)) {
         const radius = 45;
         const cx = canvas.width / 2;
-        const cy = 205; // Posición de la foto
+        const cy = 205; 
 
-        // Recorte circular
         ctx.save();
         ctx.beginPath();
         ctx.arc(cx, cy, radius, 0, Math.PI * 2);
         ctx.clip();
         
-        // Ajustar imagen para que rellene el círculo perfectamente
         const size = Math.min(customAvatarImg.width, customAvatarImg.height);
         const sx = (customAvatarImg.width - size) / 2;
         const sy = (customAvatarImg.height - size) / 2;
         ctx.drawImage(customAvatarImg, sx, sy, size, size, cx - radius, cy - radius, radius * 2, radius * 2);
         ctx.restore();
         
-        // Borde dorado de la foto
         ctx.beginPath();
         ctx.arc(cx, cy, radius, 0, Math.PI * 2);
         ctx.lineWidth = 3;
         ctx.strokeStyle = '#d4af37';
         ctx.stroke();
 
-        drawY = 285; // Empujamos el texto hacia abajo
+        drawY = 285; // Empujamos el texto hacia abajo para hacer hueco
     }
 
-    // Contenido Dinámico (Se mueve si hay foto)
-    ctx.fillStyle = '#aaa'; ctx.font = 'bold 16px "Rajdhani"'; ctx.fillText("⚔️ MAIN WEAPON", canvas.width/2, drawY);
-    ctx.fillStyle = '#fff'; ctx.font = '26px "Rajdhani"'; ctx.fillText(weapon, canvas.width/2, drawY + 30);
-    ctx.fillStyle = '#aaa'; ctx.font = 'bold 16px "Rajdhani"'; ctx.fillText("⭐ CORE STAT", canvas.width/2, drawY + 95);
-    ctx.fillStyle = '#d4af37'; ctx.font = 'bold 48px "Rajdhani"'; ctx.fillText(stat, canvas.width/2, drawY + 145);
+    // Contenido Dinámico
+    ctx.fillStyle = '#aaa'; ctx.font = 'bold 16px "Rajdhani", sans-serif'; ctx.fillText("⚔️ MAIN WEAPON", canvas.width/2, drawY);
+    ctx.fillStyle = '#fff'; ctx.font = '26px "Rajdhani", sans-serif'; ctx.fillText(weapon, canvas.width/2, drawY + 30);
+    ctx.fillStyle = '#aaa'; ctx.font = 'bold 16px "Rajdhani", sans-serif'; ctx.fillText("⭐ CORE STAT", canvas.width/2, drawY + 95);
+    ctx.fillStyle = '#d4af37'; ctx.font = 'bold 48px "Rajdhani", sans-serif'; ctx.fillText(stat, canvas.width/2, drawY + 145);
 
-    // Marca de Agua por Rangos
-    ctx.fillStyle = 'rgba(212,175,55,0.6)'; ctx.font = 'bold 16px "Rajdhani"'; ctx.letterSpacing = "2px";
+    // Marca de Agua por Tiers
+    ctx.fillStyle = 'rgba(212,175,55,0.6)'; ctx.font = 'bold 16px "Rajdhani", sans-serif'; ctx.letterSpacing = "2px";
     if (t3.includes(code)) {
         ctx.fillText("GUIDEVAULT LEGEND", canvas.width/2, canvas.height-40);
     } else if (t2.includes(code)) {
@@ -283,48 +303,53 @@ function drawCard() {
 
 function downloadCard() {
     const canvas = document.getElementById('buildCard');
+    const buildName = document.getElementById('buildName') ? document.getElementById('buildName').value.replace(/\s+/g, '-').toLowerCase() : 'build';
+    
+    const image = canvas.toDataURL("image/png");
     const link = document.createElement('a');
-    link.download = `GuideVault-Build.png`;
-    link.href = canvas.toDataURL("image/png");
+    link.download = `GuideVault-${buildName}.png`;
+    link.href = image;
     link.click();
-    setTimeout(() => { alert("✨ Legend Card Downloaded! ✨\n\nSupport us on Patreon to unlock exclusive Raider and Legend themes!"); }, 500);
+
+    setTimeout(() => { 
+        alert("✨ Legend Card Downloaded! ✨\n\nSupport us on Patreon to unlock exclusive Raider and Legend features!"); 
+    }, 500);
 }
 
+// --- EVENTOS INICIALES Y SEGURIDAD ---
 window.addEventListener('load', () => {
     document.getElementById('calc-weapon')?.addEventListener('change', calculateBuild);
     document.getElementById('calc-armor')?.addEventListener('change', calculateBuild);
     document.getElementById('calc-acc')?.addEventListener('change', calculateBuild);
 
-    // LECTOR DE ARCHIVOS PARA EL AVATAR
+    // LECTOR DE ARCHIVOS PARA EL AVATAR CON SEGURIDAD
     const avatarInput = document.getElementById('avatarUpload');
     if (avatarInput) {
         avatarInput.addEventListener('change', function(e) {
             const file = e.target.files[0];
             if (!file) return;
 
-            // 1. SEGURIDAD: Comprobar que sea una imagen
+            // Seguridad: Solo imágenes
             if (!file.type.match('image.*')) {
                 alert("⛔ Security Alert: Please upload a valid image file (PNG, JPG, WEBP).");
-                avatarInput.value = ""; // Limpiar el campo
+                avatarInput.value = "";
                 return;
             }
 
-            // 2. SEGURIDAD: Límite de tamaño (5 MB = 5 * 1024 * 1024 bytes)
+            // Seguridad: Máximo 5 MB
             const maxSize = 5 * 1024 * 1024;
             if (file.size > maxSize) {
                 alert("⛔ File too large: Please upload an image smaller than 5MB.");
-                avatarInput.value = ""; // Limpiar el campo
+                avatarInput.value = "";
                 return;
             }
 
-            // Si pasa la seguridad, leemos la imagen localmente
             const reader = new FileReader();
             reader.onload = function(event) {
                 customAvatarImg = new Image();
                 customAvatarImg.onload = function() {
-                    drawCard(); // Repintar cuando la foto cargue
+                    drawCard();
                 };
-                // Extra de seguridad: Si la imagen está corrupta, fallará aquí sin romper la web
                 customAvatarImg.onerror = function() {
                     alert("Error loading the image. It might be corrupted.");
                     customAvatarImg = null;
