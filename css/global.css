@@ -531,3 +531,89 @@ ul, ol { list-style: none; }
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 }
+.patreon-upsell-box {
+    margin-top: 3rem;
+    padding: 3rem;
+    text-align: center;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    position: relative;
+    overflow: hidden;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* El brillo de fondo para que parezca "épico" */
+.patreon-upsell-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.upsell-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    background: rgba(212, 175, 55, 0.2);
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+}
+
+.patreon-upsell-box h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.upsell-features {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.upsell-features li {
+    color: #ccc;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.upsell-features li span {
+    font-size: 1.4rem;
+}
+
+/* Botón de Patreon con su color oficial pero estilo GuideVault */
+.patreon-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #FF424D; /* Color oficial Patreon */
+    color: white;
+    padding: 15px 35px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.patreon-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 66, 77, 0.4);
+}

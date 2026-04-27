@@ -407,85 +407,109 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           </div>
         </div>
         <section class="guide-section reveal" id="create-card" style="margin-bottom: 4rem;">
-    <h2 class="guide-section-title" style="color: var(--gold); font-size: 2.2rem; margin-bottom: 1rem;">6. Create Your Legend Card</h2>
-    <p style="color: #ccc; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">
-        Showcase your build to the community! Customize your player name, build archetype, and selected gear to generate a high-quality shareable card.
-    </p>
-<div class="build-crafter-container theme-crimson-desert">
-    <div class="crafter-controls glass-panel">
-        <h3>Forge Your Build</h3>
-        
-        <div class="input-group">
-            <label for="playerName">Player Name</label>
-            <input type="text" id="playerName" value="Dark Vagabond" oninput="drawCard()">
-        </div>
+        <h2 class="guide-section-title" style="color: var(--gold); font-size: 2.2rem; margin-bottom: 1rem;">6. Create Your Legend Card</h2>
+        <p style="color: #ccc; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">
+            Showcase your build to the community! Customize your player name, build archetype, and selected gear to generate a high-quality shareable card.
+        </p>
 
-        <div class="input-group">
-            <label for="buildName">Build Name</label>
-            <input type="text" id="buildName" value="Shadow Assassin" oninput="drawCard()">
-        </div>
+        <div class="build-crafter-container theme-crimson-desert">
+            
+            <div class="crafter-controls glass-panel">
+                <h3>Forge Your Build</h3>
+                
+                <div class="input-group">
+                    <label for="playerName">Player Name</label>
+                    <input type="text" id="playerName" value="Dark Vagabond" oninput="drawCard()">
+                </div>
 
-       <div class="input-group">
-    <label for="mainWeapon">Main Weapon</label>
-    <select id="mainWeapon" onchange="drawCard()">
-        <option value="Bare Hands">-- Select Weapon --</option>
-        
-        <optgroup label="One-Handed Swords">
-            <option value="Sword of the Lord">Sword of the Lord</option>
-            <option value="Tauria Curved Sword">Tauria Curved Sword</option>
-            <option value="Hollow Visage">Hollow Visage</option>
-            <option value="Legionary's Gladius">Legionary's Gladius</option>
-            <option value="Melted Ambition">Melted Ambition</option>
-            <option value="Survivor's Solitude">Survivor's Solitude</option>
-            <option value="Acria Sword">Acria Sword</option>
-            <option value="Wolf's Fang">Wolf's Fang</option>
-            <option value="The Grove's Thorn">The Grove's Thorn</option>
-            <option value="Volono Sword">Volono Sword</option>
-        </optgroup>
+                <div class="input-group">
+                    <label for="buildName">Build Name</label>
+                    <input type="text" id="buildName" value="Shadow Assassin" oninput="drawCard()">
+                </div>
 
-        <optgroup label="Two-Handed & Heavy">
-            <option value="Hwando">Hwando</option>
-            <option value="Soul Spear">Soul Spear</option>
-            <option value="Frozen Anguish">Frozen Anguish</option>
-            <option value="Vessel of Dark Pursuit">Vessel of Dark Pursuit</option>
-            <option value="Ignir">Ignir</option>
-            <option value="Righteous Verdict">Righteous Verdict</option>
-            <option value="Darkbringer">Darkbringer</option>
-            <option value="Mining Knuckledrill">Mining Knuckledrill</option>
-            <option value="Acorn Mace">Acorn Mace</option>
-        </optgroup>
+                <div class="input-group">
+                    <label for="mainWeapon">Main Weapon</label>
+                    <select id="mainWeapon" onchange="drawCard()">
+                        <option value="Bare Hands">-- Select Weapon --</option>
+                        
+                        <optgroup label="One-Handed Swords">
+                            <option value="Sword of the Lord">Sword of the Lord</option>
+                            <option value="Tauria Curved Sword">Tauria Curved Sword</option>
+                            <option value="Hollow Visage">Hollow Visage</option>
+                            <option value="Legionary's Gladius">Legionary's Gladius</option>
+                            <option value="Melted Ambition">Melted Ambition</option>
+                            <option value="Survivor's Solitude">Survivor's Solitude</option>
+                            <option value="Acria Sword">Acria Sword</option>
+                            <option value="Wolf's Fang">Wolf's Fang</option>
+                            <option value="The Grove's Thorn">The Grove's Thorn</option>
+                            <option value="Volono Sword">Volono Sword</option>
+                        </optgroup>
 
-        <optgroup label="Daggers & Rapiers">
-            <option value="Goblin King's Treasure Dagger">Goblin King's Treasure Dagger</option>
-            <option value="Kylus Dagger">Kylus Dagger</option>
-            <option value="Fallen Kingdom's Rapier">Fallen Kingdom's Rapier</option>
-        </optgroup>
+                        <optgroup label="Two-Handed & Heavy">
+                            <option value="Hwando">Hwando</option>
+                            <option value="Soul Spear">Soul Spear</option>
+                            <option value="Frozen Anguish">Frozen Anguish</option>
+                            <option value="Vessel of Dark Pursuit">Vessel of Dark Pursuit</option>
+                            <option value="Ignir">Ignir</option>
+                            <option value="Righteous Verdict">Righteous Verdict</option>
+                            <option value="Darkbringer">Darkbringer</option>
+                            <option value="Mining Knuckledrill">Mining Knuckledrill</option>
+                            <option value="Acorn Mace">Acorn Mace</option>
+                        </optgroup>
 
-        <optgroup label="Ranged & Magic">
-            <option value="Sorcerer's Staff">Sorcerer's Staff</option>
-            <option value="Nobleman's Bow">Nobleman's Bow</option>
-            <option value="Tommasoan Bow">Tommasoan Bow</option>
-            <option value="Sior Blaster">Sior Blaster (Pistol)</option>
-            <option value="Demenissian Hero's Musket">Demenissian Hero's Musket</option>
-            <option value="Eastern Witch's Fan">Eastern Witch's Fan</option>
-        </optgroup>
+                        <optgroup label="Daggers & Rapiers">
+                            <option value="Goblin King's Treasure Dagger">Goblin King's Treasure Dagger</option>
+                            <option value="Kylus Dagger">Kylus Dagger</option>
+                            <option value="Fallen Kingdom's Rapier">Fallen Kingdom's Rapier</option>
+                        </optgroup>
 
-    </select>
+                        <optgroup label="Ranged & Magic">
+                            <option value="Sorcerer's Staff">Sorcerer's Staff</option>
+                            <option value="Nobleman's Bow">Nobleman's Bow</option>
+                            <option value="Tommasoan Bow">Tommasoan Bow</option>
+                            <option value="Sior Blaster">Sior Blaster (Pistol)</option>
+                            <option value="Demenissian Hero's Musket">Demenissian Hero's Musket</option>
+                            <option value="Eastern Witch's Fan">Eastern Witch's Fan</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="coreStat">Core Stat</label>
+                    <input type="number" id="coreStat" value="99" min="1" max="99" oninput="drawCard()">
+                </div>
+
+                <div class="input-group">
+    <label for="premiumCode" style="color: #d4af37;">Secret Forge Code (Patreon)</label>
+    <input type="text" id="premiumCode" placeholder="Enter code for Mythic skins..." oninput="drawCard()">
 </div>
 
-        <div class="input-group">
-            <label for="coreStat">Core Stat</label>
-            <input type="number" id="coreStat" value="99" min="1" max="99" oninput="drawCard()">
-        </div>
-
-        <button class="crafter-export-btn" onclick="downloadCard()">Download Card</button>
-    </div>
-
-    <div class="crafter-preview">
-        <canvas id="buildCard" width="400" height="500"></canvas>
-    </div>
+<div class="input-group" id="avatarBox" style="display: none; margin-top: 15px;">
+    <label for="avatarUpload" style="color: #2ecc71;">🖼️ Upload Character Portrait</label>
+    <input type="file" id="avatarUpload" accept="image/*" style="border-color: #2ecc71;">
 </div>
-</section>
+                
+                <button class="crafter-export-btn" onclick="downloadCard()">Download Card</button>
+            </div> <div class="crafter-preview">
+                <canvas id="buildCard" width="400" height="500"></canvas>
+            </div> </div> <div class="patreon-upsell-box glass-panel" style="margin-top: 4rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <div class="upsell-content" style="text-align: center;">
+                <div class="upsell-badge">PREMIUM FORGE</div>
+                <h2>Unlock Mythic Customization</h2>
+                <p>Take your Legend Cards to the next level. Patreon supporters unlock exclusive features to make their builds truly unique.</p>
+                
+                <ul class="upsell-features" style="display: inline-block; text-align: left; margin: 2rem auto;">
+                    <li><span>✨</span> <strong>Exclusive Themes:</strong> Obsidian, Mythic Gold, and Bloodstone backgrounds.</li>
+                    <li><span>🖼️</span> <strong>Custom Portraits:</strong> Upload your own character screenshot to the card.</li>
+                    <li><span>🚀</span> <strong>Early Access:</strong> Be the first to use our upcoming Interactive Map Tracker.</li>
+                </ul>
+                <br>
+                <a href="https://www.patreon.com/guidevault" class="patreon-btn" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Patreon_logo.svg" alt="Patreon" width="20">
+                    Join the Vault on Patreon
+                </a>
+            </div>
+        </div> </section>
         <div class="chapter-nav">
             <a href="/crimson-desert/extras/bestiary.php" style="color: var(--text-dim); text-decoration: none; font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">← Previous: Bestiary</a>
             <a href="/crimson-desert/extras/companions.php" class="btn btn-gold">Next: Companions →</a>
