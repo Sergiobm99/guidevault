@@ -11,7 +11,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 ?>
 
   <header class="guide-hero" style="min-height: 40vh; padding-top: calc(var(--nav-h) + 2rem);">
-    <div class="guide-hero-bg"></div>
+    <div class="guide-hero-bg" style="background: linear-gradient(to bottom, rgba(8,8,8,0.4) 0%, rgba(8,8,8,1) 100%), url('/crimson-desert/img/chapter1.webp') center/cover no-repeat;"></div>
     <div class="guide-hero-inner">
       <nav class="guide-hero-breadcrumb" aria-label="Breadcrumb" style="margin-bottom: 2rem;">
         <a href="../../">Home</a>

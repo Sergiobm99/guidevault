@@ -11,7 +11,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 ?>
 
   <header class="guide-hero" style="min-height: 45vh; padding-top: calc(var(--nav-h) + 2rem);">
-    <div class="guide-hero-bg" style="background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(212, 168, 67, 0.25) 0%, transparent 65%), radial-gradient(ellipse 50% 70% at 80% 20%, rgba(40, 10, 80, 0.9) 0%, transparent 60%), linear-gradient(180deg, #050505 0%, #0d0a14 60%, #050505 100%);"></div>
+    <div class="guide-hero-bg" style="background: linear-gradient(to bottom, rgba(8,8,8,0.4) 0%, rgba(8,8,8,1) 100%), url('/crimson-desert/img/chapter9.jpg') center/cover no-repeat;"></div>
     
     <div class="guide-hero-inner">
       <nav class="guide-hero-breadcrumb" aria-label="Breadcrumb" style="margin-bottom: 2rem;">
